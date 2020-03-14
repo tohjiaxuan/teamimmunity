@@ -1,24 +1,30 @@
 <template>
-  <div class="body">
-    <img id='book' src = 'assets/book.png'>
-        <span id='text1'>
-            Customised for 
-            <br/>
-            modules
-        </span>
-    <img id='pitch' src = 'assets/pitch.png'>
-        <span id='text2'>
-            Detailed 
-            <br/>
-            explanation
-        </span>
-    <img id='console' src = 'assets/gamepad.png'>
-        <span id='text3'>
-            Gamelike 
-            <br/>
-            exercises
-        </span>
+<div class="body">
+<b-container fluid class='pt-5 mt-5 pb-5 mb-5'>
+          <b-row>
+              <b-col>
+                <b-img center fluid src='assets/book.png' class='w-25'></b-img>
+              </b-col>
+              <b-col>
+                <b-img center fluid src='assets/pitch.png' class='w-25'></b-img>
+              </b-col>
+              <b-col>
+                <b-img center fluid src='assets/gamepad.png' class='w-25'></b-img>
+              </b-col>
+          </b-row>
 
+            <b-row align='center'>
+                <b-col class=''>
+                    <span>Customised for<br/>modules</span>
+                </b-col>
+                <b-col>
+                    <span>Detailed<br/>explanation</span>
+                </b-col>
+                <b-col>
+                    <span>Gamelike<br/>exercises</span>
+                </b-col>
+                </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -29,91 +35,14 @@ export default {
 </script>
 
 <style scoped>
-    #book{
-        position: absolute;
-        width: 136px;
-        height: 136px;
-        left: 200px;
-        top: 1000px;
 
-    }
+.test {
+    border: 1px solid red;
+}
 
-    #pitch{
-        position: absolute;
-        width: 136px;
-        height: 136px;
-        left: 651px;
-        top: 1000px;
-
-        background: pitch;
-    }
-
-    #console{
-        position: absolute;
-        width: 132px;
-        height: 132px;
-        left: 1102px;
-        top: 1000px;
-
-        background: console;
-    }
-
-
-    #text1{
-        position: absolute;
-        width: 257px;
-        height: 153px;
-        left: 165px;
-        top: 1150px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 30px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-    }
-
-    #text2{
-        position: absolute;
-        width: 257px;
-        height: 153px;
-        left: 640px;
-        top: 1150px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 30px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-    }
-
-    #text3{
-        position: absolute;
-        width: 257px;
-        height: 153px;
-        left: 1100px;
-        top:1150px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 30px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #000000;
-    }
+span{
+    font-family: Futura Hv Bt;
+    font-size: 30px;
+}
 
 </style>

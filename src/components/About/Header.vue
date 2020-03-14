@@ -1,188 +1,58 @@
-<template>
-  <div >
-    <header>
-        <div id='rect'></div>
-        <router-link to="/" id='home' class='link'>Home</router-link>
-        <router-link to="/about" id='about' class='link'>About</router-link>
-        <router-link to="/language" id='language' class='link'>Language</router-link>
-        <router-link to='/proglang' id='module' class='link'>Module</router-link>
-        <router-link to='/exercise' id='exercise' class='link'>Exercise</router-link>
-        <router-link to='/after' id='acc' class='link'>Account</router-link>
-        <span id='log'>Logout</span>
-    </header>
-  </div>
+ <template>
+<div>
+  <b-navbar toggleable="md" type="light" variant="outline-danger" fixed="top" class='bg-overlay pb-1'>
+    <b-navbar-brand to='/' id="nav">Code.io
+    </b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+
+        <b-nav-item-dropdown text="☰" right id="menu" toggle-class="text-dark" no-caret class="drop">
+          <b-dropdown-item to="/about" id="menu">About</b-dropdown-item>
+          <b-dropdown-item href="#" id="menu">Exercise</b-dropdown-item>
+          <b-dropdown-item href="#" id="menu">Language</b-dropdown-item>
+          <b-dropdown-item href="#" id="menu">Account</b-dropdown-item>
+
+        </b-nav-item-dropdown>
+
+        <!-- <b-nav-item-dropdown right text="User" id="menu" toggle-class="text-dark">
+          <b-dropdown-item href="#" id="menu">Sign In</b-dropdown-item>
+          <b-dropdown-item href="#" id="menu">Register</b-dropdown-item>
+        </b-nav-item-dropdown> -->
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
+
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>
 
 <style scoped>
-#rect {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 87px;
-    left: 0px;
-    top: 0px;
-    background: white;
+
+.navbar {
+  font-family: Futura Hv Bt;
+  color: black;
 }
 
-#home {
-    position: fixed;
-    z-index: 2;
-    width: auto;
-    height: 34px;
-    left: 57%;
-    top: 31px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
+.drop.dropdown{
+  font-size: 30px;
+  color: black;
 }
 
-#about {
-    position: fixed;
-    z-index: 2;
-    width: auto;
-    height: 34px;
-    left: 62%;
-    top: 31px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
+.bg-overlay {
+    /* background: linear-gradient(180deg, #a3f1ff 0%, rgba(222, 248, 254, 0) 100%); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#CBE7F8;
+    /* height: 100vh; */
 }
-
-#module {
-    position: fixed;
-    z-index:2;
-    width:auto;
-    height:34px;
-    left:67%;
-    top:31px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#exercise {
-    position: fixed;
-    z-index:2;
-    width:auto;
-    height:34px;
-    left:73%;
-    top:31px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-
-#language {
-    position: fixed;
-    z-index:2;
-    width:auto;
-    height:34px;
-    left:79%;
-    top:31px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#acc {
-    position: fixed;
-    z-index: 2;
-    width: auto;
-    height: 34px;
-    left: 86%;
-    top: 31px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#log {
-    position: fixed;
-    z-index: 2;
-    width: auto;
-    height: 34px;
-    left:92%;
-    top: 31px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-.link {
-    /* border:1px solid red; */
-}
-
-.link:hover {
-    background-color: #CBE7F8;
-    color: black;
-}
-
-.link.active {
-    background-color: #CBE7F8;
-    color: black;
-  }
-
 </style>

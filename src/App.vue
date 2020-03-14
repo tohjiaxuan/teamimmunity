@@ -12,19 +12,19 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   padding: 0px;
   margin: 0px;
   
   background-color: white;
-}
+} */
 
 html, body {
-  width: 100%;
+  /* width: 100%;
   padding: 0px;
   margin: 0px;
   overflow-x: hidden;
-  overflow-y:scroll;
+  overflow-y:scroll; */
   scrollbar-width: thin;
 }  
 

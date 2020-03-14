@@ -1,4 +1,7 @@
 import Vue from 'vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import HomePage from './components/Homepage.vue'
@@ -28,6 +31,8 @@ import Page3 from './components/Charlotte/Page3.vue'
 
 
 Vue.use(VueRouter);
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
 
 Vue.config.productionTip = false
 

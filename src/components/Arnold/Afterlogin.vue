@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-Navbar></app-Navbar>
     <Title></Title>
     <span id='badges'>10 badges</span>
     <span id='rank'>1 Rank</span>
@@ -41,12 +41,12 @@
 </template>
 
 <script>
-import Header from '../About/Header.vue'
+import Navbar from '../About/Navbar.vue'
 import Title from './afterlogintitle.vue'
 import Footer from '../Footer.vue'
 export default {
     components: {
-    'app-header': Header,
+    'app-Navbar': Navbar,
     Title,
     'app-footer': Footer,
   }

@@ -1,19 +1,19 @@
 <template>
     <div>
-      <Header></Header>
+      <Navbar></Navbar>
       <Info></Info>
       <Race></Race>  
     </div>
 </template>
 
 <script>
-import Header from '../About/Header.vue'
+import Navbar from '../About/Navbar.vue'
 import Info from './Page2/Info.vue'
 import Race from './Page2/Race.vue'
 
 export default {
   components: {
-    Header, 
+    Navbar, 
     Info,
     Race,
   }

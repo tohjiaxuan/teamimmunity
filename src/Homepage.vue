@@ -1,6 +1,6 @@
  <template>
  <div>
-    <Header></Header>
+    <Navbar></Navbar>
     <Body></Body>
     <!-- <Bottom></Bottom> -->
 </div>
@@ -8,14 +8,14 @@
 
 <script>
 
-import Header from './components/Homepage/Header.vue'
+import Navbar from './components/Homepage/Navbar.vue'
 import Body from './components/Homepage/Body.vue'
 // import Bottom from './components/Homepage/Bottom.vue'
 
 export default {
     name:"home",
     components:{
-        Header,
+        Navbar,
         Body,
         // Bottom
     }

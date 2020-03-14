@@ -1,8 +1,7 @@
  <template>
 <div>
   <b-navbar toggleable="md" type="light" variant="outline-danger" fixed="top" class='bg-overlay pb-1'>
-    <b-navbar-brand to='/' id="nav">Code.io
-    </b-navbar-brand>
+    <b-navbar-brand to='/' id="nav">Code.io</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -13,10 +12,9 @@
 
         <b-nav-item-dropdown text="☰" right id="menu" toggle-class="text-dark" no-caret class="drop">
           <b-dropdown-item to="/about" id="menu">About</b-dropdown-item>
-          <b-dropdown-item href="#" id="menu">Exercise</b-dropdown-item>
+          <b-dropdown-item to="/exercise" id="menu">Exercise</b-dropdown-item>
           <b-dropdown-item to="/language" id="menu">Language</b-dropdown-item>
-          <b-dropdown-item href="#" id="menu">Account</b-dropdown-item>
-
+          <b-dropdown-item to="/after" id="menu">Account</b-dropdown-item>
         </b-nav-item-dropdown>
 
         <!-- <b-nav-item-dropdown right text="User" id="menu" toggle-class="text-dark">

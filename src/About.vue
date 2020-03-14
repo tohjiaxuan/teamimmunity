@@ -1,6 +1,6 @@
  <template>
  <div>
-    <Header></Header>
+    <Navbar></Navbar>
     <Body></Body>
     <Bottom></Bottom>
 </div>
@@ -8,7 +8,7 @@
 
 <script>
 
-import Header from './components/About/Header.vue'
+import Navbar from './components/About/Navbar.vue'
 import Body from './components/About/Body.vue'
 import Bottom from './components/About/Bottom.vue'
 
@@ -16,7 +16,7 @@ import Bottom from './components/About/Bottom.vue'
 export default {
     name:"home",
     components:{
-        Header,
+        Navbar,
         Body,
         Bottom
     }

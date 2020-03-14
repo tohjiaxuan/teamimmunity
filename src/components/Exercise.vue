@@ -4,7 +4,7 @@
       <img id='back' src='/assets/track.jpg'/>
       </div>
       <div>
-      <Menu></Menu>
+      <Navbar></Navbar>
       <Header></Header>
       <Login></Login>
       <Footer id='footer'></Footer>
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import Menu from './About/Header.vue'
+import Navbar from './About/Navbar.vue'
 import Header from './Charlotte/Page1/Header.vue'
 import Login from './Charlotte/Page1/Login.vue'
 import Footer from './Footer.vue'
 
 export default {
   components: {
-    Menu,
+    Navbar,
     Header,
     Login,
     Footer

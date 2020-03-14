@@ -12,7 +12,7 @@
 </template>
  
 <script>
-import navbar from '../About/Header.vue'
+import navbar from '../About/Navbar.vue'
 import imgHeader from './imgHeader.vue'
 import Web1 from './Web1.vue'
 import select2 from './select2.vue'

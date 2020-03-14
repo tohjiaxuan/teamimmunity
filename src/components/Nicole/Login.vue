@@ -55,8 +55,8 @@ export default {
 }
 
 .page-holder {
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .bg-cover {

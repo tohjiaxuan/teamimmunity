@@ -16,8 +16,12 @@
 <b-row align-h='center' class='mt-5'>
 <b-col cols='1.5'>
                     <b-button-group size='lg'>
-                        <b-button class='b-button' variant="outline-primary" to="/reg">Register</b-button>
-                        <b-button class='b-button' variant="outline-primary" to="/log">Sign In</b-button>
+                        <router-link to="/reg">
+                            <b-button class='b-button' variant="outline-primary">Register</b-button>
+                        </router-link>
+                        <router-link to="/log">
+                            <b-button class='b-button' variant="outline-primary">Sign In</b-button>
+                        </router-link>
                     </b-button-group>
                 </b-col>
             </b-row>

@@ -1,7 +1,7 @@
  <template>
 <div>
   <b-navbar toggleable="md" type="light" variant="outline-danger" fixed="top" class='bg-overlay'>
-    <b-navbar-brand href="#" id="nav">Code.io
+    <b-navbar-brand to="/" id="nav">Code.io
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -49,10 +49,10 @@ export default {
 }
 
 .bg-overlay {
-    background: linear-gradient(180deg, #CBE7F8 50%, rgba(222, 248, 254, 0) 100%);
+    /* background: linear-gradient(180deg, #CBE7F8 50%, rgba(222, 248, 254, 0) 100%); */
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: #e9e8dc ; */
+    background-color: #CBE7F8 ;
     /* height: 100vh; */
 }
 </style>

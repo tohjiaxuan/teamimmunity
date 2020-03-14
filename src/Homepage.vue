@@ -2,7 +2,7 @@
  <div>
     <Navbar></Navbar>
     <Body></Body>
-    <!-- <Bottom></Bottom> -->
+    <!-- <Footer></Footer> -->
 </div>
 </template>
 
@@ -10,14 +10,14 @@
 
 import Navbar from './components/Homepage/Navbar.vue'
 import Body from './components/Homepage/Body.vue'
-// import Bottom from './components/Homepage/Bottom.vue'
+// import Footer from './components/Common/Footer.vue'
 
 export default {
     name:"home",
     components:{
         Navbar,
         Body,
-        // Bottom
+        // Footer
     }
 }
 </script>

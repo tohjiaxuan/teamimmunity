@@ -8,7 +8,7 @@
 
 <script>
 
-import Navbar from './components/About/Navbar.vue'
+import Navbar from './components/Common/Navbar.vue'
 import Body from './components/About/Body.vue'
 import Bottom from './components/About/Bottom.vue'
 

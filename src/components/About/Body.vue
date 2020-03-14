@@ -1,6 +1,6 @@
 <template>
 <div>
-    <b-container fluid class='my-container mt-5 text-dark bg-overlay pb-5'>
+    <b-container fluid class='my-container text-dark bg-overlay pb-5 pt-0'>
         <b-row align-h="center" class='my-row pt-4'>
         <b-col cols='5.5' class='my-col'>
             <h1 class="mt-3 pt-3 display-4"><strong>{{text1}}</strong></h1>

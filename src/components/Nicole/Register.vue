@@ -1,290 +1,254 @@
 <template>
-    <div id="test1">
-    <div id="overview" style="background-image: url(/assets/login.jpeg)">
-       <div id="rectangle">
-            <h2> Hello There! </h2>
-            <p> Feeling lost about coding? </p>
-                <div id="grey"> 
+<b-container fluid id="main">
+    <b-row id="rows" cols="2">
+        <b-col>
+            <div id="overview" class="bg-cover"> </div>
+            <div id="rectangle"> </div>
+                <h2 id="welcome"> Hello There! </h2>
+                <p id="subtitle"> Feeling lost about coding? </p>
+                <div id="grey" class="shadow-lg p-3 mb-5 bg-grey rounded">
                     <p id="description"> Join us on a journey to discover the tips and 
                     tricks for coding in various languages! 
                     Suitable for aspiring coders and experienced coders who wish to 
-                    further hone their skills or pick up a new language </p>
+                    further hone their skills or pick up a new language. </p>
                 </div>
-        </div>
-
-        <div id='reg'> 
-            <h4> Sign Up /     
-            <router-link id="change" to="/log">
-                Login
-            </router-link>
-            </h4>
-            <div id="extra"> 
-                <h5> Fill in to join us! </h5>
-            </div>
-            <form id="signup">
-                <div class="form">
-                    <input type="text" v-model="user.userId" name="userId" placeholder="    User ID" class="box"/>
-                </div>
-                <div class="form">
-                    <input type="text" v-model="user.email" name="email" placeholder="    Email" class="box"/>
-                </div>
-                <div class="form">
-                    <input type="password" v-model="user.password" placeholder="    Password" class="box"/>
-                </div>
-                <div class="form">
-                    <input type="password" v-model="user.password2" placeholder="    Re-Enter Password" class="box"/>
-                </div>
-                <div class="form">
-                    <input type="text" v-model="user.course" placeholder="    Course" class="box"/>
-                </div>
-                <div class="dropdown">
-                    <select v-model="user.year">
-                        <option disabled value = ""> Year of Study </option>
-                        <option> Prospective Freshmen </option>
-                        <option> Year 1 </option>
-                        <option> Year 2 </option>
-                        <option> Year 3 </option>
-                        <option> Year 4 </option>
-                    </select>
-                </div>
-                <div>
-                    <button id="signing" v-on:click="submitted = true">Let's Get Started!</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    </div>
+        </b-col>
+        <b-col>
+            <b-row no-gutters="">
+                <b-col sm="4"> <h2 id="titles"> Sign Up /</h2> </b-col>
+                <b-col align-self="start">
+                    <router-link to="/log">
+                    <h2 id="login"> Login </h2>
+                    </router-link>
+                </b-col>
+            </b-row>
+            <h5 id="sub"> Fill in to join us! </h5>
+            <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+                <b-input-group id="group1">
+                    <b-input-group-prepend is-text>
+                        <b-icon icon="at" variant="info"></b-icon>
+                    </b-input-group-prepend>
+                    <b-form-input id="userid" v-model="form.userid" type="text" required placeholder="User ID"> </b-form-input>
+                </b-input-group>
+                <b-input-group id="group2">
+                    <b-input-group-prepend is-text>
+                        <b-icon icon="envelope" variant="info"></b-icon>
+                    </b-input-group-prepend>
+                    <b-form-input type="email" required placeholder="Email" v-model="form.email"> </b-form-input>
+                </b-input-group>
+                <b-input-group id="group3">
+                    <b-input-group-prepend is-text>
+                        <b-icon icon="lock-fill" variant="info"></b-icon>
+                    </b-input-group-prepend>
+                    <b-form-input type="password" required placeholder="Password" v-model="form.password"> </b-form-input>
+                </b-input-group>
+                <b-input-group id="group4">
+                    <b-input-group-prepend is-text>
+                        <b-icon icon="shield-lock-fill" variant="info"></b-icon>
+                    </b-input-group-prepend>
+                    <b-form-input type="password" required placeholder="Re-enter Password" v-model="form.password2"> </b-form-input>
+                </b-input-group>
+                <b-input-group id="group5">
+                    <b-input-group-prepend is-text>
+                        <b-icon icon="book-half-fill" variant="info"></b-icon>
+                    </b-input-group-prepend>
+                    <b-form-input type="text" required placeholder="Course" v-model="form.course"> </b-form-input>
+                </b-input-group>
+                <b-input-group id="group6">
+                    <b-input-group-prepend is-text>
+                        <b-icon icon="calendar-fill" variant="info"></b-icon>
+                    </b-input-group-prepend>
+                    <b-form-select v-model="form.year" :options="options"> </b-form-select>
+                </b-input-group>
+                <router-link to="/after">
+                    <b-button block variant="outline-light" id="start"> Let's Get Started! </b-button>
+                </router-link>
+            </b-form>
+        </b-col>
+    </b-row>
+</b-container>
 </template>
 
 <script>
+  export default {
+    data() {
+      return {
+        form: {
+          userid: '',
+          email: '',
+          password: '',
+          password2: '',
+          course: '',
+          year: null,
 
-export default {
-    data () {
-        return {
-            user: {
-                userId: '',
-                email: '',
-                password: '',
-                password2: '',
-                course: '',
-                year: ''
-            }
-        }
+        },
+        show: true,
+        options: [
+            { value: null, text: 'Year of study' },
+            { value: 'new', text: 'Prospective Freshmen' },
+            { value: '1', text: 'Year 1' },
+            { value: '2', text: 'Year 2' },
+            { value: '3', text: 'Year 3' },
+            { value: '4', text: 'Year 4' }
+        ]
+      }
+    },
+    methods: {
+      onSubmit(evt) {
+        evt.preventDefault()
+        alert(JSON.stringify(this.form))
+      },
+      onReset(evt) {
+        evt.preventDefault()
+        // Reset our form values
+        this.form.userid = '',
+        this.form.email = '',
+        this.form.password = '',
+        this.form.password2 = '',
+        this.form.course = '',
+        this.form.year = []
+        // Trick to reset/clear native browser form validation state
+        this.show = false
+        this.$nextTick(() => {
+          this.show = true
+        })
+      }
     }
-}
+  }
 </script>
 
 <style scoped>
-#test1 {
-    max-height: 100%;
-    max-width: 100%;
+#main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
 }
 
-#rectangle {
-    position: absolute;
-    width: 631px;
-    height: 1153px;
-    left: -35px;
-    top: 0px;
-
-    background: rgba(23, 23, 23, 0.49);
+#rows {
+    height: 100%;
+    width: 100%;
 }
 
 #overview {
     position: absolute;
-    width: 594px;
-    height: 1153px;
-    left: 0px;
-    top: 0px;
+    left: 0%;
+    background-image:url('/assets/login.jpeg');
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
-#description {
-    position: absolute;
-    width: 513px;
-    height: 518px;
-    left: 70px;
-    top: 402px;
 
-    background: rgba(196, 196, 196, 0.7);
+.bg-cover {
+  background-size: cover !important;
 }
 
-#reg {
+#rectangle{
     position: absolute;
-    margin-top: 2px;
-    width: auto;
-    height: auto;
-    left: 730px;
+    background-color: rgba(23, 23, 23, 0.49);
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#welcome {
+    font-family: 'Futura Hv BT';
+    font-size: 250%;
+    text-align: center;
+    margin-top: 30%;
+    color: #ffffff;
+}
+
+#subtitle {
+    font-family: 'Futura Hv BT';
+    font-size: 150%;
+    text-align: center;
+    color:  #ffffff;
 }
 
 #grey {
-    position: absolute;
-    top: -30px;
-}
-
-h4 {
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
     text-align: center;
-    width: 250px;
-}
-
-
-.placeholder {
-  position: absolute;
-  left: 20px;
-  top: 0px;
-  bottom: 50px;
-  opacity: -1;
-  background-color: white;
-  padding: 0 20px;
-}
-
-#change {
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-}
-
-h2 {
-    position: absolute;
-    width: auto;
-    height: 58px;
-    margin-left: 180px;
-    top: 170px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 45px;
-    line-height: 54px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-}
-
-p {
-    position: absolute;
-    width: auto;
-    height: 72px;
-    left: 170px;
-    top: 220px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 25px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-}
-
-#quote {
-    position: absolute;
-    width: 348px;
-    height: 72px;
-    left: 150px;
-    top: 220px;
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 25px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-}
-
-#extra {
-    position: absolute;
-    width: 241px;
-    height: 54px;
-    left: 0px;
-    top: 173px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-
+    font-family: 'Futura Hv BT';
+    background-color: rgba(196, 196, 196, 0.7);
+    width: 68%;
+    margin-left: 15%;
+    margin-top: 10%;
+    font-size: 120%;
     color: #000000;
 
 }
 
-#signup {
-    position: absolute;
-    width: auto;
-    height: 500px;
-    top: 280px;
+#titles {
+    font-family: 'Futura Hv BT';
+    font-size: 190%;
+    margin-top: 20%;
+    margin-left: 20%;
+    height: 40%;
+    width: 75%;
 }
 
-input {
-    width: 447px;
-    height: 50px;
-    outline: none;
-    border: none;
-    padding-bottom: 0px;
-    border-bottom: 1px solid #000000;
+#login {
+    font-family: 'Futura Hv BT';
+    font-size: 190%;
+    margin-top: 10%;
+    margin-left: 0%;
+    text-align: left;
+    color: #ADACAC;
+    text-decoration: underline;
 }
 
-#signing {
-    background-color:#84CEEB; 
-    width:385px; 
-    height:43px;
-    font-family:'Futura Hv BT'; 
-    font-size:20px; 
-    color:#FFFFFF;
-    position: center;
-
-    position: absolute;
-    left: 90px;
-    top: 600px;
-    border: none;
-    cursor: pointer;
-}
-#signing:hover {
-    opacity: 0.8;
+#sub {
+    font-family: 'Futura Hv BT';
+    font-size: 150%;
+    margin-left: 7%;
+    margin-top: 8%;
 }
 
-.form {
-    margin-bottom: 40px;
-    width: 700px;
+#group1 {
+    margin-top: 10%;
+    margin-left: 6%;
+    width: 90%;
 }
 
-.box {
-    border:0px;
-    border-bottom: 1px solid grey;
-    width: 500px;
+#group2 {
+    width: 90%;
+    margin-left: 6%;
+    margin-top: 7%;
 }
 
-.dropdown {
-    margin-top: 50px;
-    top: 450px;
-    left: 0px;
+#group3 {
+    width: 90%;
+    margin-left: 6%;
+    margin-top: 7%;
 }
 
-select {
-    border: none;
-    width: 456px;
-    height: 40px;
-    border-bottom: 1px solid #000000;
-    background-color: #ffffff;
+#group4 {
+    width: 90%;
+    margin-left: 6%;
+    margin-top: 7%;
 }
+
+#group5 {
+    width: 90%;
+    margin-left: 6%;
+    margin-top: 7%;
+}
+
+#group6 {
+    width: 90%;
+    margin-left: 6%;
+    margin-top: 7%;
+}
+
+#start {
+    font-family: 'Futura Hv BT';
+    background-color: #84CEEB;
+    margin-top: 7%;
+    margin-left: 29%;
+    width: 50%;
+}
+
 </style> 

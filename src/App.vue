@@ -25,6 +25,7 @@ html, body {
   overflow-x: hidden;
   overflow-y:scroll; */
   scrollbar-width: thin;
+  padding-top:28px;
 }  
 
 </style>

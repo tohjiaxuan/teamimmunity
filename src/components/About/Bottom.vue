@@ -14,7 +14,7 @@
             :interval="4000"
             controls
             indicators
-            background="white"
+            background="linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 80%)"
             img-height=280
             style="text-shadow: 1px 1px 2px #333;"
         >
@@ -123,7 +123,7 @@ h2{
   margin: auto;
 }
 
-.carousel-inner .active{
+.carousel-inner.active{
      background:none !important;
 }
 
@@ -132,9 +132,10 @@ h2{
     color:black
 }
 
-.carousel .controls{
+/* .carousel.controls{
     color:black !important;
-}
+} */
+
 
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
@@ -143,5 +144,10 @@ h2{
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
+
+.bg-overlay {
+    background: #CBE7F8;
+}
+
 
 </style>

@@ -1,570 +1,211 @@
 <template>
   <div>
-    <app-Navbar></app-Navbar>
-    <Title></Title>
-    <span id='badges'>10 badges</span>
-    <span id='rank'>1 Rank</span>
-    <router-link to='/after/account'><button id='profile'>Edit Profile</button></router-link>
+    <Navbar></Navbar>
 
-    <div id='rect1'></div>
-    <span id='current'>Currently On:</span>
-    <span id='ex1'>Python Exercise 5</span>
-    <div id='btn1'></div>
-    <span id='btntext1'>Continue</span>
+    <b-container fluid>
+        <b-row>
+            <b-col class='first-section'>
+                <b-row class='mt-5 pt-5'>
+                    <b-col align='center'>
+                        <b-img fluid src="http://nicesnippets.com/demo/1499344631_malecostume.png"></b-img>
+                    </b-col>
+                </b-row>
 
-    <div id='rect2'></div>
-    <span id='reco'>Recommended Exercise:</span>
-    <span id='ex2'>Python Final Exercise</span>
-    <div id='btn2'></div>
-    <span id='btntext2'>Start</span>
+                <b-row><b-col align='center' class='pt-3'><span id='font40'>ARNOLD NG</span></b-col></b-row>
 
-    <div id='rect3'></div>
-    <span id='prog'>Progress:</span>
-    <hr id='line1'>
-    <hr id='line2'>
+                <b-row>
+                    <b-col align='center' class='pt-4 pb-2'>
+                        <b-button to='/after/account' variant='info'>Edit Profile</b-button>
+                    </b-col>
+                </b-row>
 
-    <div id='rect4'></div>
-    <span id='leaderboard'>Leaderboard</span>
-    <span id='badges2'>Badges</span>
-    <span id='first'>1. </span>
-    <span id='arnold'>Arnold</span>
-    <span id='ten'>10</span>
-    <span id='second'>2. </span>
-    <span id='charlotte'>Charlotte</span>
-    <span id='seven'>7</span>
-    <span id='third'>3. </span>
-    <span id='nicole'>Nicole</span>
-    <span id='five'>5</span>
+                <b-row>
+                    <b-col><hr align='center' class='w-75' ></b-col>
+                </b-row>
 
-    <app-footer id='footer'></app-footer>
+                <b-row>
+                    <b-col align='left' class='offset-1 pl-4'>
+                        <span id='number'>10</span>
+                        <br>
+                        <span>BADGES</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col><hr align='center' class='w-75' ></b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col align='left' class='offset-1 pl-4'>
+                        <span id='number'>1</span>
+                        <br>
+                        <span>RANK</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col><hr align='center' class='w-75' ></b-col>
+                </b-row>
+            </b-col>
+
+            <b-col cols='7' class='second-section'>
+                <b-row>
+                    <b-col align='center' class='pt-5 pb-5'>
+                        <span id='font35'>PROFILE PAGE</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col>
+                        <span id='font20'>Overall Progress</span>
+                        <b-progress :value="oValue" :max="max" show-progress animated height='30px' variant="danger" class='mb-4'></b-progress>
+
+                        <span id='font20'>Python</span>
+                        <b-col align='right' class='mt-n4'><span id='font20'>Completed!!</span></b-col>
+                        <b-progress :value="pValue" :max="max" show-progress animated height='20px' variant="success" class='mb-4'></b-progress>
+
+                        <span id='font20'>Java</span>
+                        <b-progress :value="jValue" :max="max" show-progress animated height='20px' variant="info" class='mb-4'></b-progress>
+
+                        <span id='font20'>Javascript</span>
+                        <b-progress :value="jsValue" :max="max" show-progress animated height='20px' variant="warning" class='mb-4'></b-progress>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col cols='auto' class='mt-5'><span id='font25'>Currently On:</span></b-col>
+                    <b-col class='mt-5'><span id='font25'>Java Exercise 5</span></b-col>
+                </b-row>
+                <b-row>
+                    <b-col class='mt-4'><b-button variant='info'>Continue</b-button></b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col cols='auto' class='mt-5'><span id='font25'>Recommended Exercise:</span></b-col>
+                    <b-col class='mt-5'><span id='font25'>Python Final Exercise</span></b-col>
+
+                </b-row>
+                <b-row>
+                    <b-col class='mt-4'><b-button variant='info'>Start</b-button></b-col>
+                </b-row>
+
+                <hr>
+            </b-col>
+
+            <b-col class='third-section'>
+                <b-row>
+                    <b-col align='center' class='pt-4'>
+                        <span id='font35'>Leaderboard</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col><hr align='center' class='w-75 ' ></b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col align='right' class='mt-1 mb-4'><span id='badges'>Badges</span></b-col>
+                </b-row>
+
+                <b-row class='mb-3'>
+                    <b-col cols='2'><span id='font20'>1</span></b-col>
+                    <b-col><span id='font20'>Arnold</span></b-col>
+                    <b-col cols='4' align='center'><span id='font20'>10</span></b-col>
+                </b-row>
+                <b-row class='mb-3'>
+                    <b-col cols='2'><span id='font20'>2</span></b-col>
+                    <b-col><span id='font20'>Charlotte</span></b-col>
+                    <b-col cols='4' align='center'><span id='font20'>7</span></b-col>
+                </b-row>
+                <b-row class='mb-3'>
+                    <b-col cols='2'><span id='font20'>3</span></b-col>
+                    <b-col><span id='font20'>Nicole</span></b-col>
+                    <b-col cols='4' align='center'><span id='font20'>5</span></b-col>
+                </b-row>    
+
+
+            </b-col>
+        </b-row>        
+    </b-container>
+
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Navbar from '../About/Navbar.vue'
-import Title from './afterlogintitle.vue'
-import Footer from '../Footer.vue'
+import Navbar from '../Common/Navbar.vue'
+import Footer from '../Common/Footer.vue'
 export default {
+    data() {
+        return {
+            oValue: 23,
+            pValue: 100,
+            jValue: 19,
+            jsValue: 82,
+            max: 100,
+        }
+    },
     components: {
-    'app-Navbar': Navbar,
-    Title,
-    'app-footer': Footer,
-  }
-
+        Navbar,
+        Footer,
+    }
 }
 </script>
 
 <style scoped>
+.b-col {
+    border:1px solid red;
+}
+
+.first-section {
+    background-color:aliceblue;
+}
+
+#font20 {
+    font-size: 20px;
+}
+
+#font25 {
+    font-size: 25px;;
+}
+
+#font35 {
+    font-size: 35px;
+}
+
+#font40 {
+    font-size: 40px;
+}
+
+hr{
+  border: 2px solid #E5E5E5;
+}
+
+button {
+    font-family: Futura Hv BT;
+}
+
+span {
+    font-family: Futura Hv BT;
+    font-size: 25px;
+}
+
+#number {
+    font-size: 40px;
+    color: #7CBBC3;
+}
+
+.second-section {
+    background-color: white;
+}
+
+.third-section {
+    background-color: aliceblue
+}
+
 #badges {
-    position: absolute;
-    width: 79px;
-    height: 54px;
-    left: 1255px;
-    top: 170px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
     font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
+    text-decoration: underline;
 }
 
-#rank {
-    position: absolute;
-    width: 59px;
-    height: 54px;
-    left: 1360px;
-    top: 170px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#profile{
-    position: absolute;
-    width: 119px;
-    height: 33px;
-    left: 1300px;
-    top: 234px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-    background-color: rgba(86, 128, 233, 0.53);
-
-
-}
-
-#rect1 {
-    position: absolute;
-    width: 646px;
-    height: 270px;
-    left: 5%;
-    top: 350px;
-
-    background: #FFFFFF;
-    border: 2px solid #C4C4C4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-
-#current {
-    position: absolute;
-    width: auto;
-    height: 101px;
-    left: 7%;
-    top: 335px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#ex1 {
-    position: absolute;
-    width: auto;
-    height: 42px;
-    left: 21%;
-    top: 454px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#btn1 {
-    position: absolute;
-    width: 166px;
-    height: 48px;
-    left: 35.5%;
-    top: 559px;
-
-    background: #C4C4C4;
-    border-radius: 20px;
-}
-
-#btntext1 {
-    position: absolute;
-    width: auto;
-    height: 24px;
-    left: 38%;
-    top: 569px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#rect2 {
-    position: absolute;
-    width: 646px;
-    height: 270px;
-    left: 53%;
-    top: 350px;
-
-    background: #FFFFFF;
-    border: 2px solid #C4C4C4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-
-#reco {
-    position: absolute;
-    width: auto;
-    height: 101px;
-    left: 55%;
-    top: 335px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#ex2 {
-    position: absolute;
-    width: auto;
-    height: 42px;
-    left: 68%;
-    top: 454px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#btn2 {
-    position: absolute;
-    width: 163px;
-    height: 48px;
-    left: 83.5%;
-    top: 559px;
-
-    background: #C4C4C4;
-    border-radius: 20px;
-}
-
-#btntext2 {
-    position: absolute;
-    width: auto;
-    height: 24px;
-    left: 87.4%;
-    top: 569px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 24px;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#rect3 {
-    position: absolute;
-    width: 900px;
-    height: 490px;
-    left: 5%;
-    top: 698px;
-
-    background: #FFFFFF;
-    border: 2px solid #C4C4C4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-
-#prog {
-    position: absolute;
-    width: auto;
-    height: 75px;
-    left: 7%;
-    top: 710px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-}
-
-#line1 {
-    position: absolute;
-    width: 830px;
-    height: 0px;
-    left: 7.7%;
-    top: 800px;
-}
-
-#line2 {
-    position: absolute;
-    width: 830px;
-    height: 0px;
-    left: 7.7%;
-    top: 870px;
-}
-
-#rect4 {
-    position: absolute;
-    width: 393px;
-    height: 490px;
-    left: 70%;
-    top: 698px;
-
-    background: #FFFFFF;
-    border: 2px solid #C4C4C4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-
-#leaderboard {
-    position: absolute;
-    width: auto;
-    height: 75px;
-    left: 72%;
-    top: 710px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-}
-
-#badges2 {
-    position: absolute;
-    width: auto;
-    height: 22px;
-    left: 90%;
-    top: 782px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#first {
-    position: absolute;
-    width: 223px;
-    height: 43px;
-    left: 71%;
-    top: 815px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#arnold {
-    position: absolute;
-    width: auto;
-    height: 43px;
-    left: 81%;
-    top: 815px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#ten {
-    position: absolute;
-    width: auto;
-    height: 43px;
-    left: 91.5%;
-    top: 815px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#second {
-    position: absolute;
-    width: 223px;
-    height: 43px;
-    left: 71%;
-    top: 860px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#charlotte {
-    position: absolute;
-    width: auto;
-    height: 43px;
-    left: 81%;
-    top: 860px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#seven {
-    position: absolute;
-    width: auto;
-    height: 43px;
-    left: 91.9%;
-    top: 860px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#third {
-    position: absolute;
-    width: 223px;
-    height: 43px;
-    left: 71%;
-    top: 905px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#nicole {
-    position: absolute;
-    width: auto;
-    height: 43px;
-    left: 81%;
-    top: 905px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: right;
-
-    color: #000000;
-}
-
-#five {
-    position: absolute;
-    width: auto;
-    height: 43px;
-    left: 91.9%;
-    top: 905px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
-}
-
-#footer {
-  position: absolute;
-  width: 454px;
-  height: 30px;
-  left: 1219px;
-  top: 1250px;
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-}
-
-/* span {
-    border: 1px solid red;
-} */
 </style>

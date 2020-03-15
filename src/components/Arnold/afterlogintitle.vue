@@ -1,7 +1,12 @@
 <template>
-  <div class="text">
-    <div id='img'></div>
-    <span id='text1'>{{text1}}</span>
+  <div>
+    <b-container fluid>
+      <b-row class='pr-5'>
+        <b-col align='right' class='p-5 mr-5'>
+          <span>{{text1}}</span>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -16,32 +21,8 @@ export default {
 </script>
 
 <style scoped>
-#img {
-    position: absolute;
-    width: 100%;
-    height: 215px;
-    left: 0px;
-    top: 87px;
-    background: url('/assets/title1.jpg');
-    background-size: cover;
-}
-
-#text1 {
-    position: absolute;
-    width: 315px;
-    height: 142px;
-    left: 1273px;
-    top: 60px;
-
-    font-family: Futura Hv BT;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #000000;
+span {
+  font-family: Futura Hv BT;
+  font-size: 30px;
 }
 </style>

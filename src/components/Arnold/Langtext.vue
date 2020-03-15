@@ -6,7 +6,7 @@
     <button>Let's Go</button>
     Let's Go
     </router-link> -->
-    <b-container fluid class='pb-5 mb-2'>
+    <b-container fluid class='pb-5 mb-3'>
       <b-row align='center'>
         <b-col>
           <b-img fluid src="/assets/python1.png" class='pt-5 mt-4'></b-img>

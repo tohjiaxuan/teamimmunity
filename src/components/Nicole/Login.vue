@@ -52,6 +52,7 @@ export default {
 #background {
     position: absolute;
     background-image:url('/assets/login.jpeg');
+    top: 0%;
 }
 
 .page-holder {

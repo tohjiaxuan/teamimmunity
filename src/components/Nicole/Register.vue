@@ -60,7 +60,9 @@
                     </b-input-group-prepend>
                     <b-form-select v-model="form.year" :options="options"> </b-form-select>
                 </b-input-group>
-                <router-link to="/after">
+                <br>
+                <br>
+                <router-link id="move" to="/after">
                     <b-button block variant="outline-light" id="start"> Let's Get Started! </b-button>
                 </router-link>
             </b-form>
@@ -122,6 +124,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    top: 0%;
 
 }
 
@@ -158,7 +161,7 @@
     font-family: 'Futura Hv BT';
     font-size: 250%;
     text-align: center;
-    margin-top: 30%;
+    padding-top: 30%;
     color: #ffffff;
 }
 
@@ -175,7 +178,7 @@
     background-color: rgba(196, 196, 196, 0.7);
     width: 68%;
     margin-left: 15%;
-    margin-top: 10%;
+    padding-top: 10%;
     font-size: 120%;
     color: #000000;
 
@@ -184,7 +187,7 @@
 #titles {
     font-family: 'Futura Hv BT';
     font-size: 190%;
-    margin-top: 20%;
+    padding-top: 20%;
     margin-left: 20%;
     height: 40%;
     width: 75%;
@@ -193,7 +196,7 @@
 #login {
     font-family: 'Futura Hv BT';
     font-size: 190%;
-    margin-top: 10%;
+    padding-top: 10%;
     margin-left: 0%;
     text-align: left;
     color: #ADACAC;
@@ -204,11 +207,11 @@
     font-family: 'Futura Hv BT';
     font-size: 150%;
     margin-left: 7%;
-    margin-top: 8%;
+    padding-top: 8%;
 }
 
 #group1 {
-    margin-top: 10%;
+    padding-top: 10%;
     margin-left: 6%;
     width: 90%;
 }
@@ -216,37 +219,36 @@
 #group2 {
     width: 90%;
     margin-left: 6%;
-    margin-top: 7%;
+    padding-top: 7%;
 }
 
 #group3 {
     width: 90%;
     margin-left: 6%;
-    margin-top: 7%;
+    padding-top: 7%;
 }
 
 #group4 {
     width: 90%;
     margin-left: 6%;
-    margin-top: 7%;
+    padding-top: 7%;
 }
 
 #group5 {
     width: 90%;
     margin-left: 6%;
-    margin-top: 7%;
+    padding-top: 7%;
 }
 
 #group6 {
     width: 90%;
     margin-left: 6%;
-    margin-top: 7%;
+    padding-top: 7%;
 }
 
 #start {
     font-family: 'Futura Hv BT';
     background-color: #84CEEB;
-    margin-top: 7%;
     margin-left: 29%;
     width: 50%;
 }

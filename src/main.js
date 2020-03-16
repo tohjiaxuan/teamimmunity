@@ -1,6 +1,13 @@
+import '@babel/polyfill'
+import 'mutationobserver-shim'
 import Vue from 'vue'
+import './plugins/bootstrap-vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import { BootstrapVue, IconsPlugin} from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 import HomePage from './components/Homepage.vue'
 import About from './components/About.vue'
 import Language from './components/Language.vue'
@@ -25,11 +32,14 @@ import Exercise from './components/Exercise.vue'
 import Page2 from './components/Charlotte/Page2.vue'
 import Page3 from './components/Charlotte/Page3.vue'
 
+Vue.config.productionTip = false
 
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 Vue.use(VueRouter);
-
-Vue.config.productionTip = false
 
 const router = new VueRouter ({
   routes: [

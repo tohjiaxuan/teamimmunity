@@ -1,200 +1,195 @@
 <template>
-    <div id="page">
-        <navbar></navbar>
-        <app-header id="blueheader"></app-header>
+<div id="cs1010s-page">
+    <navbar></navbar>
+    <Footer id="footer"></Footer>
 
-        <div class="container">
-            <div id="cs1010s">
-                    <h1 id="cs"><u>CS1010S</u></h1>
+    <div id="background" class="page-holder bg-cover"/>
+    <div id="overlay" class="shadow-lg p-3 mb-5 bg-grey rounded"/>
 
-                    <section id = "searchmodules">
-                        <b>Module Subject Area: </b> 
-                        <input type="text" name="subjectarea" v-model="subjectarea" placeholder="   Module Code" 
-                        style="height:30px; width:300px; font-family: 'Futura Hv BT'; font-size: 17px; margin-left:7px"/>
-                        <a href="#Search">&#x1f50d;</a>
-                        <p></p>
-                        <b>Module Catalog No.: </b>
-                        <input type="text" name="catalognumber" v-model="catalognumber" placeholder="   Catalog Number" 
-                        style="height:30px; width:300px; font-family: 'Futura Hv BT'; font-size: 17px; margin-left:10px;"/>
-                        <a href="#Search">&#x1f50d;</a>
-                    </section>
+        <div id="content">
+            <b-container id="cs1010s">
+                <div id="word">
+                    <p id="word1" class="h4 text-center mb-4">Search</p>   
+                </div>
+        
+                <!-- entire blue search bar -->
+                <div id="search-row">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label id="word2" for="subjectarea">Subject Area</label>
+                            <input id="search" type="text" class="form-control" placeholder="Subject Area">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label id="word2" for="catalognum">Catalogue Number</label>
+                            <input id="search" type="text" class="form-control" placeholder="Catalogue Number">
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <b-button id="btn" type="button">Go</b-button>
+                <!-- end -->
 
-                    <p></p>
-                    <button type="button" id="gobtn"
-                    style="background-color:#84CEEB; width:100px; height:40px; border-radius:20px;
-                    font-family:'Futura Hv BT'; font-size:18px; color:#FFFFFF"> Go </button>
+                <div id="mod-box">
+                    <div><p id="h1">CS1010S - Programming Methodology</p></div>
 
-                    <section id="modsynopsis1">
-                        <b>Module Synopsis: </b>
-                        <div id = "modsynopsis2">
+                    <br>
+
+                    <div id="mod-synopsis">
+                        <div id="mod-synopsis-1"><p id="name"><b>Module Synopsis:</b></p></div>
+                        <div id = "mod-synopsis-2">
                             This module introduces the fundamental concepts of problem solving by computing and programming using an 
                             imperative programming language. Topics covered include problem solving by computing, writing pseudo-codes, 
                             basic problem formulation and problem solving, program development, coding, testing and debugging, fundamental 
                             programming constructs (variables, types, expressions, assignments, functions, control structures, etc.), 
                             fundamental data structures: arrays, strings and structures, simple file processing, and basic recursion.
                         </div>
-                    </section>
+                    </div>
 
-                    <section id="relevlang1">
-                        <b>Relevant Languages: </b>
-                        <section id = "relevlang2">
+                    <br>
+
+                    <div id="relev-lang">
+                        <div id="relev-lang-1"><p id="name"><b>Relevant Languages:</b></p></div>
+                        <div id="relev-lang-2">
                             Python
-                        </section>
-                    </section>
+                        </div>
+                    </div>
 
-                    <section id="recomex1">
-                        <b>Recommended Ex. : </b>
-                        <section id="recomex2">
-                            <button type="py1" id="btn" name="langbutton" style="background-color:rgb(0, 128, 128); width:120px; height:40px
-                            font-family:'Futura Hv BT'; font-size:15px; color:#ffffff">Python 1</button>
-                            <button type="py2" id="btn" name="langbutton" style="background-color:rgb(0, 128, 128); width:120px; height:40px
-                            font-family:'Futura Hv BT'; font-size:15px; color:#ffffff">Python 2</button>
-                            <button type="py3" id="btn" name="langbutton" style="background-color:rgb(0, 128, 128); width:120px; height:40px
-                            font-family:'Futura Hv BT'; font-size:15px; color:#ffffff">Python 3</button>
-                        </section>
-                    </section>
+                    <br>
+
+                    <div id="recom-ex">
+                        <div id="recom-ex-1"><p id="name"><b>Recommended Ex. :</b></p></div>
+                        <div id="recom-ex-2">
+                            <button type="button" id="ex-btn" name="langbutton">Python 1</button>
+                            <button type="button" id="ex-btn" name="langbutton">Python 2</button>
+                            <button type="button" id="ex-btn" name="langbutton">Python 3</button>
+                        </div>
+                    </div>   
                     
-            </div>
-        </div>
-        <Footer id='footer'></Footer>
+                </div>
 
-    </div>
+            </b-container>
+        </div>
+
+   
+
+</div>
 </template>
 
 <script>
-import navbar from '../About/Navbar.vue'
-import Header from './Header.vue'
+import navbar from '../About/Header.vue'
 import Footer from '../Footer.vue'
 export default {
     components: {
         'navbar': navbar,
-        'app-header': Header,
-        Footer,
+        Footer
     }
 }
 </script>
 
 <style scoped>
-#page {
+#background {
+    position: absolute;
+    top: 36%;
+    background-image: url(/assets/cs1010s-bkg.jpeg);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+    opacity: 0.6;
+}
+
+#overlay {
+    position: absolute;
+    top: 36%;
+    background: rgba(226, 222, 222, 0.65);
+    height: 100%;
     width: 100%;
-    height: auto;
+    z-index: -1;
 }
 
-.container {
-    width:100%;
-    height:100%;
-    font-family: 'Futura Hv BT';
-    text-align: center;
-    color: #2c3e50;
-    padding-left: 250px;
-    padding-right: 250px;
-}
+/*Search Section*/
 
-#cs1010s {
+#word {
     position: absolute;
-    width: auto;
-    height: auto;
-    left: 350px;
-    top: 400px;
+    background: rgb(152, 208, 240);
+    top: 13%;
+    left: 10%;
+    width: 80%;
+    height: 19%;
 }
 
-#cs {
+#word1 {
+    font-family: "Futura Hv BT";
+    font-size: 40px;
+}
+
+#word2 {
+    font-family: "Futura Hv BT";
+    font-size: 18px;
+}
+
+#search-row {
     position: absolute;
-    width: auto;
-    height: auto;
-    left: 85px;
-    top: -100px;
+    background: rgb(152, 208, 240);
+    border: none;
+    top: 21%;
+    left: 11%;
+    width: 70%;
+    height: 10%;
 }
 
-a {
-    margin: 20px;
-    font-size: 25px;
+#search {
+    background: white;
+    border: 1px;
 }
 
 #btn {
-    font-family: 'Futura Hv BT';
-    background-color: rgb(0, 128, 128);
-}
-
-#gobtn {
     position: absolute;
-    width: auto;
-    height: auto;
-    left: 680px;
-    top: 20px;
+    top: 24%;
+    left: 82%;
+    width: 6%;
+    height: 6%;
+    font-family: 'Futura Hv BT';
+    font-size: 22px;
+    cursor: pointer;    
+    background-color: white; 
+    border-color: #2196F3;
+    color: dodgerblue
+}
+#btn:hover {
+    background: #2196F3;
+    color: white;
 }
 
-#langbutton {
-    padding-right: 10px;
+/*Name of Module*/
+
+#mod-box {
+    position: absolute;
+    background: none;
+    top: 50%;
+    left: 10%;
+    height: 100%;
+    width: 80%;
 }
 
-#searchmodules {
-    margin-left: 85px;
-    text-align: left;
+#h1 {
+    font-family: "Futura Hv BT";
+    font-size: 40px;
 }
 
-#modsynopsis1 {
-    padding-top: 50px;
-    margin-left: 85px;
-    text-align: left;
-    
+/*Details*/
+
+#name {
+    font-size: 20px;
 }
 
-#modsynopsis2 {
-    width: 600px;
-    margin-left: 179px;
-    text-align: left;
-    margin-top: -18px;
+#ex-btn {
+    background-color:rgb(0, 128, 128); 
+    width:10%; 
+    font-family:'Futura Hv BT'; 
+    font-size:17px; 
+    color:#ffffff;
 }
-
-#relevlang1 {
-    padding-top: 30px;
-    margin-left: 85px;
-    text-align: left;
-}
-
-#relevlang2 {
-    margin-left: 180px;
-    text-align: left;
-    margin-top:-18px;
-}
-
-#recomex1 {
-    padding-top: 50px;
-    margin-left: 85px;
-    text-align: left;
-}
-
-#recomex2 {
-    margin-left: 180px;
-    text-align: left;
-    margin-top:-29px;
-}
-
-#footer {
-  position: absolute;
-  width: 454px;
-  height: 30px;
-  left: 1219px;
-  top: 1000px;
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-}
-
-button {
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    opacity: 0.8;
-}
-
 </style>

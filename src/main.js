@@ -31,6 +31,8 @@ import diff1 from './components/Vicki/Diff1.vue'
 import diff2 from './components/Vicki/Diff2.vue'
 import diff3 from './components/Vicki/Diff3.vue'
 
+
+
 import Page1 from './components/Charlotte/Page1.vue'
 import Question1 from './components/Charlotte/Question1.vue'
 
@@ -58,6 +60,7 @@ const router = new VueRouter ({
     {path: '/diff1', component:diff1},
     {path: '/diff2', component:diff2},
     {path: '/diff3', component:diff3},
+    
    
     {path: '/after/account', component:Account}, 
     { path:'/page1', component: Page1},

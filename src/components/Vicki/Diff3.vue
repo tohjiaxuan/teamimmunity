@@ -154,7 +154,7 @@
   
   
   <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info float-left">Back</button></router-link>
-  <button type="button" class="btn btn-info float-right">Next</button>
+  <router-link to="/page1" id="getstarted5"><button type="button" class="btn btn-info float-right">Try Exercises!</button></router-link>
   <br>
   <br>
   <br>

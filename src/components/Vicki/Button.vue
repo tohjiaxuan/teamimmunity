@@ -53,6 +53,12 @@ export default {
     --input-padding-x: 1.5rem;
     --input-padding-y: 0.75rem;
   }
+
+  /*:-moz-any-link
+  h4 {
+    font-family: Futura HV BT;
+  }
+  */
   
   .login,
   .image {
@@ -81,6 +87,7 @@ export default {
   
   .btn-login {
     font-size: 0.9rem;
+    font-family: Futura HV BT;
     color:black;
     letter-spacing: 0.05rem;
     padding: 0.75rem 1rem;

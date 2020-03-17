@@ -1,19 +1,21 @@
 <template>
 <div id="cs1010s-page">
     <navbar></navbar>
-    <Footer id="footer"></Footer>
 
-    <div id="background" class="page-holder bg-cover"/>
-    <div id="overlay" class="shadow-lg p-3 mb-5 bg-grey rounded"/>
+    <b-container id="whole" fluid class='my-container text-dark bg-overlay pb-5 pt-0'>
+
+        <div id="background" class="page-holder bg-cover"/>
+        <div id="overlay" class="shadow-lg p-3 mb-5 bg-grey rounded"/>
 
         <div id="content">
-            <b-container id="cs1010s">
-                <div id="word">
-                    <p id="word1" class="h4 text-center mb-4">Search</p>   
-                </div>
+            
+            <div id="word">
+                <p id="space"></p>
+                <p id="word1" class="h4 text-center mb-4">Search</p>   
+            </div>
         
-                <!-- entire blue search bar -->
-                <div id="search-row">
+            <!-- entire blue search bar -->
+            <div id="search-row">
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -26,9 +28,10 @@
                         </div>
                     </div>
                 </form>
-                </div>
                 <b-button id="btn" type="button">Go</b-button>
-                <!-- end -->
+            </div>
+            
+            <!-- end -->
 
                 <div id="mod-box">
                     <div><p id="h1">CS1010S - Programming Methodology</p></div>
@@ -68,17 +71,17 @@
                     
                 </div>
 
-            </b-container>
+        
         </div>
 
-   
-
+    </b-container>
+    <Footer id="footer"></Footer>
 </div>
 </template>
 
 <script>
 import navbar from '../Common/Navbar.vue'
-import Footer from '../Footer.vue'
+import Footer from '../Common/Footer.vue'
 export default {
     components: {
         'navbar': navbar,
@@ -88,6 +91,7 @@ export default {
 </script>
 
 <style scoped>
+
 #background {
     position: absolute;
     top: 36%;
@@ -110,14 +114,15 @@ export default {
 }
 
 /*Search Section*/
-
+#space {
+    height: 10%;
+}
 #word {
     position: absolute;
-    background: rgb(152, 208, 240);
-    top: 13%;
-    left: 10%;
-    width: 80%;
-    height: 19%;
+    background: linear-gradient(#CBE7F8 54%,rgba(245, 242, 242, 0.65));
+    top: 7%;
+    width: 100%;
+    height: 29%;
 }
 
 #word1 {
@@ -132,8 +137,6 @@ export default {
 
 #search-row {
     position: absolute;
-    background: rgb(152, 208, 240);
-    border: none;
     top: 21%;
     left: 11%;
     width: 70%;
@@ -147,10 +150,10 @@ export default {
 
 #btn {
     position: absolute;
-    top: 24%;
-    left: 82%;
-    width: 6%;
-    height: 6%;
+    top: 34%;
+    left: 103%;
+    width: 8%;
+    height: 51%;
     font-family: 'Futura Hv BT';
     font-size: 22px;
     cursor: pointer;    

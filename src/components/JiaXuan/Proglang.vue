@@ -1,13 +1,13 @@
 <template>
 <div id="proglang-page">
     <navbar></navbar>
-    <Footer id="footer"></Footer>
 
-    <div id="background" class="page-holder bg-cover"/>
-    <div id="overlay" class="shadow-lg p-3 mb-5 bg-grey rounded">
+    <b-container fluid id="searchmodules">
 
-     <div id="content">
-        <b-container id="searchmodules">
+        <div id="background" class="page-holder bg-cover"/>
+        <div id="overlay" class="shadow-lg p-3 mb-5 bg-grey rounded">
+
+        <div id="content">
             <div id="title-box" class="shadow-lg p-3 mb-5 bg-grey rounded"/>
             <div id="title-box" class="shadow-lg p-3 mb-5 bg-grey rounded">
             <p id="main-header" class="h4 text-center mb-4">Feeling Stressed Over Coding?</p>
@@ -16,18 +16,19 @@
             
             <div id="search-row" class="shadow-lg p-3 mb-5 bg-grey rounded"/>
             <div id="search-row" class="shadow-lg p-3 mb-5 bg-grey rounded">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <!-- <label for="subjectarea">Subject Area</label> -->
-                            <input id="search" type="text" class="form-control" placeholder="Subject Area">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <!-- <label for="catalognum">Catalogue Number</label> -->
-                            <input id="search" type="text" class="form-control" placeholder="Catalogue Number">
-                        </div>
+            <form>
+                <div id="divider" class="vl"></div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <!-- <label for="subjectarea">Subject Area</label> -->
+                        <input id="search" type="text" class="form-control" placeholder="Subject Area">
                     </div>
-                </form>
+                    <div class="form-group col-md-6">
+                        <!-- <label for="catalognum">Catalogue Number</label> -->
+                        <input id="search" type="text" class="form-control" placeholder="Catalogue Number">
+                    </div>
+                </div>
+            </form>
             </div>   
             <router-link to="/cs">
                 <b-button id="btn" type="button">Go</b-button>
@@ -39,35 +40,36 @@
 
             <div id="logo-row">
                 <div id="logos" class="form-row">
-                        <div class="col-md-3">
+                    <div class="col-md-3">
                         <router-link to="/python">
-                        <b-button id="py-btn" type="button"><img id="python" src="/assets/py-code.jpg" alt="python"></b-button>
+                            <b-button id="py-btn" type="button"><img id="python" src="/assets/py-code.jpg" alt="python"></b-button>
                         </router-link> 
-                        </div>
-                        <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
                         <router-link to="/java">
-                        <b-button id="jv-btn" type="button"><img id="java" src="/assets/java.svg" alt="java"></b-button>
+                            <b-button id="jv-btn" type="button"><img id="java" src="/assets/java.svg" alt="java"></b-button>
                         </router-link> 
-                        </div>
-                        <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
                         <router-link to="/js">
-                        <b-button id="js-btn" type="button"><img id="js" src="/assets/javascript.png" alt="javascript"></b-button>
+                            <b-button id="js-btn" type="button"><img id="js" src="/assets/javascript.png" alt="javascript"></b-button>
                         </router-link> 
-                        </div>
+                    </div>
                 </div>
             </div>
             
-        </b-container>        
-    </div>  
+             
+        </div>  
 
-    </div> 
-    
+        </div> 
+    </b-container>   
+    <Footer id="footer"></Footer>
 </div>
 </template>
 
 <script>
 import navbar from '../Common/Navbar.vue'
-import Footer from '../Footer.vue'
+import Footer from '../Common/Footer.vue'
 export default {
     components: {
         'navbar': navbar,
@@ -79,7 +81,7 @@ export default {
 <style scoped>
 #background {
     position: absolute;
-    background-image: url(/assets/proglangbkg.png);
+    background-image: url(/assets/proglangbkg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -100,7 +102,7 @@ export default {
 #title-box {
     position: absolute;
     background:rgba(240, 236, 236, 0.85);
-    top: 28%;
+    top: 17%;
     left: 10%;
     height: 20%;
     width: 80%;
@@ -121,20 +123,28 @@ export default {
 #search-row {
     position: absolute;
     background: rgba(240, 236, 236, 0.85);
-    top: 54%;
+    top: 43%;
     left: 10%;
     width: 70%;
     height: 8%;
 }
 
+.vl {
+    position: absolute;
+    border-left: 1px solid rgba(49, 48, 48, 0.85);
+    height: 60%;
+    left: 50%;
+    top: 23%;
+}
+
 #search {
-    background: none;
     border: none;
+    background: none;
 }
 
 #btn {
     position: absolute;
-    top: 55%;
+    top: 44%;
     left: 82%;
     width: 8%;
     font-family: 'Futura Hv BT';
@@ -154,7 +164,7 @@ export default {
     position: absolute;
     background: none;
     border: none;
-    top: 67%;
+    top: 60%;
     left: 10%;
     width: 80%;
     height: 4%;
@@ -166,7 +176,7 @@ export default {
     position: absolute;
     background: none;
     border: none;
-    top: 75%;
+    top: 70%;
     left: 25%;
     width: 70%;
     height: 20%;
@@ -200,10 +210,6 @@ export default {
 }
 #js {
     width: 45%;
-}
-
-#footer {
-    z-index: 5;
 }
 
 </style>

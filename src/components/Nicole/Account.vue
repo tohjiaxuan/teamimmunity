@@ -82,7 +82,11 @@
                     </b-row>
                 </b-row>
                 <b-row>
-                    <b-col class='mt-4'><b-button variant='info'>Confirm</b-button></b-col>
+                    <b-col class='mt-4'>
+                      <router-link to="/after">
+                      <b-button variant='info'>Confirm</b-button>
+                      </router-link>
+                    </b-col>
                 </b-row>
 
                 <b-row>
@@ -99,7 +103,11 @@
 
                 <b-row>
                   <b-col md="3" offset-md="3"></b-col>
-                  <b-col md="3" offset-md="3"><b-button id="final" variant='danger'>Submit</b-button></b-col>
+                  <b-col md="3" offset-md="3">
+                    <router-link to="/after">
+                     <b-button id="final" variant='danger'>Submit</b-button>
+                    </router-link>
+                    </b-col>
                 </b-row>
 
                 <br>              

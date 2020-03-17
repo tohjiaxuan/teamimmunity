@@ -31,7 +31,6 @@ import diff1 from './components/Vicki/Diff1.vue'
 import diff2 from './components/Vicki/Diff2.vue'
 import diff3 from './components/Vicki/Diff3.vue'
 
-
 import Page1 from './components/Charlotte/Page1.vue'
 import Question1 from './components/Charlotte/Question1.vue'
 

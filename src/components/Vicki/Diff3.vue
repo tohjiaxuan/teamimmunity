@@ -3,6 +3,8 @@
     
 
 <section class="pricing py-5">
+  <br>
+  <Navbar></Navbar>
   <div class="container">
     <div class="text-center">
     <img src="https://img.icons8.com/color/49/000000/3-circle-c--v1.png"/>
@@ -106,6 +108,7 @@
             <h5 class="card-title text-muted text-uppercase text-center">VARIABLE DECLARATION</h5>
             <h6 class="card-price text-center">
                 <img src="https://img.icons8.com/color/48/000000/javascript.png"/>
+                <br>
                 JavaScript
                 
             </h6>
@@ -148,13 +151,31 @@
 
     </div>
   </div>
+  
+  
   <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info float-left">Back</button></router-link>
   <button type="button" class="btn btn-info float-right">Next</button>
+  <br>
+  <br>
+  <br>
+  <Footer></Footer>
 </section>
 
 
 
 </template>
+
+<script>
+import Navbar from '../Common/Navbar.vue'
+import Footer from '../Common/Footer.vue'
+export default {
+    
+    components: {
+        Navbar,
+        Footer
+    }
+}
+</script>
 
 <style>
   section.pricing {

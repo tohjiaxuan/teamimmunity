@@ -6,11 +6,11 @@
 
             <b-container fluid class='pb-5 mb-3'>
 
-                <b-row>
+                <b-row align-h="center">
                     <h1 class="pl-5 pt-4 mt-4 display-4">{{text1}}</h1>
                     <form>
                         <div class="form-row">
-                            <div id="search" class="pl-4 pt-4 mt-3 form-group col-md-6 display-4">
+                            <div id="search" class="pl-5 pt-4 mt-3 form-group col-md-6 display-4">
                                 <!-- <label for="subjectarea">Subject Area</label> -->
                                 <input id="ip" type="text" class="form-control" placeholder="Subject Area">
                             </div>
@@ -20,7 +20,7 @@
                             </div>
                         </div> 
                     </form>
-                    <router-link class="pl-5 pt-4 mt-3" to="/cs">
+                    <router-link class="pl-4 pt-4 mt-3" to="/cs">
                         <b-button id="btn" type="button">Go</b-button>
                     </router-link>
                 </b-row>

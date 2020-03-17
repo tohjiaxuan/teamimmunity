@@ -16,7 +16,6 @@
             indicators
             background="linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 80%)"
             img-height=280
-            style="text-shadow: 1px 1px 2px #333;"
         >
         <b-carousel-slide>
                 <template v-slot:img>
@@ -27,7 +26,7 @@
                     fluid
                 ></b-img>
                 </template>
-                <span id="text">Arnold<br/>Nerd </span>
+                <span id="text">Arnold<br/>Nerd</span>
         </b-carousel-slide>
 
             <b-carousel-slide>
@@ -129,7 +128,8 @@ h2{
 
 #text{
     font-family: Futura Hv Bt;
-    color:black
+    color:black;
+    
 }
 
 /* .carousel.controls{

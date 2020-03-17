@@ -1,76 +1,76 @@
 <template>
-<div id="proglang-page">
-    <navbar></navbar>
+    <div id="proglang-page">
+        <navbar></navbar>
+        <div id="bkg" class="page-holder bg-overlay">
+            <b-container fluid class='pb-5 mb-3'>
 
-    <b-container fluid id="searchmodules">
-
-        <div id="background" class="page-holder bg-cover"/>
-        <div id="overlay" class="shadow-lg p-3 mb-5 bg-grey rounded">
-
-        <div id="content">
-            <div id="title-box" class="shadow-lg p-3 mb-5 bg-grey rounded"/>
-            <div id="title-box" class="shadow-lg p-3 mb-5 bg-grey rounded">
-            <p id="main-header" class="h4 text-center mb-4">Feeling Stressed Over Coding?</p>
-            <p id="sub-header" class="h4 text-center mb-4">Start searching for your module to have a headstart in Coding!</p>
-            </div>
-            
-            <div id="search-row" class="shadow-lg p-3 mb-5 bg-grey rounded"/>
-            <div id="search-row" class="shadow-lg p-3 mb-5 bg-grey rounded">
-            <form>
-                <div id="divider" class="vl"></div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <!-- <label for="subjectarea">Subject Area</label> -->
-                        <input id="search" type="text" class="form-control" placeholder="Subject Area">
+                <b-row align-h="center">
+                    <div id="title-box" class="p-4 mb-5 mt-5 pt-5">
+                    <h1 class="pt-2 display-4">{{text1}}</h1>
+                    <h1>{{text2}}</h1>
                     </div>
-                    <div class="form-group col-md-6">
-                        <!-- <label for="catalognum">Catalogue Number</label> -->
-                        <input id="search" type="text" class="form-control" placeholder="Catalogue Number">
+                </b-row>        
+
+                <b-row align-h="center">
+                    <div id="search-box">
+                        <form>
+                            <div class="form-row">
+                                <div id="search" class="form-group col-md-6 display-4">
+                                    <!-- <label for="subjectarea">Subject Area</label> -->
+                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area">
+                                </div>
+                                <div id="search" class="w-75 form-group col-md-6 display-4">
+                                    <!-- <label for="catalognum">Catalogue Number</label> -->
+                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number">
+                                </div>
+                            </div> 
+                        </form>      
                     </div>
-                </div>
-            </form>
-            </div>   
-            <router-link to="/cs">
-                <b-button id="btn" type="button">Go</b-button>
-            </router-link> 
 
-            <div id="message-row">
-                <p id="message" class="h4 text-center mb-4">Lost? Start by exploring the languages!</p>
-            </div>
+                    <router-link class="pl-4" to="/cs">
+                        <b-button id="btn" type="button">Go</b-button>
+                    </router-link>
+                </b-row>
 
-            <div id="logo-row">
-                <div id="logos" class="form-row">
-                    <div class="col-md-3">
+                <b-row align-h="center">
+                    
+                </b-row>
+
+                <b-row align-h="center" class="mt-3 pt-3 display-4">
+                    <div class="mt-5 pt-4 display-4">
+                    <h2 id="word-box">{{text3}}</h2>
+                    </div>
+                </b-row>
+
+                <b-row align-h="center">
                         <router-link to="/python">
-                            <b-button id="py-btn" type="button"><img id="python" src="/assets/py-code.jpg" alt="python"></b-button>
-                        </router-link> 
-                    </div>
-                    <div class="col-md-3">
+                            <b-button id="logo-btn" type="button"><b-img src="/assets/icons8-python-144.png" alt="python"></b-img></b-button>
+                        </router-link>
                         <router-link to="/java">
-                            <b-button id="jv-btn" type="button"><img id="java" src="/assets/java.svg" alt="java"></b-button>
-                        </router-link> 
-                    </div>
-                    <div class="col-md-3">
+                            <b-button id="logo-btn" type="button"><b-img src="/assets/icons8-java-144.png" alt="java"></b-img></b-button>
+                        </router-link>
                         <router-link to="/js">
-                            <b-button id="js-btn" type="button"><img id="js" src="/assets/javascript.png" alt="javascript"></b-button>
+                            <b-button id="logo-btn" type="button"><b-img src="/assets/icons8-javascript-144.png" alt="js"></b-img></b-button>
                         </router-link> 
-                    </div>
-                </div>
-            </div>
+                </b-row> 
             
-             
-        </div>  
-
-        </div> 
-    </b-container>   
-    <Footer id="footer"></Footer>
-</div>
+            </b-container>
+        </div>
+        <Footer></Footer>
+    </div>
 </template>
 
 <script>
 import navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 export default {
+    data() {
+        return {
+            text1: 'Feeling stressed over coding?',
+            text2: 'Start searching for a module to have a headstart!',
+            text3: 'Start by exploring the languages!'
+        }
+    },
     components: {
         'navbar': navbar,
         Footer
@@ -79,137 +79,90 @@ export default {
 </script>
 
 <style scoped>
-#background {
-    position: absolute;
-    background-image: url(/assets/proglangbkg.jpg);
+.page-holder {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* .bg-overlay {
+    background-image: url("/assets/proglangbkg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: #fff;
     height: 100vh;
-    width: 100vw;
-    z-index: -2;
-}
+    opacity: 1.0;
+} */
 
-#overlay {
-    position: absolute;
-    background: rgba(235, 231, 231, 0.65);
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+#bkg {
+    background: linear-gradient(180deg, #CBE7F8 0%, rgba(222, 248, 254, 0) 100%), url("/assets/proglangbkg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    opacity: 0.65;
 }
-
-/*Title Section*/
 
 #title-box {
-    position: absolute;
-    background:rgba(240, 236, 236, 0.85);
-    top: 17%;
-    left: 10%;
-    height: 20%;
+    background:none;
+    height: 10%;
     width: 80%;
 }
 
-#main-header {
-    font-family: "Futura Hv BT";
-    font-size: 50px;
-}
-
-#sub-header {
-    font-family: "Futura Hv BT";
-    font-size: 30px;
-}
-
-/*Search Section*/
-
-#search-row {
-    position: absolute;
-    background: rgba(240, 236, 236, 0.85);
-    top: 43%;
-    left: 10%;
-    width: 70%;
-    height: 8%;
-}
-
-.vl {
-    position: absolute;
-    border-left: 1px solid rgba(49, 48, 48, 0.85);
-    height: 60%;
-    left: 50%;
-    top: 23%;
+#search-box {
+    background:none;
+    height: 10%;
+    width: 60%;
 }
 
 #search {
-    border: none;
     background: none;
 }
 
+#ip {
+    background: white;
+
+    font-size: 24px;
+    color: black;
+}
+
+
+h1 {
+    font-family: 'Futura Hv BT';
+    font-size: 46px;
+    color: black;
+    text-align: center;
+}
+
+/* #word-box {
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    height: 100%;
+} */
+
 #btn {
-    position: absolute;
-    top: 44%;
-    left: 82%;
-    width: 8%;
+    height: 72%;
+    width: 120%;
     font-family: 'Futura Hv BT';
     font-size: 25px;
     cursor: pointer;    
     background-color: white; 
     border-color: #2196F3;
-    color: dodgerblue
+    color: dodgerblue;
 }
 #btn:hover {
     background: #2196F3;
     color: white;
 }
 
-/*Message*/
-#message-row {
-    position: absolute;
-    background: none;
-    border: none;
-    top: 60%;
-    left: 10%;
-    width: 80%;
-    height: 4%;
+h2 {
+    font-family: 'Futura Hv BT';
+    font-size: 34px;
+    color:black;
 }
 
-/*Logo Section*/
-
-#logo-row {
-    position: absolute;
-    background: none;
-    border: none;
-    top: 70%;
-    left: 25%;
-    width: 70%;
-    height: 20%;
+#logo-btn {
+    font-family: 'Futura Hv BT';
+    background-color: transparent;
+    border: transparent;
 }
-
-#message {
-    font-family: "Futura Hv BT";
-    font-size: 23px;
-}
-
-#py-btn {
-    background-color: Transparent;
-    border: none;
-    
-}
-#python {
-    width: 60%;
-}
-
-#jv-btn {
-    background-color: Transparent;
-    border: none;
-}
-#java {
-    width: 30%;
-}
-
-#js-btn {
-    background-color: Transparent;
-    border: none;
-}
-#js {
-    width: 45%;
-}
-
 </style>

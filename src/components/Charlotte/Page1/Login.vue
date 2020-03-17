@@ -1,126 +1,115 @@
 <template>
-  <div class="container">
+<div>
+<div id="background" class="page-holder bg-cover">
 
-    <div id="box">
-      <div class="dropdown">
-        <label for="main1">Language</label>
-        <select id="main1">
-          <option value="top1" disabled>Please select a language:</option>
-          <option value="java">Java</option>
-          <option value="python">Python</option>
-          <option value="javascript">Javascript</option>
-        </select>
-          
-      </div>
-    </div>
-      
-    <p></p>
+<div id="box" class="shadow-lg mx-auto p-3 mb-5 pb-5 bg-grey rounded">
 
-    <div id="box2">
-      <div class="dropdown">
-        <label for="main2">Difficulty</label>
-        <select id="main2">
-          <option value="top2" disabled>Please select difficulty level:</option>
-          <option value="1">Easy (1)</option>
-          <option value="2">Medium (2)</option>
-          <option value="3">Hard (3)</option>
-        </select>
-
-        
-      </div>
-    </div>
-
-    <router-link to="/Page2" tag="race">
-      <button id = "race"> 
-        Go
-      </button>
-    </router-link>
-
+    <h4 id="welcome"> Hello There! </h4>
   
-  </div>
- 
+    <h4 id="lang"> Language </h4>
+    <b-form-select id = "dropdown1" v-model="selected" :options="options"></b-form-select> 
+
+    <h4 id="diff"> Difficulty </h4>
+    <b-form-select id = "dropdown2" v-model="selected" :options="options1"></b-form-select>
+
+    <router-link to="/qn1" >
+       <b-button id="btn" > Go </b-button>
+    </router-link>
+     
+</div>
+</div>
+</div>
+
 </template>
 
 <script>
+
 export default {
-  data () {
-    return {
-      user: {
-        language: "",
-        difficulty: ""
-      }
+    name: 'Login',
+    data() {
+        return {
+
+             selected: null,
+        options: [
+          { value: null, text: 'Please select a Language' },
+          { text: 'Python' },
+          { text: 'Java' },
+          { text: 'Javascript'}
+        ],
+
+         selected1: null,
+        options1: [
+          { value: null, text: 'Please select a Difficulty' },
+          { text: 'Easy (1)' },
+          { text: 'Medium (2)' },
+          { text: 'Hard (3)'}
+        ]
+        }
+    },
+    methods: {
     }
-  }
-  
 }
 </script>
 
-
 <style scoped>
 
-  #box {
-    font-family:'Futura Hv BT';
-    font-size: 30px;
+#background {
     position: absolute;
-    width: 500px;
-    height: 150px;
-    left: 500px;
-    top: 330px;
-  }
+    background-image:url('/assets/trackbg.jpg');
+}
 
-  #box2 {
-    font-family:'Futura Hv BT';
-    font-size: 30px;
-    position: absolute;
-    width: 500px;
-    height: 150px;
-    left: 500px;
-    top: 430px;
-  }
 
-  select {
-    width: 456px;
-    height: 40px;
-    font-size: 15px;
-    font-family:'Futura Hv BT';
-  }
+.page-holder {
+    min-height: 100vh;
+    min-width: 100vw;
+}
 
-  #race {
-    position: absolute;
-    width: 150px;
-    height: 69px;
-    left: 995px;
-    top: 600px;
-    background-color:#84CEEB;
-    color: #ffffff;
-    font-family:'Futura Hv BT'; 
-    font-size:25px;
-    font-style: normal;
-    font-weight: normal;
+.bg-cover {
+  background-size: cover !important;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+#box{
     text-align: center;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    box-sizing: border-box;
-    border-radius:20px;
+    font-family: 'Futura Hv BT';
+    background-color: rgba(196, 196, 196, 0.7);
+    width: 30%;
+    margin-left: 15%;
+    margin-top: 15%;
+    font-size: 120%;
+    color: #000000;
+
+}
+
+#lang {
+    font-family: 'Futura Hv BT';
+    font-size: 100%;
+    text-align: left;
+    margin-top: 10%;
+}
+
+#diff {
+    font-family: 'Futura Hv BT';
+    font-size: 100%;
+    text-align: left;
+    margin-top: 1%;
+}
+
+#btn {
+    background-color:#84CEEB; 
+    width:20%; 
+    height:5%;
+    font-family:'Futura Hv BT'; 
+    color:#FFFFFF;
+    position: center;
+    font-size: 120%;
+    position: relative;
+    border:none;
     cursor: pointer;
-    
-  }
-  #race:hover {
-    opacity: 0.8;
-  }
-
-  b {
-    font-family: 'Futura Hv BT'
-  }
-
-  .txtbox {
-    height:50px; 
-    width:300px; 
-    font-family: 'Futura Hv BT'; 
-    font-size: 25px
-  }
-
+    margin-left:70%;
+    margin-top: 10%;
+}
 
 
 </style>

@@ -11,7 +11,7 @@
           <b-nav-item to="/about" class='pr-2'>About</b-nav-item>
           <b-nav-item to="/language" class='pr-2' >Language</b-nav-item>
           <b-nav-item to="/proglang" class='pr-2'>Module</b-nav-item>
-          <b-nav-item to="/exercise" class='pr-2'>Exercise</b-nav-item>
+          <b-nav-item to="/page1" class='pr-2'>Exercise</b-nav-item>
           <b-nav-item to="/after" class='pr-2'>Account</b-nav-item>
           <b-nav-item to="/" class='pr-2'>Logout</b-nav-item>
         </b-navbar-nav>

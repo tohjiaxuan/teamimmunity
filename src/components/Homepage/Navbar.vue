@@ -11,8 +11,9 @@
 
         <b-nav-item-dropdown text="☰" right id="menu" toggle-class="text-dark" no-caret class="drop">
           <b-dropdown-item to="/about" id="menu">About</b-dropdown-item>
-          <b-dropdown-item to="/exercise" id="menu">Exercise</b-dropdown-item>
-          <b-dropdown-item to="/language" id="menu">Language</b-dropdown-item>
+           <b-dropdown-item to="/language" id="menu">Language</b-dropdown-item>
+          <b-dropdown-item to="/proglang" id="menu">Module</b-dropdown-item>
+          <b-dropdown-item to="/page1" id="menu">Exercise</b-dropdown-item>
           <b-dropdown-item to="/after" id="menu">Account</b-dropdown-item>
         </b-nav-item-dropdown>
 

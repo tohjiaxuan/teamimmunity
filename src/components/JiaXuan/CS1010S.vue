@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import navbar from '../About/Header.vue'
+import navbar from '../Common/Navbar.vue'
 import Footer from '../Footer.vue'
 export default {
     components: {

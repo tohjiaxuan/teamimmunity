@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import navbar from '../About/Header.vue'
+import navbar from '../About/Navbar.vue'
 import imgHeader from './imgHeader.vue'
 import Web2 from './Web2.vue'
 import Page from './Page.vue'

@@ -1,30 +1,66 @@
 <template>
-  <div class="body">
-    <img id='mac' src = '/assets/mac.jpeg'>
-    <div id='background'></div>
-    <span id='text1'>
-        {{text1}}
-    </span>
-    <span id='text2'>
-        {{text2}}
-    </span>
+<div class='bg-overlay '>
+    <b-container fluid class='my-container text-dark'>
+        <b-row align-h="center" class='my-row mt-3 pt-3'>
+            <b-col cols='5.5' class='my-col'>
+                <h1 class="mt-3 pt-3 display-4">{{text1}}</h1>
+            </b-col>
+        </b-row>
 
-    <div id='rec'></div>
-    <router-link to="/reg" id='reg'>Register</router-link>
-    <span id='a'>|</span>
-    <router-link to="/log" id='log'>Sign In</router-link>
-    <div id='line'></div>
-  </div>
+        <b-row align-h="center" class='my-row'>
+            <b-col cols='5.5' class='my-col'>
+                <h2 class='pt-3'>{{text2}}</h2>
+            </b-col>
+        </b-row>
+
+        <b-row align-h='center' class='mt-5'>
+            <b-col cols='1.5'>
+                <b-button-group size='lg'>
+                    <router-link to="/reg">
+                        <b-button class='b-button' variant="outline-primary">Register</b-button>
+                    </router-link>
+                    <router-link to="/log">
+                        <b-button class='b-button' variant="outline-primary">Sign In</b-button>
+                    </router-link>
+                </b-button-group>
+            </b-col>
+        </b-row>
+    </b-container>
+
+    <b-container fluid class='pt-5 mt-5 '>
+        <b-row cols="3" align='center'>
+            <b-col>
+                <b-img center fluid src='assets/book.png' class='w-25'></b-img>
+            </b-col>
+            <b-col>
+                <b-img center fluid src='assets/pitch.png' class='w-25'></b-img>
+            </b-col>
+            <b-col>
+                <b-img center fluid src='assets/gamepad.png' class='w-25'></b-img>
+            </b-col>
+        </b-row>
+
+        <b-row cols="3" align='center'>
+            <b-col>
+                <span>Customised for<br/>modules</span>
+            </b-col>
+            <b-col>
+                <span>Detailed<br/>explanation</span>
+            </b-col>
+            <b-col>
+                <span>Gamelike<br/>exercises</span>
+            </b-col>
+        </b-row>
+    </b-container>
+</div>    
 </template>
 
 <script>
-
-
 export default {
     data() {
       return {
-          text1: 'Coding can be for anyone.',
-          text2: 'Sign up with us today!',
+        text1: 'Coding can be for anyone.',
+        text2: 'Sign up with us today!',
       }
   }
     
@@ -32,153 +68,27 @@ export default {
 </script>
 
 <style scoped>
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-    #body{
-        width: 100%;
-        height:auto;
-    }
+.bg-overlay {
+    background: linear-gradient(180deg, #CBE7F8 0%, rgba(222, 248, 254, 0) 100%), url("/assets/mac.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center center; */
+    color: #fff;
+    height: 90vh;
+}
 
-    #mac{
-        position: absolute;
-        width: 100%;
-        height: 110%;
-        left: 0px;
-        top: 5%;
+h1, h2, .b-button {
+    font-family: Futura Hv Bt;
+}
 
-
-        background: mac;
-    }
-
-    #background{
-        position: absolute;
-        width: 100%;
-        height: 110%;
-        left: 0px;
-        top: 5%;
-        
-        background: linear-gradient(180deg, #CBE7F8 0%, rgba(222, 248, 254, 0) 100%);
-    }
-
-    #text1{
-        position: absolute;
-        width: 895px;
-        height: 294px;
-        left: 430px;
-        top: 170px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 58px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #433A2C;
-    }
-
-    #text2{
-        position: absolute;
-        width: 895px;
-        height: 494px;
-        left: 550px;
-        top: 170px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 36px;
-        line-height: 43px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #433A2C;
-    }
-
-    #rec{
-        position: absolute;
-        width: 515px;
-        height: 119px;
-        left: 462px;
-        top: 500px;
-        z-index: 1;
-
-        background: #00A3FF;
-        border-radius: 10px;
-        
-    }
-
-    #reg{
-        position: absolute;
-        width: 384px;
-        height: 66px;
-        left: 610px;
-        top: 527px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 30px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        z-index:1;
-
-        color: #FCFDFE;
-
-    }
-
-    #a{
-        position: absolute;
-        width: auto;
-        height: 66px;
-        left: 730px;
-        top: 527px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 30px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        z-index:2;
-
-        color: #FCFDFE;
-    }
-
-    #log{
-        position: absolute;
-        width: 384px;
-        height: 66px;
-        left: 750px;
-        top: 527px;
-
-        font-family: Futura Hv BT;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 30px;
-        line-height: 36px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        z-index:1;
-
-        color: #FCFDFE;        
-    }
-    
-    #line{
-        position: absolute;
-        width: 100%;
-        height: 0px;
-        left: 0px;
-        top: 908px;
-
-        border: 3px solid #000000;
-        transform: rotate(0deg);
-    }
+span{
+    font-family: Futura Hv Bt;
+    color: black;
+}
 </style>

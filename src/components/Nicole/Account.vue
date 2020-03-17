@@ -1,306 +1,307 @@
 <template>
   <div>
-    <navbar></navbar>
-    <app-header id="blueheader"></app-header>
-    <div id="title">
-      <p> My Details </p>
-    </div>
-    <hr>
-    <div>
-      <p id="userid"> User ID </p>
-      <form id="id">
-        <input type="text" v-model="user.userId" name=userId />
-      </form>
-    </div>
-    <div>
-      <p id="password"> Old Password </p>
-      <form id="word">
-        <input type="text" v-model="user.password" name=password />
-      </form>
-    </div>
-    <div>
-      <p id="course"> Course </p>
-      <form id="cor">
-        <input type="text" v-model="user.course" name=course />
-      </form>
-    </div>
-    <div>
-      <p id="email"> Email </p>
-      <form id="mail">
-        <input type="text" v-model="user.email" name=email />
-      </form>
-    </div>
-    <div>
-      <p id="passwordnew"> New Password </p>
-      <form id="password2">
-        <input type="text" v-model="user.passwordnew" name=passwordnew />
-      </form>
-    </div>
-    <div>
-      <p id="year"> Year of Study </p>
-      <form id="studyyear">
-        <input type="text" v-model="user.year" name=year />
-      </form>
-    </div>
-    <div>
-      <router-link id="change" to="/account">
-        <button id="done"> Update Account </button>
-      </router-link>
-    </div>
-    <Footer id='footer'></Footer>
+    <Navbar></Navbar>
+
+    <b-container fluid>
+        <b-row>
+            <b-col class='first-section'>
+                <b-row class='mt-5 pt-5'>
+                    <b-col align='center'>
+                        <b-img fluid src="http://nicesnippets.com/demo/1499344631_malecostume.png"></b-img>
+                    </b-col>
+                </b-row>
+
+                <b-row><b-col align='center' class='pt-3'><span id='font40'>ARNOLD NG</span></b-col></b-row>
+
+                <b-row>
+                    <b-col align='center' class='pt-4 pb-2'>
+                        <b-button variant='info'>Upload Profile Picture</b-button>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col><hr align='center' class='w-75' ></b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col align='left' class='offset-1 pl-4'>
+                        <span id='number'>10</span>
+                        <br>
+                        <span>BADGES</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col><hr align='center' class='w-75' ></b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col align='left' class='offset-1 pl-4'>
+                        <span id='number'>1</span>
+                        <br>
+                        <span>RANK</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col><hr align='center' class='w-75' ></b-col>
+                </b-row>
+            </b-col>
+
+            <b-col cols='7' class='second-section'>
+                <b-row>
+                    <b-col align='center' class='pt-5 pb-5'>
+                        <span id='font35'>EDIT PROFILE</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                  <b-col cols='auto' class='mt-5'><span id='font25'>Change Details</span>
+                    <b-form-group id='input1' label="User ID">
+                      <b-form-input id="userid" v-model="user.userid"></b-form-input>
+                    </b-form-group>
+                    <b-form-group id='input4' label="Email">
+                      <b-form-input id="email" v-model="user.email"></b-form-input>
+                    </b-form-group>
+                  </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col cols='auto' class='mt-5'><span id='font25'>Change Password</span></b-col>
+                    <b-row>
+                      <b-col align='left' cols='auto' class='mt-5'>
+                        <b-form-group id='input2' label="Current Password">
+                          <b-form-input type="password" id="pw" v-model="user.password"></b-form-input>
+                        </b-form-group>
+                      </b-col>
+                      <b-col align='left' cols='auto' class='mt-5'>
+                        <b-form-group id='input3' label="New Password">
+                          <b-form-input type="password" id="pw2" v-model="user.password2"></b-form-input>
+                        </b-form-group>
+                      </b-col>
+                    </b-row>
+                </b-row>
+                <b-row>
+                    <b-col class='mt-4'><b-button variant='info'>Confirm</b-button></b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col cols='auto' class='mt-5'>
+                      <span id='font25'>Change Schooling Details</span>
+                      <b-form-group id='input5' label="Course">
+                        <b-form-input id="course" v-model="user.course"></b-form-input>
+                      </b-form-group>
+                      <b-form-group id='input6' label="Year Of Study">
+                        <b-form-select v-model="user.year" :options="options"> </b-form-select>
+                      </b-form-group>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                  <b-col md="3" offset-md="3"></b-col>
+                  <b-col md="3" offset-md="3"><b-button id="final" variant='danger'>Submit</b-button></b-col>
+                </b-row>
+
+                <br>              
+            </b-col>
+
+            <b-col class='third-section'>
+                <b-row>
+                    <b-col align='center' class='pt-4'>
+                        <span id='font35'>Leaderboard</span>
+                    </b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col><hr align='center' class='w-75 ' ></b-col>
+                </b-row>
+
+                <b-row>
+                    <b-col align='right' class='mt-1 mb-4'><span id='badges'>Badges</span></b-col>
+                </b-row>
+
+                <b-row class='mb-3'>
+                    <b-col cols='2'><span id='font20'>1</span></b-col>
+                    <b-col><span id='font20'>Arnold</span></b-col>
+                    <b-col cols='4' align='center'><span id='font20'>10</span></b-col>
+                </b-row>
+                <b-row class='mb-3'>
+                    <b-col cols='2'><span id='font20'>2</span></b-col>
+                    <b-col><span id='font20'>Charlotte</span></b-col>
+                    <b-col cols='4' align='center'><span id='font20'>7</span></b-col>
+                </b-row>
+                <b-row class='mb-3'>
+                    <b-col cols='2'><span id='font20'>3</span></b-col>
+                    <b-col><span id='font20'>Nicole</span></b-col>
+                    <b-col cols='4' align='center'><span id='font20'>5</span></b-col>
+                </b-row>    
+
+
+            </b-col>
+        </b-row>        
+    </b-container>
+
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import navbar from '../About/Header.vue'
-import Header from './Header.vue'
-import Footer from '../Footer.vue'
+import Navbar from '../Common/Navbar.vue'
+import Footer from '../Common/Footer.vue'
 export default {
-  data () {
-    return {
-      user: {
-        userId: '',
-        email: '',
-        password: '',
-        passwordnew: '',
-        course: '',
-        year: ''
+    data() {
+        return {
+            oValue: 23,
+            pValue: 100,
+            jValue: 19,
+            jsValue: 82,
+            max: 100,
+            user: {
+              userid: '',
+              email: '',
+              password: '',
+              password2: '',
+              course: '',
+              year: null,
+            },
+            show: true,
+            options: [
+              { value: null, text: 'Select One' },
+              { value: 'new', text: 'Prospective Freshmen' },
+              { value: '1', text: 'Year 1' },
+              { value: '2', text: 'Year 2' },
+              { value: '3', text: 'Year 3' },
+              { value: '4', text: 'Year 4' }
+            ]
+        }
+    },
+    components: {
+        Navbar,
+        Footer,
+    },
+
+    methods: {
+      onSubmit(evt) {
+        evt.preventDefault()
+        alert(JSON.stringify(this.form))
+      },
+      onReset(evt) {
+        evt.preventDefault()
+        // Reset our form values
+        this.user.userid = '',
+        this.user.email = '',
+        this.user.password = '',
+        this.user.password2 = '',
+        this.user.course = '',
+        this.user.year = []
+        // Trick to reset/clear native browser form validation state
+        this.show = false
+        this.$nextTick(() => {
+          this.show = true
+        })
       }
     }
-  }, 
-  components: {
-        'navbar': navbar,
-        'app-header': Header,
-        Footer
-  }
 }
 </script>
 
 <style scoped>
-
-#title {
-  position: absolute;
-  width: 167px;
-  height: 62px;
-  left: 120px;
-  top: 300px;
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #000000;
+.b-col {
+    border:1px solid red;
 }
 
-hr {
-  position: absolute;
-  width: 1194px;
-  height: 0px;
-  left: 115px;
-  top: 350px;
-
-  border: 1px solid #000000;
+.first-section {
+    background-color:aliceblue;
 }
 
-#userid {
-  position: absolute;
-  width: 107px;
-  height: 62px;
-  left: 120px;
-  top: 380px;
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+#font20 {
+    font-size: 20px;
 }
 
-#id {
-  position: absolute;
-  left: 110px;
-  top: 480px;
+#font25 {
+    font-size: 25px;;
 }
 
-#password {
-  position: absolute;
-  width: 200px;
-  height: 62px;
-  left: 120px;
-  top: 570px;
-
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+#font35 {
+    font-size: 35px;
 }
 
-#word {
-  position: absolute;
-  left: 110px;
-  top: 670px;
+#font40 {
+    font-size: 40px;
 }
 
-#course {
-  position: absolute;
-  width: 200px;
-  height: 62px;
-  left: 120px;
-  top: 760px;
-
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+hr{
+  border: 2px solid #E5E5E5;
 }
 
-#cor {
-  position: absolute;
-  left: 120px;
-  top: 860px;
+button {
+    font-family: Futura Hv BT;
 }
 
-#email {
-  position: absolute;
-  width: 107px;
-  height: 62px;
-  right: 500px;
-  top: 380px;
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+span {
+    font-family: Futura Hv BT;
+    font-size: 25px;
 }
 
-#mail {
-  position: absolute;
-  right: 130px;
-  top: 480px;
+#number {
+    font-size: 40px;
+    color: #7CBBC3;
 }
 
-#passwordnew{
-  position: absolute;
-  width: 200px;
-  height: 62px;
-  right: 410px;
-  top: 570px;
-
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+.second-section {
+    background-color: white;
 }
 
-#password2 {
-  position: absolute;
-  right: 130px;
-  top: 670px;
+.third-section {
+    background-color: aliceblue
 }
 
-#year {
-  position: absolute;
-  width: 200px;
-  height: 62px;
-  right: 410px;
-  top: 760px;
-
-
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+#badges {
+    font-size: 20px;
+    text-decoration: underline;
 }
 
-#studyyear {
-  position: absolute;
-  right: 130px;
-  top: 860px;
+#input1 {
+  font-family: 'Futura Hv BT';
+  width: 350%;
+  margin-top: 10%;
 }
 
-input {
-  width: 485px;
-  background-color: rgba(132, 206, 235, 0.4);
-  border-radius: 25px;
-  border: none;
-  height: 40px;
+#input4 {
+  font-family: 'Futura Hv BT';
+  width: 350%;
 }
 
-#change {
-  position: absolute;
-  width: 230px;
-  height: 73px;
-  left: 1080px;
-  top: 980px;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 25px;
-  line-height: 36px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+#input2 {
+  font-family: 'Futura Hv BT';
+  margin-top: 30%;
+  margin-left: -118%;
+  width: 140%;
 }
 
-#done {
-  background-color: #FB7474;
-  width:298px;
-  height: 50px;
-  font-size: 25px;
-  font-family: Futura Hv BT;
-  border-radius: 25px;
-
-  color: #FFFFFF;
-  border: none;
+#input3 {
+  font-family: 'Futura Hv BT';
+  margin-top: 30%;
+  margin-left: -25%;
+  width: 140%;
 }
 
-#footer {
-  position: absolute;
-  width: 454px;
-  height: 30px;
-  left: 1219px;
-  top: 1150px;
+#input5 {
+  font-family: 'Futura Hv BT';
+  margin-top: 8%;
+  padding-left: 1%;
+  width: 220%;
+}
 
-  font-family: Futura Hv BT;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
+#input6 {
+  font-family: 'Futura Hv BT';
+  margin-top: 8%;
+  padding-left: 1%;
+  width: 220%;
+}
 
-  color: #000000;
+#final {
+  margin-top: 10%;
+  margin-left: 20%;
 }
 
 </style>

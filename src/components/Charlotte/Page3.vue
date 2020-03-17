@@ -1,17 +1,17 @@
 <template>
     <div>
-      <Header></Header>
+      <Navbar></Navbar>
       <Question></Question>
     </div>
 </template>
 
 <script>
-import Header from '../About/Header.vue'
+import Navbar from '../About/Navbar.vue'
 import Question from './Page3/Question.vue'
 
 export default {
   components: {
-    Header,
+    Navbar,
     Question,
   }
 }

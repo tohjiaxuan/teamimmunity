@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import navbar from '../About/Header.vue'
+import navbar from '../About/Navbar.vue'
 import imgHeader from './imgHeader.vue'
 import Web from './Web.vue'
 import Page from './Page.vue'

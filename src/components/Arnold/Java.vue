@@ -6,7 +6,7 @@
     <b-container fluid>
       <b-row>
         <b-col align='center'>
-          <b-img fluid src='/assets/java_logo1.png' class=''></b-img>
+          <b-img fluid src='/assets/java.png' class='mt-3'></b-img>
           <h1 class='pt-5'>Introduction to Java</h1>
           <h2 class='pl-5 pr-5'>Java is among the most popular programming languages out there, thanks to its versatility and compatibility. Java is used for software development, mobile applications, and large systems development.</h2>
 
@@ -28,7 +28,7 @@
 
         </b-col>
 
-        <b-col style='background: #E2F7FF; border-left:5px solid black'>
+        <b-col style='background: #E2F7FF;'>
           <h3 class='pl-4 pt-5'>Modules that require Java</h3>
 
           <h2 class='pl-4 pt-4'>School of Computing:</h2>

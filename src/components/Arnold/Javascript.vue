@@ -28,7 +28,7 @@
 
         </b-col>
 
-        <b-col style='background: #E2F7FF; border-left:5px solid black'>
+        <b-col style='background: #E2F7FF;'>
           <h3 class='pl-4 pt-5'>Modules that require Java</h3>
 
           <h2 class='pl-4 pt-4'>School of Computing:</h2>

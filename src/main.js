@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import HomePage from './Homepage.vue'
 import About from './About.vue'
@@ -24,9 +25,13 @@ import Account from './components/Nicole/Account.vue'
 import CS1010 from './components/JiaXuan/CS1010S.vue'
 import Proglang from './components/JiaXuan/Proglang.vue'
 
-import Newlang from './components/Vicki/home.vue'
-import Syntax from './components/Vicki/syntax.vue'
-import Printing from './components/Vicki/printing.vue'
+
+import btn from './components/Vicki/Button.vue'
+import diff1 from './components/Vicki/Diff1.vue'
+import diff2 from './components/Vicki/Diff2.vue'
+import diff3 from './components/Vicki/Diff3.vue'
+
+
 
 import Exercise from './components/Exercise.vue'
 import Page2 from './components/Charlotte/Page2.vue'
@@ -52,9 +57,10 @@ const router = new VueRouter ({
     {path: '/cs', component:CS1010},
     {path: '/proglang', component:Proglang},
     {path: '/after', component:Afterlog},
-    {path: '/newlang', component:Newlang},
-    {path: '/syntax', component:Syntax},
-    {path: '/printing', component:Printing},
+    {path: '/btn', component:btn},
+    {path: '/diff1', component:diff1},
+    {path: '/diff2', component:diff2},
+    {path: '/diff3', component:diff3},
     {path: '/exercise', component:Exercise},
     {path: '/page2', component:Page2},
     {path: '/page3', component:Page3},

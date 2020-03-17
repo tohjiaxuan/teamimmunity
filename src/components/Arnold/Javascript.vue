@@ -24,7 +24,7 @@
             </b-row> -->
           </b-container>
 
-          <b-button variant='info' class='mt-5' to='/newlang'>Let's Get Started</b-button>
+          <b-button variant='info' class='mt-5' to='/python'>Let's Get Started</b-button>
 
         </b-col>
 

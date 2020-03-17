@@ -82,7 +82,11 @@
                     </b-row>
                 </b-row>
                 <b-row>
-                    <b-col class='mt-4'><b-button variant='info'>Confirm</b-button></b-col>
+                    <b-col class='mt-4'>
+                      <router-link to="/after">
+                      <b-button variant='info'>Confirm</b-button>
+                      </router-link>
+                    </b-col>
                 </b-row>
 
                 <b-row>
@@ -99,7 +103,11 @@
 
                 <b-row>
                   <b-col md="3" offset-md="3"></b-col>
-                  <b-col md="3" offset-md="3"><b-button id="final" variant='danger'>Submit</b-button></b-col>
+                  <b-col md="3" offset-md="3">
+                    <router-link to="/after">
+                     <b-button id="final" variant='danger'>Submit</b-button>
+                    </router-link>
+                    </b-col>
                 </b-row>
 
                 <br>              
@@ -262,41 +270,41 @@ span {
 
 #input1 {
   font-family: 'Futura Hv BT';
-  width: 380%;
+  width: 350%;
   margin-top: 10%;
 }
 
 #input4 {
   font-family: 'Futura Hv BT';
-  width: 380%;
+  width: 350%;
 }
 
 #input2 {
   font-family: 'Futura Hv BT';
   margin-top: 30%;
   margin-left: -118%;
-  width: 160%;
+  width: 140%;
 }
 
 #input3 {
   font-family: 'Futura Hv BT';
   margin-top: 30%;
-  margin-left: -18%;
-  width: 160%;
+  margin-left: -25%;
+  width: 140%;
 }
 
 #input5 {
   font-family: 'Futura Hv BT';
   margin-top: 8%;
   padding-left: 1%;
-  width: 240%;
+  width: 220%;
 }
 
 #input6 {
   font-family: 'Futura Hv BT';
   margin-top: 8%;
   padding-left: 1%;
-  width: 240%;
+  width: 220%;
 }
 
 #final {

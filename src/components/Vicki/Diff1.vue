@@ -109,6 +109,7 @@
             <h5 class="card-title text-muted text-uppercase text-center">SYNTAX</h5>
             <h6 class="card-price text-center">
                 <img src="https://img.icons8.com/color/48/000000/javascript.png"/>
+                <br>
                 JavaScript
                 
             </h6>

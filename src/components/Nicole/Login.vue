@@ -52,6 +52,7 @@ export default {
 #background {
     position: absolute;
     background-image:url('/assets/login.jpeg');
+    top: 0%;
 }
 
 .page-holder {
@@ -100,7 +101,7 @@ export default {
 #box {
     height: 30%;
     width: 60%;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 20%;
     background-color: rgba(196, 196, 196, 0.7);
     box-shadow: 50px;

@@ -3,7 +3,9 @@
     
 
 <section class="pricing py-5">
+  <br>
   <div class="container">
+    <Navbar></Navbar>
     <div class="text-center">
     <img src="https://img.icons8.com/color/49/000000/2-circle-c--v1.png"/>
     </div>
@@ -154,111 +156,28 @@
 
 
     </div>
+    
   </div>
   <router-link to="/diff1" id="getstarted3"><button type="button" class="btn btn-info float-left">Back</button></router-link>
   <router-link to="/diff3" id="getstarted4"><button type="button" class="btn btn-info float-right">Next</button></router-link>
+  <br>
+  <br>
+  <br>
+  <Footer></Footer>
 </section>
 
 
 
 </template>
-
-<style>
-  section.pricing {
-    background: #CBE7F8;
+<script>
+import Navbar from '../Common/Navbar.vue'
+import Footer from '../Common/Footer.vue'
+export default {
     
-    
-  }
-
-  h2 {
-    font-family: Futura HV BT;
-    color:#3F6892;
-  }
-
-  
-  .pricing .card {
-    border: none;
-    border-radius: 1rem;
-    transition: all 0.2s;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-    
-    
-   
-  }
-  
-  .pricing hr {
-    margin: 1.5rem 0;
-  }
-  
-  .pricing .card-title {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    letter-spacing: .1rem;
-    font-weight: bold;
-  }
-  
-  .pricing .card-price {
-    font-size: 3rem;
-    margin: 0;
-  }
-  
-  .pricing .card-price .period {
-    font-size: 0.8rem;
-  }
-  
-  .pricing ul li {
-    margin-bottom: 1rem;
-  }
-  
-  .pricing .text-muted {
-    opacity: 0.7;
-  }
-  
-  .pricing .btn {
-    font-size: 80%;
-    border-radius: 5rem;
-    letter-spacing: .1rem;
-    font-weight: bold;
-    padding: 1rem;
-    opacity: 0.7;
-    transition: all 0.2s;
-  }
-  
-  /* Hover Effects on Card */
-  
-  @media (min-width: 992px) {
-    .pricing .card:hover {
-      margin-top: -.25rem;
-      margin-bottom: .25rem;
-      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    components: {
+        Navbar,
+        Footer
     }
-    .pricing .card:hover .btn {
-      opacity: 1;
-    }
-  }
-  /* Fallback for Edge
-  -------------------------------------------------- */
-  
-  @supports (-ms-ime-align: auto) {
-    .form-label-group>label {
-      display: none;
-    }
-    .form-label-group input::-ms-input-placeholder {
-      color: #777;
-    }
-  }
-  
-  /* Fallback for IE
-  -------------------------------------------------- */
-  
-  @media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
-    .form-label-group>label {
-      display: none;
-    }
-    .form-label-group input:-ms-input-placeholder {
-      color: #777;
-    }
-  }
-</style>
+}
+</script>
 

@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+  <Navbar></Navbar>
   <div class="row no-gutter">
     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
     <div class="col-md-8 col-lg-6">
@@ -32,8 +33,20 @@
       </div>
     </div>
   </div>
+  <Footer></Footer>
 </div>
 </template>
+<script>
+import Navbar from '../Common/Navbar.vue'
+import Footer from '../Common/Footer.vue'
+export default {
+    
+    components: {
+        Navbar,
+        Footer
+    }
+}
+</script>
 
 <style scoped>
   :root {

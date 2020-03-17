@@ -51,7 +51,7 @@
             <b-col cols='7' class='second-section'>
                 <b-row>
                     <b-col align='center' class='pt-5 pb-5'>
-                        <span id='font35'>PROFILE PAGE</span>
+                        <span id='font50'>PROFILE PAGE</span>
                     </b-col>
                 </b-row>
 
@@ -175,6 +175,10 @@ export default {
 
 #font40 {
     font-size: 40px;
+}
+
+#font50 {
+    font-size: 50px;
 }
 
 hr{

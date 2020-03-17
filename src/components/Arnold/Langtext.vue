@@ -3,13 +3,13 @@
     <b-container fluid class='pb-5' style='background:linear-gradient(180deg, #CBE7F8 40%, rgba(222, 248, 254, 0) 100%);'>
       <b-row align='center' class='pb-5'>
         <b-col>
-          <b-img fluid src="/assets/python.png" v-b-popover.hover.bottom.v-info="'Python is a general-purpose, versatile and modern programming language.'" class='mt-5 pt-5 w-75'></b-img>
+          <b-img fluid src="/assets/python.png" v-b-popover.hover.bottom.v-warning="'Python is a general-purpose, versatile and modern programming language.'" class='mt-5 pt-5 w-75'></b-img>
         </b-col>
         <b-col>
-          <b-img fluid src="/assets/java.png" v-b-popover.hover.bottom.v-info="'Java is used for software development, mobile applications, and large system development.'" class='w-75'></b-img>
+          <b-img fluid src="/assets/java.png" v-b-popover.hover.bottom.v-warning="'Java is used for software development, mobile applications, and large system development.'" class='w-75'></b-img>
         </b-col>
         <b-col>
-          <b-img fluid src="/assets/javascript.png" v-b-popover.hover.bottom.v-info="'Javascript is the programming language of the web.'"></b-img>
+          <b-img fluid src="/assets/javascript.png" v-b-popover.hover.bottom.v-warning="'Javascript is the programming language of the web.'"></b-img>
         </b-col>
       </b-row>
 

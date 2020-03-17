@@ -2,9 +2,8 @@
 <div>
   <Navbar></Navbar>
   <b-container fluid id="main">
-<div id="background" class="page-holder bg-cover">
-
-<div id="box" class="shadow-lg mx-auto p-3 mb-5 pb-5 bg-grey rounded">
+    <div id="background" class="page-holder bg-cover">
+    <div id="box" class="shadow-lg mx-auto p-3 mb-5 pb-5 bg-grey rounded">
 
     <h4 id="welcome"> Hello There! </h4>
   
@@ -18,10 +17,10 @@
        <b-button id="btn" > Go </b-button>
     </router-link>
      
-</div>
-</div>
+    </div>
+    </div>
   </b-container>
- <Footer></Footer>
+  <Footer></Footer>
 
 </div>
 
@@ -35,27 +34,26 @@ export default {
     name: 'Login',
     data() {
         return {
+            selected: null,
+            options: [
+                { value: null, text: 'Please select a Language' },
+                { text: 'Python' },
+                { text: 'Java' },
+                { text: 'Javascript'}
+            ],
 
-             selected: null,
-        options: [
-          { value: null, text: 'Please select a Language' },
-          { text: 'Python' },
-          { text: 'Java' },
-          { text: 'Javascript'}
-        ],
-
-         selected1: null,
-        options1: [
-          { value: null, text: 'Please select a Difficulty' },
-          { text: 'Easy (1)' },
-          { text: 'Medium (2)' },
-          { text: 'Hard (3)'}
-        ]
+            selected1: null,
+            options1: [
+                { value: null, text: 'Please select a Difficulty' },
+                { text: 'Easy (1)' },
+                { text: 'Medium (2)' },
+                { text: 'Hard (3)'}
+            ]
         }
     },
     methods: {
     }, 
-       components: {
+    components: {
         Navbar,
         Footer,
     }

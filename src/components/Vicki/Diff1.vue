@@ -161,7 +161,7 @@
     </div>
     
   </div>
-  <router-link to="/" id="getstarted2"><button type="button" class="btn btn-info float-left">Back</button></router-link>
+  <router-link to="/btn" id="getstarted2"><button type="button" class="btn btn-info float-left">Back</button></router-link>
   <router-link to="/diff2" id="getstarted2"><button type="button" class="btn btn-info float-right">Next</button></router-link>
   <br>
   <br>

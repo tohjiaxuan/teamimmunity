@@ -43,14 +43,14 @@
                 </b-row>
 
                 <b-row align-h="center">
-                        <router-link to="/python">
-                            <b-button id="logo-btn" type="button"><b-img src="/assets/icons8-python-144.png" alt="python"></b-img></b-button>
+                        <router-link to="/language/python">
+                            <b-button id="logo-btn" type="button"><b-img fluid src="/assets/icons8-python-144.png" alt="python" v-b-popover.hover.bottom.v-warning="'Did you know? Many big companies such as Google, Netflix and Spotify use Python for their products and/or services. Click to learn more!'"></b-img></b-button>
                         </router-link>
-                        <router-link to="/java">
-                            <b-button id="logo-btn" type="button"><b-img src="/assets/icons8-java-144.png" alt="java"></b-img></b-button>
+                        <router-link to="/language/java">
+                            <b-button id="logo-btn" type="button"><b-img fluid src="/assets/icons8-java-144.png" alt="java" v-b-popover.hover.bottom.v-warning="'Did you know? Minecraft, one of the most popular video games of all time, was first written in Java. Click to learn more!'"></b-img></b-button>
                         </router-link>
-                        <router-link to="/js">
-                            <b-button id="logo-btn" type="button"><b-img src="/assets/icons8-javascript-144.png" alt="js"></b-img></b-button>
+                        <router-link to="/language/javascript">
+                            <b-button id="logo-btn" type="button"><b-img fluid src="/assets/icons8-javascript-144.png" alt="js" v-b-popover.hover.bottom.v-warning="'Did you know? In Javascript, equal is not always equal. For e.g. 1==1 may be true, but [1,2,3]==[1,2,3] would be false as the array [1,2,3] is simply a reference type. Click to learn more!'"></b-img></b-button>
                         </router-link> 
                 </b-row> 
             

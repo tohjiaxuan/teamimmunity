@@ -41,7 +41,7 @@
                         </form>      
                     </div>
 
-                    <div class="pl-4 pt-2 mt-2" to="/cs">
+                    <div class="pl-4 pt-2 mt-2">
                         <b-button id="btn" type="submit" @click.stop.prevent="submit(subject,catnum)">Go</b-button>
                     </div>
                 </b-row>
@@ -91,7 +91,7 @@ export default {
     },
     methods: {
         submit(subject,catnum){ 
-            if (subject.value=='cs' && catnum.value=='1010s') {
+            if (subject=='cs' && catnum=='1010s') {
                 this.$router.push({path:'/cs'});
             } else {
                 this.$router.push({path:'/about'});

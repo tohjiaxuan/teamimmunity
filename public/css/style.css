@@ -1,5 +1,6 @@
 section.pricing {
-    background: #CBE7F8;
+    
+    background: linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 100%);
     
     
   }
@@ -77,6 +78,10 @@ section.pricing {
     opacity: 0.7;
     transition: all 0.2s;
     
+  }
+  .pricing .fixed-row-bottom {
+     
+    bottom: 0;
   }
   
   /* Hover Effects on Card */

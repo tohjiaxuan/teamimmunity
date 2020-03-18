@@ -1,8 +1,13 @@
 section.pricing {
     
     background: linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 100%);
+    overflow-x: hidden;
     
     
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   h2 {
@@ -37,7 +42,14 @@ section.pricing {
   .pricing .modal-body {
     font-family: Futura HV BT;
     font-size: 1.3rem;
+    overflow: hidden;
+    
 }
+
+.pricing .modal-open {
+  overflow: hidden;
+}
+
 
 
   
@@ -77,6 +89,7 @@ section.pricing {
     padding: 1rem;
     opacity: 0.7;
     transition: all 0.2s;
+    
     
   }
   .pricing .fixed-row-bottom {

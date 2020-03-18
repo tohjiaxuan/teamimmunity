@@ -150,11 +150,13 @@
 
 
     </div>
+    <br>
+    <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info float-left">Back</button></router-link>
+    <router-link to="/page1" id="getstarted5"><button type="button" class="btn btn-info float-right">Try Exercises!</button></router-link>
   </div>
   
   
-  <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info float-left">Back</button></router-link>
-  <router-link to="/page1" id="getstarted5"><button type="button" class="btn btn-info float-right">Try Exercises!</button></router-link>
+  
   <br>
   <br>
   <br>

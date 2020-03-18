@@ -125,7 +125,7 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">
                 See Code
             </button>
-            <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade modal-open" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -154,15 +154,21 @@
             </div>
           </div>
         </div>
+        
       </div>
+      
     
 
 
     </div>
+    <br>
+    <router-link to="/btn" id="getstarted2"><button type="button" class="btn btn-info">Back</button></router-link>
+    <router-link to="/diff2" id="getstarted2"><button type="button" class="btn btn-info float-right">Next</button></router-link>
     
   </div>
-  <router-link to="/btn" id="getstarted2"><button type="button" class="btn btn-info float-left">Back</button></router-link>
-  <router-link to="/diff2" id="getstarted2"><button type="button" class="btn btn-info float-right">Next</button></router-link>
+  
+  
+  
   <br>
   <br>
   <br>

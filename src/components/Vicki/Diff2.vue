@@ -156,10 +156,12 @@
 
 
     </div>
+  <br>
+    <router-link to="/diff1" id="getstarted3"><button type="button" class="btn btn-info float-left">Back</button></router-link>
+    <router-link to="/diff3" id="getstarted4"><button type="button" class="btn btn-info float-right">Next</button></router-link>
     
   </div>
-  <router-link to="/diff1" id="getstarted3"><button type="button" class="btn btn-info float-left">Back</button></router-link>
-  <router-link to="/diff3" id="getstarted4"><button type="button" class="btn btn-info float-right">Next</button></router-link>
+  
   <br>
   <br>
   <br>

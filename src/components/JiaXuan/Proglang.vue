@@ -18,32 +18,32 @@
                                 <div id="search" class="form-group col-md-6 display-4">
                                     <!-- <label for="subjectarea">Subject Area</label> -->
                                     <!-- <input id="ip" type="text" class="form-control" placeholder="Subject Area"> -->
-                                    <select id="font" class="custom-select">
+                                    <select id="font" class="custom-select" v-model="subject">
                                         <option disabled selected>Select Subject Area</option>
-                                        <option value="1">BT</option>
-                                        <option value="2">CS</option>
+                                        <option value="bt">BT</option>
+                                        <option value="cs">CS</option>
                                     </select>
                                 </div>
                                 <div id="search" class="w-75 form-group col-md-6 display-4">
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
                                     <!-- <input id="ip" type="text" class="form-control" placeholder="Catalogue Number"> -->
-                                    <select id="font" class="custom-select">
+                                    <select id="font" class="custom-select" v-model="catnum">
                                         <option disabled selected>Select Catalogue Number</option>
-                                        <option value="1">1010</option>
-                                        <option value="2">1010J</option>
-                                        <option value="3">1010S</option>
-                                        <option value="4">2030</option>
-                                        <option value="5">2040</option>
-                                        <option value="6">3103</option>
+                                        <option value="1010">1010</option>
+                                        <option value="1010j">1010J</option>
+                                        <option value="1010s">1010S</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2040">2040</option>
+                                        <option value="3103">3103</option>
                                     </select>
                                 </div>
                             </div> 
                         </form>      
                     </div>
 
-                    <router-link class="pl-4 pt-2 mt-2" to="/cs">
-                        <b-button id="btn" type="button">Go</b-button>
-                    </router-link>
+                    <div class="pl-4 pt-2 mt-2" to="/cs">
+                        <b-button id="btn" type="submit" @click.stop.prevent="submit(subject,catnum)">Go</b-button>
+                    </div>
                 </b-row>
 
                 <b-row align-h="center">
@@ -89,13 +89,17 @@ export default {
         'navbar': navbar,
         Footer
     },
-    // methods: {
-    //     check: function(input) {
-    //         if(input == 'CS1010S') {
-    //             <router-link class="pl-4" to="/cs"></router-link>
-    //         }
-    //     }
-    // }
+    methods: {
+        submit(subject,catnum){ 
+            if (subject.value=='cs' && catnum.value=='1010s') {
+                this.$router.push({path:'/cs'});
+            } else {
+                this.$router.push({path:'/about'});
+            }
+         
+        
+      }
+    }
 }
 </script>
 

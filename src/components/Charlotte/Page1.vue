@@ -128,7 +128,6 @@
 <script>
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
-
 export default {
     components: {
         Navbar,
@@ -138,14 +137,12 @@ export default {
 </script>
 
 <style scoped>
-
 #main {
     height: 100%;
     border-style: solid;
     padding-top: 6%;
     padding-bottom: 9%;
 }
-
 .bg-overlay {
     background: linear-gradient(180deg, #CBE7F8 0%, rgba(222, 248, 254, 0) 100%), url("/assets/start.jpg");
     background-repeat: no-repeat;
@@ -155,35 +152,27 @@ export default {
     /* background-color: #CBE7F8 */
     /* height: 100vh; */
 }
-
-
 #pythonimg{
     width: 50%;
 }
-
 #javaimg{
     width: 40%;
 }
-
 #javascriptimg{
     width: 70%;
 }
-
 .number {
     color: grey;
     font-weight: lighter;
 }
-
 .hours {
     color: grey;
     font-weight: lighter;
 }
-
 .exercise {
     color: #1ebba6;
     font-weight: bolder;
 }
-
 .time {
     color: #1ebba6;
     font-weight: bolder;
@@ -199,5 +188,4 @@ export default {
       opacity: 1;
     }
   }
-
 </style>

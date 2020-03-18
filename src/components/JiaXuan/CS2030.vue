@@ -89,7 +89,7 @@ export default {
 
 <style scoped>
 #bkg {
-    background: linear-gradient(180deg, #CBE7F8 0%, rgba(222, 248, 254, 0) 100%), url("/assets/cs1010s-bkg.jpeg");
+    background: linear-gradient(180deg, rgb(168, 212, 240) 0%, rgba(222, 248, 254, 0) 100%), url("/assets/cs1010s-bkg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;

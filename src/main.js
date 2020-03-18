@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import HomePage from './Homepage.vue'
 import About from './About.vue'
 
-import Language from './components/Language.vue'
+import Language from './components/Arnold/Language.vue'
 import Python from './components/Arnold/Python.vue'
 import Java from './components/Arnold/Java.vue'
 import Js from './components/Arnold/Javascript.vue'

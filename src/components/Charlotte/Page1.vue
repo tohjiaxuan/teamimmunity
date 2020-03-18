@@ -141,6 +141,7 @@ export default {
 
 #main {
     height: 100%;
+    border-style: solid;
     padding-top: 6%;
     padding-bottom: 9%;
 }
@@ -192,7 +193,7 @@ export default {
   
   @media (min-width: 992px) {
     .pricing1 .card:hover {
-      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.9);
     }
     .pricing1 .card:hover .btn {
       opacity: 1;

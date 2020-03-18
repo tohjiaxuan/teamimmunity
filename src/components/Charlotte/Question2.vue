@@ -22,9 +22,12 @@
 
             <ul class="timeline2">
               <li>
-                <p>2. Syntax </p>
+                <p>2. Casting/Syntax </p>
                 <br> <br>
               </li>
+            </ul>
+
+            <ul class="timeline3">
               
               <li>
                 <p>3. Python Operators</p>
@@ -48,7 +51,7 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 1: Variable Types </span>
+              <span id='qn'> Question 2: Syntax </span>
             </b-col>
           </b-row>
 
@@ -56,16 +59,15 @@
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> var1 = 1
-                <br> var2 = 2
-                <br> var3 = 'c'
-                <br> print(var1 + var2 + var3)
+                <pre> <code> <br> x = int(2.876)
+                
+                <br> print(x)
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> Consider the variable types</p>
+                    <p class="card-text"> Integer rounds down </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -93,7 +95,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/qn2" >
+              <router-link to="/qn3" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -120,10 +122,10 @@ export default {
         return {
         
           options: [
-            { text: '12c', value: 'wrong', name: 'answer'},
-            { text: '3c', value: 'wrong', name: 'answer'},
-            { text: '3 + c', value: 'wrong', name: 'answer' },
-            { text: 'TypeError: Unsupported operand type(s) for "int" and "str"', value: 'correct',id: 'answer'}
+            { text: '3', value: 'wrong', name: 'answer'},
+            { text: '2.9', value: 'wrong', name: 'answer'},
+            { text: '2.8', value: 'wrong', name: 'answer' },
+            { text: '2', value: 'correct',id: 'answer'}
           ]
         }
     },
@@ -137,13 +139,8 @@ export default {
             alert("Please try again");
             this.$("#alert").alert();
             }
-            else if (ans =='correct') {
-              alert("Good job!");
-
-            }
             else {
-              alert("Please select an answer");
-              
+              alert("Good job!");
             }
         
       }
@@ -191,6 +188,7 @@ span {
 ul.timeline {
     list-style-type: none;
     position: relative;
+    width:100%;
  
 }
 
@@ -203,7 +201,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 380%;
+    height: 450%;
     z-index: 400;
  
 }
@@ -221,8 +219,8 @@ ul.timeline > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #22c0e8;
-    left: 20px;
+    border: 3px solid black;
+    left: 17%;
     width: 20px;
     height: 20px;
     z-index: 400;
@@ -232,6 +230,9 @@ ul.timeline > li:before {
 ul.timeline2 {
     list-style-type: none;
     position: relative;
+    width:100%;
+  
+   
  
 }
 
@@ -242,8 +243,8 @@ ul.timeline2 {
 ul.timeline2 > li {
     padding-left: 20%;
     width: 100%;
+    
 
-   
 
 }
 
@@ -253,8 +254,8 @@ ul.timeline2 > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid black;
-    left: 20px;
+    border: 3px solid #22c0e8;
+    left: 17%;
     width: 20px;
     height: 20px;
     z-index: 400;
@@ -263,6 +264,36 @@ ul.timeline2 > li:before {
 
 #next {
   margin-top:2%;
+}
+
+ul.timeline3 {
+    list-style-type: none;
+    position: relative;
+    width:100%;
+ 
+}
+
+
+
+/* words */
+ul.timeline3 > li {
+    padding-left: 20%;
+    width: 100%;
+
+}
+
+ul.timeline3 > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 17%;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+
 }
 
 

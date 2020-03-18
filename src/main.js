@@ -31,10 +31,12 @@ import diff1 from './components/Vicki/Diff1.vue'
 import diff2 from './components/Vicki/Diff2.vue'
 import diff3 from './components/Vicki/Diff3.vue'
 
-
-
 import Page1 from './components/Charlotte/Page1.vue'
 import Question1 from './components/Charlotte/Question1.vue'
+import Question2 from './components/Charlotte/Question2.vue'
+import Question3 from './components/Charlotte/Question3.vue'
+import Question4 from './components/Charlotte/Question4.vue'
+import Question5 from './components/Charlotte/Question5.vue'
 
 Vue.use(VueRouter);
 
@@ -64,7 +66,12 @@ const router = new VueRouter ({
    
     {path: '/after/account', component:Account}, 
     { path:'/page1', component: Page1},
-    { path: '/qn1', component: Question1}
+    { path: '/qn1', component: Question1},
+    { path: '/qn2', component: Question2},
+    { path: '/qn3', component: Question3},
+    { path: '/qn4', component: Question4},
+    { path: '/qn5', component: Question5}
+
   ],
   mode: 'history',
   scrollBehavior () {

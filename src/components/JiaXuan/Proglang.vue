@@ -92,7 +92,7 @@ export default {
     methods: {
         submit(subject,catnum){ 
             if (subject=='cs' && catnum=='1010s') {
-                this.$router.push({path:'/cs'});
+                this.$router.push({path:'/cs1010s'});
             } else {
                 this.$router.push({path:'/about'});
             }

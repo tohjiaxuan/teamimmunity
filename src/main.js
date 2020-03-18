@@ -22,7 +22,11 @@ import Log from './components/Nicole/Login.vue'
 import Register from './components/Nicole/Register.vue'
 import Account from './components/Nicole/Account.vue'
 
-import CS1010 from './components/JiaXuan/CS1010S.vue'
+import CS1010 from './components/JiaXuan/CS1010.vue'
+import CS1010J from './components/JiaXuan/CS1010J.vue'
+import CS1010S from './components/JiaXuan/CS1010S.vue'
+import CS2030 from './components/JiaXuan/CS2030.vue'
+import CS2040 from './components/JiaXuan/CS2040.vue'
 import Proglang from './components/JiaXuan/Proglang.vue'
 
 
@@ -55,7 +59,11 @@ const router = new VueRouter ({
     {path: '/language/javascript', component:Js},
     {path: '/reg', component: Register},
     {path: '/log', component: Log},
-    {path: '/cs', component:CS1010},
+    {path: '/cs1010', component:CS1010},
+    {path: '/cs1010j', component:CS1010J},
+    {path: '/cs1010s', component:CS1010S},
+    {path: '/cs2030', component:CS2030},
+    {path: '/cs2040', component:CS2040},
     {path: '/proglang', component:Proglang},
     {path: '/after', component:Afterlog},
     {path: '/btn', component:btn},

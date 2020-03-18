@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Navbar from './Common/Navbar.vue'
-import Title from './Arnold/Title.vue'
-import Langtext from './Arnold/Langtext.vue'
-import Footer from './Common/Footer.vue'
+import Navbar from '../Common/Navbar.vue'
+import Title from './Title.vue'
+import Langtext from './Langtext.vue'
+import Footer from '../Common/Footer.vue'
 
 export default {
   components: {

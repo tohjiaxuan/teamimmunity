@@ -7,20 +7,34 @@
             <b-container fluid class='pb-5 mb-3'>
 
                 <b-row align-h="center">
-                    <h1 class="pl-5 pt-4 mt-4 display-4">{{text1}}</h1>
+                    <h1 class="pt-4 mt-4 display-4">{{text1}}</h1>
                     <form>
-                        <div class="form-row">
-                            <div id="search" class="pl-5 pt-4 mt-3 form-group col-md-6 display-4">
-                                <!-- <label for="subjectarea">Subject Area</label> -->
-                                <input id="ip" type="text" class="form-control" placeholder="Subject Area">
-                            </div>
-                            <div id="search" class="pl-1 pt-4 mt-3 form-group col-md-6 display-4">
-                                <!-- <label for="catalognum">Catalogue Number</label> -->
-                                <input id="ip" type="text" class="form-control" placeholder="Catalogue Number">
-                            </div>
-                        </div> 
+                        <div id="search-box" class="form-row">
+                                <div id="search" class="form-group col-md-6 display-4 pl-4 pt-2 mt-3">
+                                    <!-- <label for="subjectarea">Subject Area</label> -->
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Subject Area"> -->
+                                    <select id="font" class="custom-select">
+                                        <option disabled selected>Select Subject Area</option>
+                                        <option value="1">BT</option>
+                                        <option value="2">CS</option>
+                                    </select>
+                                </div>
+                                <div id="search" class="w-75 form-group col-md-6 display-4 pl-2 pt-2 mt-3">
+                                    <!-- <label for="catalognum">Catalogue Number</label> -->
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Catalogue Number"> -->
+                                    <select id="font" class="custom-select">
+                                        <option disabled selected>Select Catalogue Number</option>
+                                        <option value="1">1010</option>
+                                        <option value="2">1010J</option>
+                                        <option value="3">1010S</option>
+                                        <option value="4">2030</option>
+                                        <option value="5">2040</option>
+                                        <option value="6">3103</option>
+                                    </select>
+                                </div>
+                            </div> 
                     </form>
-                    <router-link class="pl-4 pt-4 mt-3" to="/cs">
+                    <router-link class="pl-5 pt-4 mt-4" to="/cs">
                         <b-button id="btn" type="button">Go</b-button>
                     </router-link>
                 </b-row>
@@ -99,7 +113,7 @@ export default {
 
 #ip {
     background: white;
-    font-size: 20px;
+    font-size: 18px;
     color: black;
 }
 
@@ -110,11 +124,15 @@ h1 {
     color: black;
 }
 
+#search-box {
+    width: 110%;
+}
+
 #btn {
-    height: 70%;
+    height: 60%;
     width: 120%;
     font-family: 'Futura Hv BT';
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;    
     background-color: white; 
     border-color: #2196F3;

@@ -17,17 +17,31 @@
                             <div class="form-row">
                                 <div id="search" class="form-group col-md-6 display-4">
                                     <!-- <label for="subjectarea">Subject Area</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area">
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Subject Area"> -->
+                                    <select id="font" class="custom-select">
+                                        <option disabled selected>Select Subject Area</option>
+                                        <option value="1">BT</option>
+                                        <option value="2">CS</option>
+                                    </select>
                                 </div>
                                 <div id="search" class="w-75 form-group col-md-6 display-4">
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number">
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Catalogue Number"> -->
+                                    <select id="font" class="custom-select">
+                                        <option disabled selected>Select Catalogue Number</option>
+                                        <option value="1">1010</option>
+                                        <option value="2">1010J</option>
+                                        <option value="3">1010S</option>
+                                        <option value="4">2030</option>
+                                        <option value="5">2040</option>
+                                        <option value="6">3103</option>
+                                    </select>
                                 </div>
                             </div> 
                         </form>      
                     </div>
 
-                    <router-link class="pl-4" to="/cs">
+                    <router-link class="pl-4 pt-2 mt-2" to="/cs">
                         <b-button id="btn" type="button">Go</b-button>
                     </router-link>
                 </b-row>
@@ -74,7 +88,14 @@ export default {
     components: {
         'navbar': navbar,
         Footer
-    }
+    },
+    // methods: {
+    //     check: function(input) {
+    //         if(input == 'CS1010S') {
+    //             <router-link class="pl-4" to="/cs"></router-link>
+    //         }
+    //     }
+    // }
 }
 </script>
 
@@ -118,12 +139,15 @@ export default {
     background: none;
 }
 
-#ip {
-    background: white;
+#font {
+    font-size: 19px;
+}
 
+/* #ip {
+    background: white;
     font-size: 24px;
     color: black;
-}
+} */
 
 
 h1 {
@@ -140,7 +164,7 @@ h1 {
 } */
 
 #btn {
-    height: 72%;
+    height: 67%;
     width: 120%;
     font-family: 'Futura Hv BT';
     font-size: 25px;

@@ -22,6 +22,7 @@ import Log from './components/Nicole/Login.vue'
 import Register from './components/Nicole/Register.vue'
 import Account from './components/Nicole/Account.vue'
 
+import BT3103 from './components/JiaXuan/BT3103.vue'
 import CS1010 from './components/JiaXuan/CS1010.vue'
 import CS1010J from './components/JiaXuan/CS1010J.vue'
 import CS1010S from './components/JiaXuan/CS1010S.vue'
@@ -59,6 +60,7 @@ const router = new VueRouter ({
     {path: '/language/javascript', component:Js},
     {path: '/reg', component: Register},
     {path: '/log', component: Log},
+    {path: '/bt3103', component:BT3103},
     {path: '/cs1010', component:CS1010},
     {path: '/cs1010j', component:CS1010J},
     {path: '/cs1010s', component:CS1010S},

@@ -1,5 +1,5 @@
 <template>
-    <div id="cs1010s-page">
+    <div id="cs1010-page">
         <navbar></navbar>
 
         <div id="bkg" class="page-holder bg-overlay">
@@ -7,22 +7,37 @@
             <b-container fluid class='pb-5 mb-3'>
 
                 <b-row align-h="center">
-                    <h1 class="pl-5 pt-4 mt-4 display-4">{{text1}}</h1>
+                    <h1 class="pt-4 mt-4 display-4">{{text1}}</h1>
                     <form>
-                        <div class="form-row">
-                            <div id="search" class="pl-5 pt-4 mt-3 form-group col-md-6 display-4">
-                                <!-- <label for="subjectarea">Subject Area</label> -->
-                                <input id="ip" type="text" class="form-control" placeholder="Subject Area">
-                            </div>
-                            <div id="search" class="pl-1 pt-4 mt-3 form-group col-md-6 display-4">
-                                <!-- <label for="catalognum">Catalogue Number</label> -->
-                                <input id="ip" type="text" class="form-control" placeholder="Catalogue Number">
-                            </div>
-                        </div> 
+                        <div id="search-box" class="form-row">
+                                <div id="search" class="pl-4 pt-4 form-group col-md-6 display-4">
+                                    <!-- <label for="subjectarea">Subject Area</label> -->
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Subject Area"> -->
+                                    <select id="font" class="custom-select" v-model="subject">
+                                        <option disabled selected value="null">Select Subject Area</option>
+                                        <option value="bt">BT</option>
+                                        <option value="cs">CS</option>
+                                    </select>
+                                </div>
+                                <div id="search" class="pl-2 form-group col-md-6 display-4 pl-2 pt-2 mt-3">
+                                    <!-- <label for="catalognum">Catalogue Number</label> -->
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Catalogue Number"> -->
+                                    <select id="font" class="custom-select" v-model="catnum">
+                                        <option disabled selected value="null">Select Catalogue Number</option>
+                                        <option value="1010">1010</option>
+                                        <option value="1010j">1010J</option>
+                                        <option value="1010s">1010S</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2040">2040</option>
+                                        <option value="3103">3103</option>
+                                    </select>
+                                </div>
+                            </div> 
                     </form>
-                    <router-link class="pl-4 pt-4 mt-3" to="/cs">
-                        <b-button id="btn" type="button">Go</b-button>
-                    </router-link>
+
+                    <div class="pl-4 ml-4 pt-4 mt-4">
+                        <b-button id="btn" type="submit" @click.stop.prevent="submit(subject,catnum)">Go</b-button>
+                    </div>
                 </b-row>
 
                 <b-row align-h="center" class="pt-5">
@@ -67,6 +82,9 @@ import Footer from '../Common/Footer.vue'
 export default {
     data() {
         return {
+            subject: null,
+            catnum: null,
+
             text1: 'Search',
             text2: 'CS1010',
             text3: 'Programming Methodology',
@@ -83,13 +101,32 @@ export default {
     components: {
         'navbar': navbar,
         Footer
+    },
+    methods: {
+        submit(subject,catnum){ 
+            if (subject=='bt' && catnum=='3103') {
+                this.$router.push({path:'/bt3103'});
+            } else if (subject=='cs' && catnum=='1010') {
+                this.$router.push({path:'/cs1010'});
+            } else if (subject=='cs' && catnum=='1010j') {
+                this.$router.push({path:'/cs1010j'});
+            } else if (subject=='cs' && catnum=='1010s') {
+                this.$router.push({path:'/cs1010s'});
+            } else if (subject=='cs' && catnum=='2030') {
+                this.$router.push({path:'/cs2030'});
+            } else if (subject=='cs' && catnum=='2040') {
+                this.$router.push({path:'/cs2040'});
+            } else {
+                alert("Please select a valid subject area and catalogue number")
+            }
+        }
     }
 }
 </script>
 
 <style scoped>
 #bkg {
-    background: linear-gradient(180deg, rgb(168, 212, 240) 0%, rgba(222, 248, 254, 0) 100%), url("/assets/cs1010s-bkg.jpeg");
+    background: linear-gradient(180deg,  rgb(168, 212, 240) 0%, rgba(222, 248, 254, 0) 100%), url("/assets/cs1010s-bkg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -99,7 +136,7 @@ export default {
 
 #ip {
     background: white;
-    font-size: 20px;
+    font-size: 18px;
     color: black;
 }
 
@@ -110,11 +147,15 @@ h1 {
     color: black;
 }
 
+#search-box {
+    width: 110%;
+}
+
 #btn {
-    height: 70%;
+    height: 60%;
     width: 120%;
     font-family: 'Futura Hv BT';
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;    
     background-color: white; 
     border-color: #2196F3;
@@ -129,6 +170,8 @@ h2 {
     font-family: 'Futura Hv BT';
     font-size: 50px;
     color: black;
+    width: 70%;
+    text-align: center;
 }
 
 #title {
@@ -145,7 +188,7 @@ h2 {
 
 #ex-btn {
     background-color:rgb(36, 70, 182); 
-    width:13%; 
+    width:15%; 
     font-family:'Futura Hv BT'; 
     font-size:17px; 
     color:#ffffff;

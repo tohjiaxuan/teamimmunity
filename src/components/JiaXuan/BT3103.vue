@@ -1,5 +1,5 @@
 <template>
-    <div id="cs2040-page">
+    <div id="bt3103-page">
         <navbar></navbar>
 
         <div id="bkg" class="page-holder bg-overlay">
@@ -86,16 +86,16 @@ export default {
             catnum: null,
 
             text1: 'Search',
-            text2: 'CS2040',
-            text3: 'Data Structures and Algorithms',
+            text2: 'BT3103',
+            text3: 'Application Systems Development for Business Analytics',
             
             synopsis: 
-            'This module introduces students to the design and implementation of fundamental data structures and algorithms. The module covers basic data structures (linked lists, stacks, queues, hash tables, binary heaps, trees, and graphs), searching and sorting algorithms, and basic analysis of algorithms.',
-            lang: 'Java',
+            'This module aims to train students to be conversant in the technologies, approaches, principles and issues in designing IT applications systems for business analytics. Major topics include: rapid web frameworks, scripting languages, database design, web and mobile interfaces, tracking and analysis of customers, payment services / verification, implementing security, designing and deploying web and mobile services, and operational considerations and technical tradeoffs.',
+            lang: 'Javascript',
 
-            lang1: 'Java 1',
-            lang2: 'Java 2',
-            lang3: 'Java 3'
+            lang1: 'Javascript 1',
+            lang2: 'Javascript 2',
+            lang3: 'Javascript 3'
         }
     },
     components: {
@@ -187,7 +187,7 @@ h2 {
 }
 
 #ex-btn {
-    background-color:rgba(235, 181, 4, 0.959);
+    background-color:rgb(36, 70, 182); 
     width:15%; 
     font-family:'Futura Hv BT'; 
     font-size:17px; 

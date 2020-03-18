@@ -19,7 +19,7 @@
                                     <!-- <label for="subjectarea">Subject Area</label> -->
                                     <!-- <input id="ip" type="text" class="form-control" placeholder="Subject Area"> -->
                                     <select id="font" class="custom-select" v-model="subject">
-                                        <option disabled selected>Select Subject Area</option>
+                                        <option disabled selected value="null"> Select Subject Area</option>
                                         <option value="bt">BT</option>
                                         <option value="cs">CS</option>
                                     </select>
@@ -28,7 +28,7 @@
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
                                     <!-- <input id="ip" type="text" class="form-control" placeholder="Catalogue Number"> -->
                                     <select id="font" class="custom-select" v-model="catnum">
-                                        <option disabled selected>Select Catalogue Number</option>
+                                        <option disabled selected value="null">Select Catalogue Number</option>
                                         <option value="1010">1010</option>
                                         <option value="1010j">1010J</option>
                                         <option value="1010s">1010S</option>
@@ -80,6 +80,9 @@ import Footer from '../Common/Footer.vue'
 export default {
     data() {
         return {
+            subject: null,
+            catnum: null,
+
             text1: 'Feeling stressed over coding?',
             text2: 'Start searching for a module to have a headstart!',
             text3: 'Start by exploring the languages!'
@@ -91,14 +94,22 @@ export default {
     },
     methods: {
         submit(subject,catnum){ 
-            if (subject=='cs' && catnum=='1010s') {
+            if (subject=='bt' && catnum=='3103') {
+                this.$router.push({path:'/bt3103'});
+            } else if (subject=='cs' && catnum=='1010') {
+                this.$router.push({path:'/cs1010'});
+            } else if (subject=='cs' && catnum=='1010j') {
+                this.$router.push({path:'/cs1010j'});
+            } else if (subject=='cs' && catnum=='1010s') {
                 this.$router.push({path:'/cs1010s'});
+            } else if (subject=='cs' && catnum=='2030') {
+                this.$router.push({path:'/cs2030'});
+            } else if (subject=='cs' && catnum=='2040') {
+                this.$router.push({path:'/cs2040'});
             } else {
-                this.$router.push({path:'/about'});
+                alert("Please select a valid subject area and catalogue number")
             }
-         
-        
-      }
+        }
     }
 }
 </script>

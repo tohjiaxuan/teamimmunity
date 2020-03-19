@@ -185,3 +185,9 @@ export default {
 }
 </script>
 
+<style scoped>
+h2 {
+  color:#3F6892;
+}
+
+</style>

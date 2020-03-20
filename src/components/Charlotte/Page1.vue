@@ -139,7 +139,6 @@ export default {
 <style scoped>
 #main {
     height: 100%;
-    border-style: solid;
     padding-top: 6%;
     padding-bottom: 9%;
 }

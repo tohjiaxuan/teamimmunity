@@ -17,19 +17,33 @@
                             <div class="form-row">
                                 <div id="search" class="form-group col-md-6 display-4">
                                     <!-- <label for="subjectarea">Subject Area</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area">
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Subject Area"> -->
+                                    <select id="font" class="custom-select" v-model="subject">
+                                        <option disabled selected value="null"> Select Subject Area</option>
+                                        <option value="bt">BT</option>
+                                        <option value="cs">CS</option>
+                                    </select>
                                 </div>
                                 <div id="search" class="w-75 form-group col-md-6 display-4">
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number">
+                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Catalogue Number"> -->
+                                    <select id="font" class="custom-select" v-model="catnum">
+                                        <option disabled selected value="null">Select Catalogue Number</option>
+                                        <option value="1010">1010</option>
+                                        <option value="1010j">1010J</option>
+                                        <option value="1010s">1010S</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2040">2040</option>
+                                        <option value="3103">3103</option>
+                                    </select>
                                 </div>
                             </div> 
                         </form>      
                     </div>
 
-                    <router-link class="pl-4" to="/cs">
-                        <b-button id="btn" type="button">Go</b-button>
-                    </router-link>
+                    <div class="pl-4 pt-2 mt-2">
+                        <b-button id="btn" type="submit" @click.stop.prevent="submit(subject,catnum)">Go</b-button>
+                    </div>
                 </b-row>
 
                 <b-row align-h="center">
@@ -66,6 +80,9 @@ import Footer from '../Common/Footer.vue'
 export default {
     data() {
         return {
+            subject: null,
+            catnum: null,
+
             text1: 'Feeling stressed over coding?',
             text2: 'Start searching for a module to have a headstart!',
             text3: 'Start by exploring the languages!'
@@ -74,6 +91,25 @@ export default {
     components: {
         'navbar': navbar,
         Footer
+    },
+    methods: {
+        submit(subject,catnum){ 
+            if (subject=='bt' && catnum=='3103') {
+                this.$router.push({path:'/bt3103'});
+            } else if (subject=='cs' && catnum=='1010') {
+                this.$router.push({path:'/cs1010'});
+            } else if (subject=='cs' && catnum=='1010j') {
+                this.$router.push({path:'/cs1010j'});
+            } else if (subject=='cs' && catnum=='1010s') {
+                this.$router.push({path:'/cs1010s'});
+            } else if (subject=='cs' && catnum=='2030') {
+                this.$router.push({path:'/cs2030'});
+            } else if (subject=='cs' && catnum=='2040') {
+                this.$router.push({path:'/cs2040'});
+            } else {
+                alert("Please select a valid subject area and catalogue number")
+            }
+        }
     }
 }
 </script>
@@ -118,12 +154,15 @@ export default {
     background: none;
 }
 
-#ip {
-    background: white;
+#font {
+    font-size: 19px;
+}
 
+/* #ip {
+    background: white;
     font-size: 24px;
     color: black;
-}
+} */
 
 
 h1 {
@@ -140,7 +179,7 @@ h1 {
 } */
 
 #btn {
-    height: 72%;
+    height: 67%;
     width: 120%;
     font-family: 'Futura Hv BT';
     font-size: 25px;

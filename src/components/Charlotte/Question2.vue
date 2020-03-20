@@ -89,8 +89,19 @@
           </b-row>
 
           <b-row>
-            <b-col align='right' ><b-button variant="outline-dark" v-on:click="check(selected)" data-dismiss="alert"> Submit </b-button></b-col>
-          </b-row>
+            <b-col align='right'>
+                <b-button v-b-toggle.collapse-2 variant="outline-dark"  v-on:click="check(selected)"> Submit </b-button>
+                <b-collapse id="collapse-2" class="mt-2" >
+                  <b-card>
+                    <div>
+                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
+                      <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
+                      <span id='empty' v-else> Please enter an answer! </span>
+                    </div>
+                  </b-card>
+                </b-collapse>
+                </b-col>
+            </b-row>
 
           <b-row>
             
@@ -99,9 +110,7 @@
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
-               
           </b-row>
-
         </b-col>
 
         <b-col class='third-section'>
@@ -119,13 +128,17 @@ import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 export default {
     data() {
+
         return {
-        
+          selected: '',
+          test: '',
+    
           options: [
-            { text: '3', value: 'wrong', name: 'answer'},
-            { text: '2.9', value: 'wrong', name: 'answer'},
-            { text: '2.8', value: 'wrong', name: 'answer' },
-            { text: '2', value: 'correct',id: 'answer'}
+     
+            { text: '3', value: 'wrong'},
+            { text: '2.9', value: 'wrong'},
+            { text: '2.8', value: 'wrong'},
+            { text: '2', value: 'correct'}
           ]
         }
     },
@@ -135,16 +148,17 @@ export default {
     },
     methods: {
       check: function(ans) {
+     
             if(ans == 'wrong'){
-            alert("Please try again");
-            this.$("#alert").alert();
+              this.test='h'
+       
             }
             else {
-              alert("Good job!");
+              this.test='h'
             }
-        
       }
-    }
+
+  }
 }
 
       
@@ -231,8 +245,6 @@ ul.timeline2 {
     list-style-type: none;
     position: relative;
     width:100%;
-  
-   
  
 }
 
@@ -243,9 +255,6 @@ ul.timeline2 {
 ul.timeline2 > li {
     padding-left: 20%;
     width: 100%;
-    
-
-
 }
 
 ul.timeline2 > li:before {
@@ -265,6 +274,28 @@ ul.timeline2 > li:before {
 #next {
   margin-top:2%;
 }
+
+#wrong {
+  font-family: Futura Hv BT;
+  font-size: 16px;
+  padding-right:82%;
+
+}
+
+#correct {
+  font-family: Futura Hv BT;
+  font-size: 16px;
+  padding-right:88%;
+
+}
+
+#empty {
+  font-family: Futura Hv BT;
+  font-size: 16px;
+  padding-right:74%;
+
+}
+
 
 ul.timeline3 {
     list-style-type: none;
@@ -293,8 +324,8 @@ ul.timeline3 > li:before {
     width: 20px;
     height: 20px;
     z-index: 400;
-
 }
+
 
 
 

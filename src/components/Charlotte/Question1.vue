@@ -92,7 +92,7 @@
                 <b-button v-b-toggle.collapse-2 variant="outline-dark"  v-on:click="check(selected)"> Submit </b-button>
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
-                    <div>
+                    <div >
                       <span id='correct' v-if="selected =='correct'"> Good job! </span>
                       <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='empty' v-else> Please enter an answer! </span>
@@ -275,21 +275,21 @@ ul.timeline2 > li:before {
 #wrong {
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:82%;
+  /* padding-right:82%; */
 
 }
 
 #correct {
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:88%;
+  /* padding-right:88%; */
 
 }
 
 #empty {
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:74%;
+  /* padding-right:74%; */
 
 }
 

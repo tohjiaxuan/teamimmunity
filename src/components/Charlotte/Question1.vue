@@ -22,10 +22,10 @@
 
             <ul class="timeline2">
               <li>
-                <p>2. Syntax </p>
+                <p>2. Casting/Syntax </p>
                 <br> <br>
               </li>
-              
+
               <li>
                 <p>3. Python Operators</p>
                 <br> <br>
@@ -42,6 +42,7 @@
                 <br> <br>
               </li>
             </ul>
+
           </b-row>   
         </b-col>
 
@@ -65,7 +66,7 @@
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> Consider the variable types</p>
+                    <p class="card-text"> Consider the variable types </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -87,8 +88,19 @@
           </b-row>
 
           <b-row>
-            <b-col align='right' ><b-button variant="outline-dark" v-on:click="check(selected)" data-dismiss="alert"> Submit </b-button></b-col>
-          </b-row>
+            <b-col align='right'>
+                <b-button v-b-toggle.collapse-2 variant="outline-dark"  v-on:click="check(selected)"> Submit </b-button>
+                <b-collapse id="collapse-2" class="mt-2" >
+                  <b-card>
+                    <div >
+                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
+                      <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
+                      <span id='empty' v-else> Please enter an answer! </span>
+                    </div>
+                  </b-card>
+                </b-collapse>
+                </b-col>
+            </b-row>
 
           <b-row>
             
@@ -97,9 +109,7 @@
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
-               
           </b-row>
-
         </b-col>
 
         <b-col class='third-section'>
@@ -117,13 +127,18 @@ import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 export default {
     data() {
+
         return {
-        
+          selected: '',
+          test: '',
+    
           options: [
-            { text: '12c', value: 'wrong', name: 'answer'},
-            { text: '3c', value: 'wrong', name: 'answer'},
-            { text: '3 + c', value: 'wrong', name: 'answer' },
-            { text: 'TypeError: Unsupported operand type(s) for "int" and "str"', value: 'correct',id: 'answer'}
+
+            { text: '12c', value: 'wrong', },
+            { text: '3c', value: 'wrong'},
+            { text: '3 + c', value: 'wrong'},
+            { text: 'TypeError: Unsupported operand type(s) for "int" and "str"', value: 'correct'},
+        
           ]
         }
     },
@@ -133,21 +148,17 @@ export default {
     },
     methods: {
       check: function(ans) {
+     
             if(ans == 'wrong'){
-            alert("Please try again");
-            this.$("#alert").alert();
-            }
-            else if (ans =='correct') {
-              alert("Good job!");
-
+              this.test='h'
+       
             }
             else {
-              alert("Please select an answer");
-              
+              this.test='h'
             }
-        
       }
-    }
+
+  }
 }
 
       
@@ -191,6 +202,7 @@ span {
 ul.timeline {
     list-style-type: none;
     position: relative;
+    width:100%;
  
 }
 
@@ -203,7 +215,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 380%;
+    height: 440%;
     z-index: 400;
  
 }
@@ -222,7 +234,7 @@ ul.timeline > li:before {
     position: absolute;
     border-radius: 50%;
     border: 3px solid #22c0e8;
-    left: 20px;
+    left: 17%;
     width: 20px;
     height: 20px;
     z-index: 400;
@@ -232,19 +244,14 @@ ul.timeline > li:before {
 ul.timeline2 {
     list-style-type: none;
     position: relative;
+    width:100%;
  
 }
-
-
-
 
 /* words */
 ul.timeline2 > li {
     padding-left: 20%;
     width: 100%;
-
-   
-
 }
 
 ul.timeline2 > li:before {
@@ -254,7 +261,7 @@ ul.timeline2 > li:before {
     position: absolute;
     border-radius: 50%;
     border: 3px solid black;
-    left: 20px;
+    left: 17%;
     width: 20px;
     height: 20px;
     z-index: 400;
@@ -265,6 +272,25 @@ ul.timeline2 > li:before {
   margin-top:2%;
 }
 
+#wrong {
+  font-family: Futura Hv BT;
+  font-size: 16px;
+  /* padding-right:82%; */
 
+}
+
+#correct {
+  font-family: Futura Hv BT;
+  font-size: 16px;
+  /* padding-right:88%; */
+
+}
+
+#empty {
+  font-family: Futura Hv BT;
+  font-size: 16px;
+  /* padding-right:74%; */
+
+}
 
 </style>

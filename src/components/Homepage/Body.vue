@@ -40,11 +40,11 @@
             </b-col>
         </b-row>
 
-        <b-row cols="3" align='center'>
+        <b-row cols="3" align='center' >
             <b-col>
                 <span>Customised for<br/>modules</span>
             </b-col>
-            <b-col>
+            <b-col class='pr-1'>
                 <span>Detailed<br/>explanation</span>
             </b-col>
             <b-col>
@@ -80,7 +80,7 @@ img {
     background-size: cover;
     /* background-position: center center; */
     color: #fff;
-    height: 90vh;
+    height: 89vh;
 }
 
 h1, h2, .b-button {

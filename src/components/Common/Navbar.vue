@@ -14,6 +14,7 @@
           <b-nav-item to="/page1" class='pr-2'>Exercise</b-nav-item>
           <b-nav-item to="/after" class='pr-2'>Account</b-nav-item>
           <b-nav-item to="/" class='pr-2'>Logout</b-nav-item>
+          <b-nav-item to="/contact" class='pr-2'>?</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
       

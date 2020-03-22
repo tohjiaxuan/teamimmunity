@@ -1,8 +1,7 @@
 <template>
-<div>
 <div id="background" class="page-holder bg-cover">
     <div id="rectangle">
-        <b-container id="login">
+        <b-container id="login" class='mt-n4'>
             <router-link id="change" to="/">Back</router-link>
         <div id="box" class="shadow-lg p-3 mb-5 bg-grey rounded">
             <div>
@@ -12,24 +11,24 @@
         <!-- Default form login -->
             <form>
                 <p id="member" class="h4 text-center mb-4"> MEMBER LOGIN </p>
-                <b-form-input type="email" v-model='input.username' id="defaultFormLoginEmailEx" class="form-control" placeholder="User ID / Email"/>
+                <b-form-input type="email" v-model.lazy='input.username' id="defaultFormLoginEmailEx" class="form-control" placeholder="User ID / Email"/>
                 <br>
-                <b-form-input type="password" v-model='input.password' id="defaultFormLoginPasswordEx" class="form-control" placeholder="Password"/>
+                <b-form-input type="password" v-model.lazy='input.password' id="defaultFormLoginPasswordEx" class="form-control" placeholder="Password"/>
                 <br>
-                <router-link to="/after">
+                <!-- <router-link to="/after"> -->
                     <div class="text-center mt-4">
-                        <b-button id="login_btn" type="submit" v-on:click="login()">Login</b-button>
+                        <b-button id="login_btn" type="submit" v-on:click.prevent="login">Login</b-button>
                      </div>
-                </router-link>
+                <!-- </router-link> -->
             </form>
         </div>
         </b-container>
     </div>
 </div>
-</div>
 </template>
 
 <script>
+import firebase from "firebase"
 export default {
     name: 'Login',
     data() {
@@ -37,14 +36,27 @@ export default {
             input: {
                 username: "",
                 password: ""
-            }
+            },
+            accounts: []
         }
     },
     methods: {
         login() {
-            return this.input.username + this.input.password;
-        }
-    }
+            // return this.input.username + this.input.password;
+            firebase.auth().signInWithEmailAndPassword(this.input.username, this.input.password)
+            .then((response) => {
+                alert('Well done! You are now connected.')
+                console.log(response)
+                this.$router.replace('after')
+            })
+            .catch((error) => {
+                alert('Oops. ' + error.message)
+                console.log(error)
+            })
+        },
+        
+    },
+    
 }
 </script>
 

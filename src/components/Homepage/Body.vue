@@ -80,7 +80,7 @@ img {
     background-size: cover;
     /* background-position: center center; */
     color: #fff;
-    height: 89vh;
+    height: 90vh;
 }
 
 h1, h2, .b-button {

@@ -326,7 +326,4 @@ ul.timeline3 > li:before {
     z-index: 400;
 }
 
-
-
-
 </style>

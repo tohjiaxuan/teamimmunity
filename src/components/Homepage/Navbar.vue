@@ -9,6 +9,8 @@
 
       <b-navbar-nav class="ml-auto">
 
+        <b-button variant="outline-secondary" class="mr-2 h-50 w-75 mt-3" size="sm" to="/contact" pill>?</b-button> 
+
         <b-nav-item-dropdown text="☰" right id="menu" toggle-class="text-dark" no-caret class="drop">
           <b-dropdown-item to="/about" id="menu">About</b-dropdown-item>
            <b-dropdown-item to="/language" id="menu">Language</b-dropdown-item>

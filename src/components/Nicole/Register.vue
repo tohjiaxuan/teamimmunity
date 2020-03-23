@@ -18,7 +18,7 @@
                 <b-col sm="4"> <h2 id="titles"> Sign Up /</h2> </b-col>
                 <b-col align-self="start">
                     <router-link to="/log">
-                    <h2 id="login"> Login </h2>
+                    <h2 id="login" class='ml-n5 '> Login </h2>
                     </router-link>
                 </b-col>
             </b-row>
@@ -28,43 +28,43 @@
                     <b-input-group-prepend is-text>
                         <b-icon icon="at" variant="info"></b-icon>
                     </b-input-group-prepend>
-                    <b-form-input id="userid" v-model="form.userid" type="text" required placeholder="User ID"> </b-form-input>
+                    <b-form-input id="userid" v-model.lazy="form.userid" type="text" required placeholder="User ID"> </b-form-input>
                 </b-input-group>
                 <b-input-group id="group2">
                     <b-input-group-prepend is-text>
                         <b-icon icon="envelope" variant="info"></b-icon>
                     </b-input-group-prepend>
-                    <b-form-input type="email" required placeholder="Email" v-model="form.email"> </b-form-input>
+                    <b-form-input type="email" required placeholder="Email" v-model.lazy="form.email"> </b-form-input>
                 </b-input-group>
                 <b-input-group id="group3">
                     <b-input-group-prepend is-text>
                         <b-icon icon="lock-fill" variant="info"></b-icon>
                     </b-input-group-prepend>
-                    <b-form-input type="password" required placeholder="Password" v-model="form.password"> </b-form-input>
+                    <b-form-input type="password" required placeholder="Password" v-model.lazy="form.password"> </b-form-input>
                 </b-input-group>
                 <b-input-group id="group4">
                     <b-input-group-prepend is-text>
                         <b-icon icon="shield-lock-fill" variant="info"></b-icon>
                     </b-input-group-prepend>
-                    <b-form-input type="password" required placeholder="Re-enter Password" v-model="form.password2"> </b-form-input>
+                    <b-form-input type="password" required placeholder="Re-enter Password" v-model.lazy="form.password2"> </b-form-input>
                 </b-input-group>
                 <b-input-group id="group5">
                     <b-input-group-prepend is-text>
                         <b-icon icon="book-half-fill" variant="info"></b-icon>
                     </b-input-group-prepend>
-                    <b-form-input type="text" required placeholder="Course" v-model="form.course"> </b-form-input>
+                    <b-form-input type="text" required placeholder="Course" v-model.lazy="form.course"> </b-form-input>
                 </b-input-group>
                 <b-input-group id="group6">
                     <b-input-group-prepend is-text>
                         <b-icon icon="calendar-fill" variant="info"></b-icon>
                     </b-input-group-prepend>
-                    <b-form-select v-model="form.year" :options="options"> </b-form-select>
+                    <b-form-select v-model.lazy="form.year" :options="options"> </b-form-select>
                 </b-input-group>
                 <br>
                 <br>
-                <router-link id="move" to="/after">
-                    <b-button block variant="outline-light" id="start"> Let's Get Started! </b-button>
-                </router-link>
+                <!-- <router-link id="move" to="/after"> -->
+                    <b-button block variant="outline-light" id="start" v-on:click.prevent='register' class='mb-5'> Let's Get Started! </b-button>
+                <!-- </router-link> -->
             </b-form>
         </b-col>
     </b-row>
@@ -72,6 +72,8 @@
 </template>
 
 <script>
+import db from "../../firebase.js";
+import firebase from 'firebase';
   export default {
     data() {
       return {
@@ -113,6 +115,19 @@
         this.show = false
         this.$nextTick(() => {
           this.show = true
+        })
+      },
+      register() {
+        db.doc
+        firebase.auth().createUserWithEmailAndPassword(this.form.email, this.form.password)
+        .then((response) => {
+            alert('Your account has been created!')
+            console.log(response)
+            this.$router.replace('log')
+        })
+        .catch((error) => {
+            alert('Oops. ' + error.message)
+            console.log(error)
         })
       }
     }

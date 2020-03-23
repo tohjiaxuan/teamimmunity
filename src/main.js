@@ -53,6 +53,7 @@ Vue.config.productionTip = false
 
 const router = new VueRouter ({
   routes: [
+    {path: '*', redirect: '/'},
     {path: '/', component: HomePage},
     {path: '/about', component: About},
     {path: '/contact', component: Contact},

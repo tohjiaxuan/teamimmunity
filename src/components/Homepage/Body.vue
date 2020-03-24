@@ -89,6 +89,6 @@ h1, h2, .b-button {
 
 span{
     font-family: Futura Hv Bt;
-    color: black;
+    color: rgb(33, 32, 58);
 }
 </style>

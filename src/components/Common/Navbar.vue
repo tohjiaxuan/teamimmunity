@@ -1,7 +1,9 @@
 <template>
   <div>
     <b-navbar toggleable="md" type="light" variant="light" class='navbar fixed-top'>
-        <b-navbar-brand to="/" id="nav">Code.io</b-navbar-brand>
+        <b-navbar-brand to="/" id="nav">
+        <b-img src='assets/code2.png' class='h-50 w-50 '></b-img>
+        </b-navbar-brand>
           
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

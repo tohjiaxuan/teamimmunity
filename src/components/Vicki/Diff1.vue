@@ -10,7 +10,6 @@
       <img src="https://img.icons8.com/color/49/000000/1-circle-c--v1.png"/>
     </div>
     <h2 class="text-center">Key Differences in: Syntax</h2>
-
     <div class="row">
     
       <!-- Python Tier -->
@@ -59,7 +58,7 @@
       </div>
       
       <!-- Java Tier -->
-      <div class="col-lg-4" style='border:1px solid'>
+      <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0 w-75 ml-5">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">SYNTAX</h5>
@@ -72,7 +71,7 @@
             <hr>
             <ul class="fa-ul mb-5">
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Code blocks defined by curly braces</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Semi-colons required to end statements</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Semi-colons are required to end statements</li>
             </ul>
             <div>
             <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
@@ -107,7 +106,7 @@
       </div>
       
       <!-- JS Tier -->
-      <div class="col-lg-4" style='border:1px solid'>
+      <div class="col-lg-4">
         <div class="card w-75 ml-5">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">SYNTAX</h5>
@@ -120,7 +119,7 @@
             <hr>
             <ul class="fa-ul mb-5">
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Code blocks defined by curly braces</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Semi-colons required to end statements</li>
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>Semi-colons are required to end statements</li>
               
             </ul>
             <div>

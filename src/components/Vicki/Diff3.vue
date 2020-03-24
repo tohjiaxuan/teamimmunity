@@ -1,12 +1,10 @@
 
 <template>
     
-
-<section class="pricing py-5">
-  <br>
+<div>
   <Navbar></Navbar>
-  <div class="container">
-    <div class="text-center">
+  <div class="container-fluid difference mt-3">
+    <div class="text-center mt-4">
     <img src="https://img.icons8.com/color/49/000000/3-circle-c--v1.png"/>
     </div>
     <h2 class="text-center">Key Differences in: Variable Declaration</h2>
@@ -163,7 +161,7 @@
   <div class="row fixed-row-bottom float-right">
   <Footer></Footer>
   </div>
-</section>
+</div>
 
 
 

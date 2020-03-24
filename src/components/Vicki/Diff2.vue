@@ -1,12 +1,9 @@
 
 <template>
-    
-
-<section class="pricing py-5">
-  <br>
-  <div class="container">
-    <Navbar></Navbar>
-    <div class="text-center">
+    <div>
+      <Navbar></Navbar>
+  <div class="container-fluid difference mb-3">
+    <div class="text-center mt-4">
     <img src="https://img.icons8.com/color/49/000000/2-circle-c--v1.png"/>
     </div>
     <h2 class="text-center">Key Differences in: Printing</h2>
@@ -168,7 +165,8 @@
   <div class="row fixed-row-bottom float-right">
   <Footer></Footer>
   </div>
-</section>
+
+</div>
 
 
 

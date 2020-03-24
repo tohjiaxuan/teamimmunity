@@ -1,7 +1,9 @@
 <template>
 <div>
   <b-navbar toggleable="md" type="light" variant="outline-danger" fixed="top" class='bg-overlay'>
-    <b-navbar-brand to="/" id="nav">Code.io</b-navbar-brand>
+    <b-navbar-brand to="/" id="nav">
+      <b-img src='assets/homecode.png' class='h-50 w-50 '></b-img>
+    </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -50,5 +52,9 @@ export default {
     background-size: cover;
     background-color: #CBE7F8 ;
     /* height: 100vh; */
+}
+
+.b-img{
+  height:1%
 }
 </style>

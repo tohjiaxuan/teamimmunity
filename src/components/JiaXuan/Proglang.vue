@@ -96,19 +96,43 @@ export default {
     },
     methods: {
         submit(subject,catnum){ 
-            if (subject=='bt' && catnum=='3103') {
+            if (subject=='BT' && catnum=='3103') {
                 this.$router.push({path:'/bt3103'});
+            } else if (subject=='bt' && catnum=='3103') {
+                this.$router.push({path:'/bt3103'});
+            } 
+            
+            else if (subject=='CS' && catnum=='1010') {
+                this.$router.push({path:'/cs1010'});
             } else if (subject=='cs' && catnum=='1010') {
                 this.$router.push({path:'/cs1010'});
+            } 
+            
+            else if (subject=='CS' && catnum=='1010J') {
+                this.$router.push({path:'/cs1010j'});
             } else if (subject=='cs' && catnum=='1010j') {
                 this.$router.push({path:'/cs1010j'});
+            } 
+            
+            else if (subject=='CS' && catnum=='1010S') {
+                this.$router.push({path:'/cs1010s'});
             } else if (subject=='cs' && catnum=='1010s') {
                 this.$router.push({path:'/cs1010s'});
+            }
+             
+            else if (subject=='CS' && catnum=='2030') {
+                this.$router.push({path:'/cs2030'});
             } else if (subject=='cs' && catnum=='2030') {
                 this.$router.push({path:'/cs2030'});
+            }
+            
+            else if (subject=='CS' && catnum=='2040') {
+                this.$router.push({path:'/cs2040'});
             } else if (subject=='cs' && catnum=='2040') {
                 this.$router.push({path:'/cs2040'});
-            } else {
+            }
+            
+            else {
                 alert("Please select a valid subject area and catalogue number")
             }
         }

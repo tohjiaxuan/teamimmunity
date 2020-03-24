@@ -27,6 +27,8 @@ html, body {
   overflow-y:scroll; */
   scrollbar-width: thin;
   padding-top: 28px;
+  padding-right:0px !important;
+  margin-right:0px !important;
 }  
 
 </style>

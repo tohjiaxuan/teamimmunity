@@ -40,9 +40,11 @@
                             </div> 
                         </form>      
                     </div>
-
-                    <div class="pl-4 pt-2 mt-2">
+                    <!-- <div class="pl-4 pt-2 mt-2">
                         <b-button id="btn" type="submit" @click.stop.prevent="submit(subject,catnum)">Go</b-button>
+                    </div> -->
+                    <div class='mt-n1'>
+                        <b-button id='btn' type="submit" size='sm' class='ml-3' @click.stop.prevent="submit(subject,catnum)">Go</b-button>
                     </div>
                 </b-row>
 
@@ -179,8 +181,7 @@ h1 {
 } */
 
 #btn {
-    height: 67%;
-    width: 120%;
+    width: 100%;
     font-family: 'Futura Hv BT';
     font-size: 25px;
     cursor: pointer;    

@@ -2,19 +2,20 @@
 <template>
     
 
-<section class="pricing py-5">
-  <br>
-  <div class="container">
-    <Navbar></Navbar>
-    <div class="text-center">
-    <img src="https://img.icons8.com/color/49/000000/1-circle-c--v1.png"/>
+<section>
+  <Navbar></Navbar>
+
+  <div class="container-fluid pricing mb-3">
+    <div class="text-center mt-4">
+      <img src="https://img.icons8.com/color/49/000000/1-circle-c--v1.png"/>
     </div>
     <h2 class="text-center">Key Differences in: Syntax</h2>
+
     <div class="row">
     
       <!-- Python Tier -->
-      <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
+      <div class="col-lg-4" style='border:1px solid'>
+        <div class="card mb-5 mb-lg-0 w-75">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">SYNTAX</h5>
             <h6 class="card-price text-center">
@@ -57,9 +58,10 @@
           </div>
         </div>
       </div>
+      
       <!-- Java Tier -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
+        <div class="card mb-5 mb-lg-0 w-75 ml-5">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">SYNTAX</h5>
             <h6 class="card-price text-center">
@@ -69,7 +71,7 @@
                
             </h6>
             <hr>
-            <ul class="fa-ul">
+            <ul class="fa-ul mb-5">
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Code blocks defined by curly braces</li>
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Semi-colons required to end statements</li>
             </ul>
@@ -104,9 +106,10 @@
           </div>
         </div>
       </div>
+      
       <!-- JS Tier -->
       <div class="col-lg-4">
-        <div class="card">
+        <div class="card w-75 ml-5">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">SYNTAX</h5>
             <h6 class="card-price text-center">
@@ -116,7 +119,7 @@
                 
             </h6>
             <hr>
-            <ul class="fa-ul">
+            <ul class="fa-ul mb-5">
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Code blocks defined by curly braces</li>
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Semi-colons required to end statements</li>
               
@@ -162,24 +165,14 @@
 
     </div>
     <br>
-    <router-link to="/btn" id="getstarted2"><button type="button" class="btn btn-info">Back</button></router-link>
-    <router-link to="/diff2" id="getstarted2"><button type="button" class="btn btn-info float-right">Next</button></router-link>
+    <router-link to="/btn" id="getstarted2"><button type="button" class="btn btn-info ml-5">Back</button></router-link>
+    <router-link to="/diff2" id="getstarted2"><button type="button" class="btn btn-info float-right mr-5">Next</button></router-link>
     
   </div>
-  
-  
-  
-  <br>
-  <br>
-  <br>
-  <div class="row fixed-row-bottom float-right">
+
   <Footer></Footer>
-  </div>
   
 </section>
-
-
-
 
 </template>
 <script>

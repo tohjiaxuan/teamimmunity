@@ -1,50 +1,49 @@
-section.pricing {
-    
-    background: linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 100%);
-    overflow-x: hidden;
-
-    
-    
-  }
-
-  html {
-    overflow-x: hidden;
-  }
-
-  h2 {
-    font-family: Futura HV BT;
-  }
-
-  h6 {
-    font-family: Futura HV BT;
-  }
-
-  h5 {
-    font-family: Futura HV BT;
-  }
+div.pricing {
+  
+  background: linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 100%);
+  overflow-x: hidden;
 
   
-  .pricing .card {
-    border: none;
-    border-radius: 1rem;
-    transition: all 0.2s;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-    
-    
-   
-  }
+  
+}
+
+html {
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: Futura HV BT;
+}
+
+h6 {
+  font-family: Futura HV BT;
+}
+
+h5 {
+  font-family: Futura HV BT;
+}
+
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  
+  
+  
+}
 
   
-  .pricing .fa-ul {
-      font-family: Futura HV BT;
-      font-size: 1.3rem;
-  }
+.pricing .fa-ul {
+  font-family: Futura HV BT;
+  font-size: 1.3rem;
+}
 
-  .pricing .modal-body {
-    font-family: Futura HV BT;
-    font-size: 1.3rem;
-    overflow: hidden;
-    
+.pricing .modal-body {
+  font-family: Futura HV BT;
+  font-size: 1.3rem;
+  overflow: hidden;
 }
 
 .pricing .modal-open {
@@ -110,6 +109,7 @@ section.pricing {
       opacity: 1;
     }
   }
+
   /* Fallback for Edge
   -------------------------------------------------- */
   

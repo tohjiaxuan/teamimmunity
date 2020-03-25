@@ -83,7 +83,7 @@ const router = new VueRouter ({
     {path: '/account', component:Afterlog, meta: {requiresAuth: true}},
     {path: '/account/edit', component:Account}, 
 
-    { path:'/page1', component: Page1},
+    { path:'/exercise', component: Page1},
     { path: '/qn1', component: Question1},
     { path: '/qn2', component: Question2},
     { path: '/qn3', component: Question3},

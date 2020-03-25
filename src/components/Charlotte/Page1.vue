@@ -2,31 +2,31 @@
 <div id="biggest">
   <Navbar></Navbar>
   <b-container fluid id="main" class='bg-overlay'>
-      <section class="pricing1 py-5">
+      <section class="exercisepage py-5">
         <h1 class="text-center"> Choose Your Level </h1>
         <br>
         <br>
-      <b-row cols="3">
+      <b-row>
           <!-- Python -->
           <b-col>
-              <b-card-group id="python" deck>
+              <b-card-group deck>
                   <b-card>
                       <b-row class="text-center" align-content="center" no-gutters="true">
                         <b-col md="4">
-                            <b-card-img alt src="/assets/python2.png" left id="pythonimg" ></b-card-img>
+                            <b-card-img alt src="/assets/python2.png" left id="pythonimg"></b-card-img>
                         </b-col>
                         <b-col align-self="center">
                             <h2 id="pythontitle"> Python Tutorial </h2>
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row lass="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters="true">
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="python-drop" text="Select Difficulty Level" block variant="info">
-                                <b-dropdown-item href="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item href="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item href="/qn1"> Hard (3) </b-dropdown-item>
+                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
@@ -50,20 +50,20 @@
                   <b-card>
                       <b-row class="text-center" align-content="center" no-gutters="true">
                         <b-col md="4">
-                            <b-card-img alt src="/assets/java2.png" left id="javaimg" ></b-card-img>
+                            <b-card-img alt src="/assets/java2.png" left id="javaimg"></b-card-img>
                         </b-col>
                         <b-col align-self="center">
-                            <h2 id="javatitle"> Java Tutorial </h2>
+                            <h2 id="javatitle" class='mt-n2'> Java Tutorial </h2>
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row lass="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters="true">
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
-                            <b-dropdown id="javadrop" text="Select Difficulty Level" block variant="info">
-                                <b-dropdown-item href="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item href="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item href="/qn1"> Hard (3) </b-dropdown-item>
+                            <b-dropdown id="javadrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
+                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
@@ -87,20 +87,20 @@
                   <b-card>
                       <b-row class="text-center" align-content="center" no-gutters="true">
                         <b-col md="3">
-                            <b-card-img alt src="/assets/javascript.png" left id="javascriptimg" ></b-card-img>
+                            <b-card-img alt src="/assets/javascript.png" left id="javascriptimg"></b-card-img>
                         </b-col>
                         <b-col align-self="center">
-                            <h2 id="javascripttitle"> Javascript Tutorial </h2>
+                            <h2 id="javascripttitle" class='mt-n1'> Javascript Tutorial </h2>
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row lass="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters="true">
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
-                            <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info">
-                                <b-dropdown-item href="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item href="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item href="/qn1"> Hard (3) </b-dropdown-item>
+                            <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
+                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
@@ -180,10 +180,10 @@ export default {
   /* Hover Effects on Card */
   
   @media (min-width: 992px) {
-    .pricing1 .card:hover {
+    .exercisepage .card:hover {
       box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.9);
     }
-    .pricing1 .card:hover .btn {
+    .exercisepage .card:hover .btn {
       opacity: 1;
     }
   }

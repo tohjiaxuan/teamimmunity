@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import firebase from 'firebase'
 
 import VueRouter from 'vue-router'
 
@@ -57,27 +58,31 @@ const router = new VueRouter ({
     {path: '/', component: HomePage},
     {path: '/about', component: About},
     {path: '/contact', component: Contact},
+
     {path: '/language',component:Language},
     {path: '/language/python', component:Python},
     {path: '/language/java', component:Java},
     {path: '/language/javascript', component:Js},
+
     {path: '/reg', component: Register},
     {path: '/log', component: Log},
+
     {path: '/bt3103', component:BT3103},
     {path: '/cs1010', component:CS1010},
     {path: '/cs1010j', component:CS1010J},
     {path: '/cs1010s', component:CS1010S},
     {path: '/cs2030', component:CS2030},
     {path: '/cs2040', component:CS2040},
-    {path: '/proglang', component:Proglang},
-    {path: '/after', component:Afterlog},
+    {path: '/module', component:Proglang},
+    
     {path: '/btn', component:btn},
     {path: '/diff1', component:diff1},
     {path: '/diff2', component:diff2},
     {path: '/diff3', component:diff3},
     
-   
-    {path: '/after/account', component:Account}, 
+    {path: '/account', component:Afterlog, meta: {requiresAuth: true}},
+    {path: '/account/edit', component:Account}, 
+
     { path:'/page1', component: Page1},
     { path: '/qn1', component: Question1},
     { path: '/qn2', component: Question2},
@@ -90,6 +95,17 @@ const router = new VueRouter ({
   scrollBehavior () {
     window.scrollTo(0,0);
   }
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(route => route.meta.requiresAuth)) {
+    if (firebase.auth.currentUser) {
+      next();
+    } else {
+      next({ path: '/log' });
+    }
+  }
+  next();
 });
 
 new Vue({

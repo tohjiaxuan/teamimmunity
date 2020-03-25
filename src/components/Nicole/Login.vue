@@ -47,7 +47,7 @@ export default {
             .then((response) => {
                 alert('Well done! You are now connected.')
                 console.log(response)
-                this.$router.replace('after')
+                this.$router.replace('account')
             })
             .catch((error) => {
                 alert('Oops. ' + error.message)

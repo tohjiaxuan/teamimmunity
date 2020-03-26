@@ -33,8 +33,9 @@ export default {
   methods: {
     logout() {
       firebase.auth().signOut().then(() => {
+        alert('You have successfully logged out!')
         this.$store.dispatch('clearData')
-        this.$router.replace('')
+        this.$router.replace('/')
       }).catch(err => {
         console.log(err)
       })

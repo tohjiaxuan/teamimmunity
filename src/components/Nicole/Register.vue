@@ -28,7 +28,7 @@
                     <b-input-group-prepend is-text>
                         <b-icon icon="at" variant="info"></b-icon>
                     </b-input-group-prepend>
-                    <b-form-input id="userid" v-model.lazy="form.userid" type="text" required placeholder="User ID"> </b-form-input>
+                    <b-form-input id="name" v-model.lazy="form.name" type="text" required placeholder="Name"> </b-form-input>
                 </b-input-group>
                 <b-input-group id="group2">
                     <b-input-group-prepend is-text>
@@ -78,7 +78,7 @@ import firebase from 'firebase';
     data() {
       return {
         form: {
-          userid: '',
+          name: '',
           email: '',
           password: '',
           password2: '',
@@ -105,7 +105,7 @@ import firebase from 'firebase';
       onReset(evt) {
         evt.preventDefault()
         // Reset our form values
-        this.form.userid = '',
+        this.form.name = '',
         this.form.email = '',
         this.form.password = '',
         this.form.password2 = '',
@@ -124,7 +124,7 @@ import firebase from 'firebase';
             console.log(user.user)
             this.$store.commit('setCurrentUser', user.user)
             db.collection('users').doc(user.user.uid).set({
-                name: this.form.userid,
+                name: this.form.name,
                 email: this.form.email,
                 password: this.form.password,
                 password2: this.form.password2,

@@ -15,7 +15,7 @@
 
         <b-row align-h='center' class='mt-5'>
             <b-col cols='1.5'>
-                <b-button-group size='lg'>
+                <b-button-group size='lg' v-if='!currentUser'>
                     <router-link to="/reg">
                         <b-button class='b-button' variant="outline-primary">Register</b-button>
                     </router-link>
@@ -23,6 +23,7 @@
                         <b-button class='b-button' variant="outline-primary">Sign In</b-button>
                     </router-link>
                 </b-button-group>
+                <div v-if='currentUser'>You are logged in!</div>
             </b-col>
         </b-row>
     </b-container>
@@ -56,14 +57,17 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
     data() {
       return {
         text1: 'Coding can be for anyone.',
         text2: 'Sign up with us today!',
       }
-  }
-    
+    },
+    computed: {
+        ...mapState(['currentUser'])
+    }
 }
 </script>
 

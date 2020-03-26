@@ -118,12 +118,24 @@ import firebase from 'firebase';
         })
       },
       register() {
-        db.doc
         firebase.auth().createUserWithEmailAndPassword(this.form.email, this.form.password)
-        .then((response) => {
+        .then((user) => {
             alert('Your account has been created!')
-            console.log(response)
-            this.$router.replace('log')
+            console.log(user.user)
+            this.$store.commit('setCurrentUser', user.user)
+            db.collection('users').doc(user.user.uid).set({
+                name: this.form.userid,
+                email: this.form.email,
+                password: this.form.password,
+                password2: this.form.password2,
+                course: this.form.course,
+                year: this.form.year,
+            }).then(() => {
+                this.$store.dispatch('fetchUserProfile')
+                this.$router.replace('/')
+            }).catch(error => {
+                console.log(error)
+            })
         })
         .catch((error) => {
             alert('Oops. ' + error.message)

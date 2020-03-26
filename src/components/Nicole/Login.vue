@@ -44,9 +44,11 @@ export default {
         login() {
             // return this.input.username + this.input.password;
             firebase.auth().signInWithEmailAndPassword(this.input.username, this.input.password)
-            .then((response) => {
+            .then((user) => {
                 alert('Well done! You are now connected.')
-                console.log(response)
+                console.log(user.user)
+                this.$store.commit('setCurrentUser', user.user)
+                this.$store.dispatch('fetchUserProfile')
                 this.$router.replace('account')
             })
             .catch((error) => {

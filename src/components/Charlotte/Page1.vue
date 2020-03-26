@@ -11,7 +11,7 @@
           <b-col>
               <b-card-group deck>
                   <b-card>
-                      <b-row class="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="4">
                             <b-card-img alt src="/assets/python2.png" left id="pythonimg"></b-card-img>
                         </b-col>
@@ -20,7 +20,7 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="python-drop" text="Select Difficulty Level" block variant="info">
@@ -48,7 +48,7 @@
           <b-col>
               <b-card-group deck>
                   <b-card>
-                      <b-row class="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="4">
                             <b-card-img alt src="/assets/java2.png" left id="javaimg"></b-card-img>
                         </b-col>
@@ -57,7 +57,7 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javadrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
@@ -85,7 +85,7 @@
           <b-col>
               <b-card-group deck>
                   <b-card>
-                      <b-row class="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="3">
                             <b-card-img alt src="/assets/javascript.png" left id="javascriptimg"></b-card-img>
                         </b-col>
@@ -94,7 +94,7 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters="true">
+                      <b-row class="text-center" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>

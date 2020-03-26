@@ -25,14 +25,13 @@
                           <div>
                                 <b-form-textarea
                                 id="textarea"
-                                v-model="text"
                                 placeholder="Your Message"
                                 rows="3"
                                 max-rows="6"
                                 v-model.lazy="feedback.message"
                                 ></b-form-textarea>
 
-                                <pre class="mt-3 mb-0">{{ text }}</pre>
+                                
                             </div>    
                         </b-col>
                     </b-row>

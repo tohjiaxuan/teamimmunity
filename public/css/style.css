@@ -45,10 +45,14 @@ section.pricing {
     font-size: 1.3rem;
     overflow: hidden;
     
+    
+    
 }
 
 .pricing .modal-open {
   overflow: hidden;
+  
+
 }
 
 

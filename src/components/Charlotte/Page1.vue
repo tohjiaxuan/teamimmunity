@@ -10,7 +10,7 @@
           <!-- Python -->
           <b-col>
               <b-card-group deck>
-                  <b-card>
+                  <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="4">
                             <b-card-img alt src="/assets/python2.png" left id="pythonimg"></b-card-img>
@@ -47,7 +47,7 @@
           <!-- Java --> 
           <b-col>
               <b-card-group deck>
-                  <b-card>
+                  <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="4">
                             <b-card-img alt src="/assets/java2.png" left id="javaimg"></b-card-img>

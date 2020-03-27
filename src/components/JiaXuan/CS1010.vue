@@ -208,6 +208,7 @@ h2 {
     font-family: 'Futura Hv BT';
     font-size: 20px;
     color: black;
+    z-index: 10;
 }
 
 #ex-btn {

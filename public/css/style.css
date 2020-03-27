@@ -33,15 +33,19 @@ h5 {
   font-size: 1.3rem;
 }
 
-.difference .modal-body {
-  font-family: Futura HV BT;
-  font-size: 1.3rem;
-  overflow: hidden;
+  .pricing .modal-body {
+    font-family: Futura HV BT;
+    font-size: 1.3rem;
+    overflow: hidden;
+    
+    
+    
 }
 
 .difference .modal-open {
   overflow: hidden;
-  margin-right: 0!important;
+  
+
 }
 
 .difference hr {

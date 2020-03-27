@@ -12,37 +12,38 @@
           <br>
 
           <b-row>
-            <ul class="timeline">
-              <li>
-                <p> 1. Variable Types </p>
-                <br>
-                <br>
-              </li>
-            </ul>
+            <b-col>
+              <ul class="timeline">
+                <li>
+                  <p> 1. Variable Types </p>
+                  <br>
+                  <br>
+                </li>
+              </ul>
 
-            <ul class="timeline2">
-              <li>
-                <p>2. Casting/Syntax </p>
-                <br> <br>
-              </li>
+              <ul class="timeline2">
+                <li>
+                  <p>2. Casting/Syntax </p>
+                  <br> <br>
+                </li>
 
-              <li>
-                <p>3. Python Operators</p>
-                <br> <br>
-              </li>
+                <li>
+                  <p>3. Python Operators</p>
+                  <br> <br>
+                </li>
 
-              <li>
-                <p>4. Strings </p>
-                <br> 
-                <br>
-              </li>
+                <li>
+                  <p>4. Strings </p>
+                  <br> 
+                  <br>
+                </li>
 
-              <li>
-                <p>5. Lists </p>
-                <br> <br>
-              </li>
-            </ul>
-
+                <li>
+                  <p>5. Lists </p>
+                  <br> <br>
+                </li>
+              </ul>
+            </b-col>
           </b-row>   
         </b-col>
 

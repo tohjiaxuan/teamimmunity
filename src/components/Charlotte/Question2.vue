@@ -12,7 +12,8 @@
           <br>
 
           <b-row>
-            <ul class="timeline">
+            <b-col>
+              <ul class="timeline">
               <li>
                 <p> 1. Variable Types </p>
                 <br>
@@ -45,6 +46,7 @@
                 <br> <br>
               </li>
             </ul>
+            </b-col>
           </b-row>   
         </b-col>
 

@@ -17,7 +17,7 @@
               </h4>
               
               
-              <h4 class="login-heading1 mb-5">code.io makes it easy for you to compare the <strong>key differences</strong> between programming languages for effective mastery!</h4>
+              <h4 class="login-heading1 mb-5">Code.io makes it easy for you to compare the <strong>key differences</strong> between programming languages for effective mastery!</h4>
               
               
 

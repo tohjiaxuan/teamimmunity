@@ -1,44 +1,37 @@
-section.pricing {
-    
-    background: linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 100%);
-    overflow-x: hidden;
+div.difference {
+  background: linear-gradient(180deg, #CBE7F8 54%, rgba(222, 248, 254, 0) 100%);
+  overflow-x: hidden;
+}
 
-    
-    
-  }
+html {
+  overflow-x: hidden;
+}
 
-  html {
-    overflow-x: hidden;
-  }
+h2 {
+  font-family: Futura HV BT;
+}
 
-  h2 {
-    font-family: Futura HV BT;
-  }
+h6 {
+  font-family: Futura HV BT;
+}
 
-  h6 {
-    font-family: Futura HV BT;
-  }
+h5 {
+  font-family: Futura HV BT;
+}
 
-  h5 {
-    font-family: Futura HV BT;
-  }
 
-  
-  .pricing .card {
-    border: none;
-    border-radius: 1rem;
-    transition: all 0.2s;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-    
-    
-   
-  }
+.difference .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
 
   
-  .pricing .fa-ul {
-      font-family: Futura HV BT;
-      font-size: 1.3rem;
-  }
+.difference .fa-ul {
+  font-family: Futura HV BT;
+  font-size: 1.3rem;
+}
 
   .pricing .modal-body {
     font-family: Futura HV BT;
@@ -49,92 +42,66 @@ section.pricing {
     
 }
 
-.pricing .modal-open {
+.difference .modal-open {
   overflow: hidden;
   
 
 }
 
+.difference hr {
+  margin: 1.5rem 0;
+}
 
+.difference .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
 
+.difference .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.difference .card-price .period {
+  font-size: 0.8rem;
+}
   
-  .pricing hr {
-    margin: 1.5rem 0;
-  }
+.difference ul li {
+  margin-bottom: 1rem;
+}
+
+.difference .text-muted {
+  opacity: 0.7;
+}
+
+.difference .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
   
-  .pricing .card-title {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    letter-spacing: .1rem;
-    font-weight: bold;
-  }
   
-  .pricing .card-price {
-    font-size: 3rem;
-    margin: 0;
-  }
-  
-  .pricing .card-price .period {
-    font-size: 0.8rem;
-  }
-  
-  .pricing ul li {
-    margin-bottom: 1rem;
-  }
-  
-  .pricing .text-muted {
-    opacity: 0.7;
-  }
-  
-  .pricing .btn {
-    font-size: 80%;
-    border-radius: 5rem;
-    letter-spacing: .1rem;
-    font-weight: bold;
-    padding: 1rem;
-    opacity: 0.7;
-    transition: all 0.2s;
+}
+.difference .fixed-row-bottom {
     
-    
+  bottom: 0;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .difference .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
   }
-  .pricing .fixed-row-bottom {
-     
-    bottom: 0;
+  .difference .card:hover .btn {
+    opacity: 1;
   }
+}
   
-  /* Hover Effects on Card */
-  
-  @media (min-width: 992px) {
-    .pricing .card:hover {
-      margin-top: -.25rem;
-      margin-bottom: .25rem;
-      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-    }
-    .pricing .card:hover .btn {
-      opacity: 1;
-    }
-  }
-  /* Fallback for Edge
-  -------------------------------------------------- */
-  
-  @supports (-ms-ime-align: auto) {
-    .form-label-group>label {
-      display: none;
-    }
-    .form-label-group input::-ms-input-placeholder {
-      color: #777;
-    }
-  }
-  
-  /* Fallback for IE
-  -------------------------------------------------- */
-  
-  @media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
-    .form-label-group>label {
-      display: none;
-    }
-    .form-label-group input:-ms-input-placeholder {
-      color: #777;
-    }
-  }

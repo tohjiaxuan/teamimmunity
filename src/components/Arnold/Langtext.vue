@@ -27,15 +27,15 @@
 
       <b-row align='center' class='mb-5 pb-4'>
         <b-col>
-          <b-button to="/language/python" variant="info" class='mt-4'>Let's Go</b-button>
+          <b-button to="/language/python" variant="info" class='mt-4' v-on:click='incrementClick("language_python")'>Let's Go</b-button>
           <b-icon-info class='mr-n3' v-b-popover.hover.topright.v-secondary="'Hover out the picture to find out more'"></b-icon-info>
         </b-col>
         <b-col>
-          <b-button to="/language/java" variant="info" class='mt-4'>Let's Go</b-button>
+          <b-button to="/language/java" variant="info" class='mt-4' v-on:click='incrementClick("language_java")'>Let's Go</b-button>
           <b-icon-info class='mr-n3' v-b-popover.hover.topright.v-secondary="'Hover out the picture to find out more'"></b-icon-info>
         </b-col>
         <b-col>
-          <b-button to="/language/javascript" variant="info" class='mt-4'>Let's Go</b-button>
+          <b-button to="/language/javascript" variant="info" class='mt-4' v-on:click='incrementClick("language_javascript")'>Let's Go</b-button>
           <b-icon-info class='mr-n3' v-b-popover.hover.topright.v-secondary="'Hover out the picture to find out more'"></b-icon-info>
         </b-col>
       </b-row>
@@ -44,8 +44,31 @@
 </template>
 
 <script>
+// import database from "../../firebase.js";
+import clicks from "../Common/clicks.js"
 export default {
-  
+  mixins: [clicks]
+  // data() {
+  //   return {
+      
+  //   }
+  // },
+  // methods : {
+  //   incrementClick(id) { // change document id
+  //     database.collection('clicks').doc(id).get().then(doc => {
+  //       this.setData(id, doc.data().clicks + 1)
+  //     })
+  //   },
+  //   setData(id, number) {
+  //     database.collection('clicks').doc(id).set({clicks: number})
+  //   },
+  //   getClicks(id) { // change document id
+  //     database.collection('clicks').doc(id).get() 
+  //     .then(doc => {
+  //       console.log(id + ' ' + doc.data().clicks)
+  //     })
+  //   }
+  // }
 }
 </script>
 

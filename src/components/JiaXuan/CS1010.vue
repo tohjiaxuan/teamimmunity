@@ -10,19 +10,19 @@
                     <h1 class="pt-4 mt-4 display-4">{{text1}}</h1>
                     <form>
                         <div id="search-box" class="form-row">
-                                <div id="search" class="pl-4 pt-4 form-group col-md-6 display-4">
+                                <div id="search" class="pl-4 pt-5 form-group col-md-6 display-4">
                                     <!-- <label for="subjectarea">Subject Area</label> -->
-                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Subject Area"> -->
-                                    <select id="font" class="custom-select" v-model="subject">
+                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area" v-model="subject">
+                                    <!-- <select id="font" class="custom-select" v-model="subject">
                                         <option disabled selected value="null">Select Subject Area</option>
                                         <option value="bt">BT</option>
                                         <option value="cs">CS</option>
-                                    </select>
+                                    </select> -->
                                 </div>
-                                <div id="search" class="pl-2 form-group col-md-6 display-4 pl-2 pt-2 mt-3">
+                                <div id="search" class="pl-2 form-group col-md-6 display-4 pl-2 pt-4 mt-4">
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
-                                    <!-- <input id="ip" type="text" class="form-control" placeholder="Catalogue Number"> -->
-                                    <select id="font" class="custom-select" v-model="catnum">
+                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number" v-model="catnum">
+                                    <!-- <select id="font" class="custom-select" v-model="catnum">
                                         <option disabled selected value="null">Select Catalogue Number</option>
                                         <option value="1010">1010</option>
                                         <option value="1010j">1010J</option>
@@ -30,7 +30,7 @@
                                         <option value="2030">2030</option>
                                         <option value="2040">2040</option>
                                         <option value="3103">3103</option>
-                                    </select>
+                                    </select> -->
                                 </div>
                             </div> 
                     </form>
@@ -104,19 +104,43 @@ export default {
     },
     methods: {
         submit(subject,catnum){ 
-            if (subject=='bt' && catnum=='3103') {
+            if (subject=='BT' && catnum=='3103') {
                 this.$router.push({path:'/bt3103'});
+            } else if (subject=='bt' && catnum=='3103') {
+                this.$router.push({path:'/bt3103'});
+            } 
+            
+            else if (subject=='CS' && catnum=='1010') {
+                this.$router.push({path:'/cs1010'});
             } else if (subject=='cs' && catnum=='1010') {
                 this.$router.push({path:'/cs1010'});
+            } 
+            
+            else if (subject=='CS' && catnum=='1010J') {
+                this.$router.push({path:'/cs1010j'});
             } else if (subject=='cs' && catnum=='1010j') {
                 this.$router.push({path:'/cs1010j'});
+            } 
+            
+            else if (subject=='CS' && catnum=='1010S') {
+                this.$router.push({path:'/cs1010s'});
             } else if (subject=='cs' && catnum=='1010s') {
                 this.$router.push({path:'/cs1010s'});
+            }
+             
+            else if (subject=='CS' && catnum=='2030') {
+                this.$router.push({path:'/cs2030'});
             } else if (subject=='cs' && catnum=='2030') {
                 this.$router.push({path:'/cs2030'});
+            }
+            
+            else if (subject=='CS' && catnum=='2040') {
+                this.$router.push({path:'/cs2040'});
             } else if (subject=='cs' && catnum=='2040') {
                 this.$router.push({path:'/cs2040'});
-            } else {
+            }
+            
+            else {
                 alert("Please select a valid subject area and catalogue number")
             }
         }
@@ -152,7 +176,7 @@ h1 {
 }
 
 #btn {
-    height: 60%;
+    height: 70%;
     width: 120%;
     font-family: 'Futura Hv BT';
     font-size: 20px;

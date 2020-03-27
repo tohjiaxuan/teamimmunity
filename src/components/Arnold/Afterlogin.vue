@@ -15,7 +15,7 @@
 
                 <b-row>
                     <b-col align='center' class='pt-4 pb-2'>
-                        <b-button to='/after/account' variant='info'>Edit Profile</b-button>
+                        <b-button to='/account/edit' variant='info'>Edit Profile</b-button>
                     </b-col>
                 </b-row>
 

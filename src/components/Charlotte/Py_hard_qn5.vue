@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Python: Hard </span>
             </b-col>
           </b-row>
           <br>
@@ -14,39 +14,36 @@
           <b-row>
             <b-col>
               <ul class="timeline">
-              <li>
-                <p> 1. Variable Types </p>
-                <br>
-                <br>
-              </li>
-
-              <li>
-                <p>2. Casting/Syntax </p>
-                <br> <br>
-              </li>
-
-              <li>
-                <p>3. Python Operators</p>
-                <br> <br>
-              </li>
-            </ul>
-
-            <ul class="timeline2">
                 <li>
-                    <p>4. Strings </p>
-                    <br> 
-                    <br>
-              </li>
-              
-            </ul>
+                  <p> 1. Function </p>
+                  <br>
+                  <br>
+                </li>
 
-            <ul class="timeline3">
-              
-              <li>
-                <p>5. Lists </p>
-                <br> <br>
-              </li>
-            </ul>
+                <li>
+                  <p>2. Function </p>
+                  <br> <br>
+                </li>
+
+                <li>
+                  <p>3. Set </p>
+                  <br> <br>
+                </li>
+
+                <li>
+                  <p>4. Tuple </p>
+                  <br> 
+                  <br>
+                </li>
+              </ul>
+
+              <ul class="timeline2">
+
+                <li>
+                  <p>5. String </p>
+                  <br> <br>
+                </li>
+              </ul>
             </b-col>
           </b-row>   
         </b-col>
@@ -54,7 +51,7 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 4: Strings </span>
+              <span id='qn'> Question 5: String </span>
             </b-col>
           </b-row>
 
@@ -62,15 +59,14 @@
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = 'ilovepython'
-                
-                <br> print(x[:3])
+                <pre> <code> <br> print("xyyzxyzxzxyy".count('yy'))
+             
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> Ending index is not included in String Slicing </p>
+                    <p class="card-text"> Counts the number of times the substring ‘yy’ is present in the given string </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -109,7 +105,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/qn5" >
+              <router-link to="/Py_hard_qn5" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -137,11 +133,12 @@ export default {
           test: '',
     
           options: [
-     
-            { text: 'o', value: 'wrong'},
-            { text: 'ilo', value: 'correct'},
-            { text: 'ilove', value: 'wrong'},
-            { text: 'vepython', value: 'wrong'}
+
+            { text: '3', value: 'wrong', },
+            { text: '0', value: 'wrong'},
+            { text: '1', value: 'wrong'},
+            { text: '2', value: 'correct'},
+        
           ]
         }
     },
@@ -162,10 +159,7 @@ export default {
       }
 
   }
-}
-
-      
-        
+}  
 
 </script>
 
@@ -218,7 +212,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 150%;
+    height: 110%;
     z-index: 400;
  
 }
@@ -297,36 +291,6 @@ ul.timeline2 > li:before {
   font-size: 16px;
   padding-right:74%;
 
-}
-
-
-ul.timeline3 {
-    list-style-type: none;
-    position: relative;
-    width:100%;
- 
-}
-
-
-
-/* words */
-ul.timeline3 > li {
-    padding-left: 20%;
-    width: 100%;
-
-}
-
-ul.timeline3 > li:before {
-    content: ' ';
-    background: white;
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid black;
-    left: 17%;
-    width: 20px;
-    height: 20px;
-    z-index: 400;
 }
 
 </style>

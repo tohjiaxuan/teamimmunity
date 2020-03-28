@@ -162,7 +162,7 @@ export default {
             // jsValue: 82,
             max: 100,
             leaderboard: [],
-            rank: 1,
+            arr:[]
         }
     },
     components: {
@@ -189,19 +189,24 @@ export default {
                 })
             })
         },
-        fetchRank() {
+        fetchRankArr() {
             db.collection('users').where('badges', '>=', 0).orderBy('badges', 'desc').get().then((querySnapshot)=>{
                 querySnapshot.forEach(doc=>{
-                    if (doc.data().name != this.userProfile.name) {
-                        this.rank = this.rank + 1;
-                    }
+                    // if (doc.data().name != this.userProfile.name) {
+                    //     this.rank = this.rank + 1;
+                    // }
+                    this.arr.push(doc.data().name)
+                    // console.log(this.arr)
                 })
             })
         },
+        getRank() {
+            return this.arr.findIndex(x=>x==this.userProfile.name)+1
+        },
         updateRank() {
-            if (this.rank != this.userProfile.rank) {
+            if (this.getRank() != this.userProfile.rank) {
                 db.collection('users').doc(this.currentUser.uid).set({
-                    rank: this.rank
+                    rank: this.getRank()
                 }, {merge: true})
             }
         } 
@@ -227,14 +232,10 @@ export default {
         }
         this.fetchLeaderboard()
         await sleep(2000)
-        console.log('first' + this.rank)
-        this.fetchRank()
+        this.fetchRankArr()
         await sleep(2000)
-        console.log('second' + this.rank)
         this.updateRank()
         await sleep(2000)
-        console.log('third' + this.rank)
-        
     }
 }
 </script>

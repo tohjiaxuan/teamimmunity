@@ -133,8 +133,8 @@
                                 <b-col>
                                     <span id='font20'>{{person.name}}</span>
                                 </b-col>
-                                <b-col align='center' class='ml-5'>
-                                    <span id='font20' class='ml-4'>{{person.badges}}</span>
+                                <b-col cols='3' align='center'>
+                                    <span id='font20'>{{person.badges}}</span>
                                 </b-col>
                             </b-row>
                         </b-container>

@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Python: Hard </span>
             </b-col>
           </b-row>
           <br>
@@ -15,33 +15,34 @@
             <b-col>
               <ul class="timeline">
               <li>
-                <p> 1. Variable Types </p>
+                <p> 1. Function </p>
                 <br>
                 <br>
-              </li>
-               <li>
-                <p>2. Casting/Syntax </p>
-                <br> <br>
               </li>
             </ul>
 
             <ul class="timeline2">
-                <li>
-                <p>3. Python Operators</p>
+              <li>
+                <p>2. Function </p>
                 <br> <br>
               </li>
-             
             </ul>
 
             <ul class="timeline3">
+              
               <li>
-                <p>4. Strings </p>
+                <p>3. Set </p>
+                <br> <br>
+              </li>
+
+              <li>
+                <p>4. Tuple </p>
                 <br> 
                 <br>
               </li>
 
               <li>
-                <p>5. Lists </p>
+                <p>5. String </p>
                 <br> <br>
               </li>
             </ul>
@@ -52,22 +53,26 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 3: Python Operators </span>
+              <span id='qn'> Question 2: Function </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
-              <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
+               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> print(9//2)
-        
+                <pre> <code> <br> def power(x, y=2):
+                <br>   r = 1
+                <br>   for i in range(y):
+                <br>     r = r * x
+                <br>   return r
+                <br> print(power(3))
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> The ‘//’ operator in Python returns the integer part of the floating number </p>
+                    <p class="card-text"> The arguments in Python functions may have implicit values. An implicit value is used, if no value is provided. </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -76,14 +81,9 @@
 
           <b-row>
               <div id = "options">  
-                <b-form-group>
-                  <b-form-radio-group size="lg"
-                  v-model="selected"
-                  :options="options"
-                  name="radios-stacked"
-                  stacked>
-                  </b-form-radio-group>
-                </b-form-group> 
+               <b-form-textarea
+                id="textarea"
+                v-model="selected" ></b-form-textarea>
         
               </div> 
           </b-row>
@@ -94,9 +94,9 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
-                      <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
-                      <span id='empty' v-else> Please enter an answer! </span>
+                     <span id='correct' v-if="selected =='9'"> Good job! </span>
+                      <span id='empty' v-else-if="selected ==''"> Please enter an answer! </span>
+                      <span id='wrong' v-else > Please try again! </span>
                     </div>
                   </b-card>
                 </b-collapse>
@@ -106,7 +106,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/qn4" >
+              <router-link to="/Py_hard_qn3" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -130,16 +130,8 @@ export default {
     data() {
 
         return {
-          selected: '',
-          test: '',
-    
-          options: [
-     
-            { text: '4', value: 'correct'},
-            { text: '4.0', value: 'wrong'},
-            { text: '4.5', value: 'wrong'},
-            { text: 'Error', value: 'wrong'}
-          ]
+          selected: ''
+
         }
     },
     components: {
@@ -215,7 +207,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 230%;
+    height: 450%;
     z-index: 400;
  
 }
@@ -325,5 +317,11 @@ ul.timeline3 > li:before {
     height: 20px;
     z-index: 400;
 }
+
+#options {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
 
 </style>

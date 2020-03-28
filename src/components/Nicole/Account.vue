@@ -11,7 +11,7 @@
                     </b-col>
                 </b-row>
 
-                <b-row><b-col align='center' class='pt-3'><span id='font40'>ARNOLD NG</span></b-col></b-row>
+                <b-row><b-col align='center' class='pt-3'><span id='font40'>{{userProfile.name}}</span></b-col></b-row>
 
                 <b-row>
                     <b-col align='center' class='pt-4 pb-2'>
@@ -51,7 +51,7 @@
             <b-col cols='7' class='second-section'>
                 <b-row>
                     <b-col align='center' class='pt-5 pb-5'>
-                        <span id='font35'>EDIT PROFILE</span>
+                        <span id='font50'>EDIT PROFILE</span>
                     </b-col>
                 </b-row>
 
@@ -156,14 +156,10 @@
 <script>
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
+import { mapState } from 'vuex'
 export default {
     data() {
         return {
-            oValue: 23,
-            pValue: 100,
-            jValue: 19,
-            jsValue: 82,
-            max: 100,
             user: {
               userid: '',
               email: '',
@@ -208,6 +204,9 @@ export default {
           this.show = true
         })
       }
+    },
+    computed: {
+      ...mapState(['userProfile', 'currentUser'])
     }
 }
 </script>
@@ -235,6 +234,10 @@ export default {
 
 #font40 {
     font-size: 40px;
+}
+
+#font50 {
+    font-size: 50px;
 }
 
 hr{

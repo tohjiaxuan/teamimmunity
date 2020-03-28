@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Python: Medium </span>
             </b-col>
           </b-row>
           <br>
@@ -14,35 +14,39 @@
           <b-row>
             <b-col>
               <ul class="timeline">
-                <li>
-                  <p> 1. Variable Types </p>
-                  <br>
-                  <br>
-                </li>
-              </ul>
+              <li>
+                <p> 1. For Loop </p>
+                <br>
+                <br>
+              </li>
 
-              <ul class="timeline2">
-                <li>
-                  <p>2. Casting/Syntax </p>
-                  <br> <br>
-                </li>
+                 <li>
+                <p>2. While Loop </p>
+                <br> <br>
+              </li>
 
                 <li>
-                  <p>3. Python Operators</p>
-                  <br> <br>
-                </li>
+                <p>3. List </p>
+                <br> <br>
+              </li>
+            </ul>
 
-                <li>
-                  <p>4. Strings </p>
-                  <br> 
-                  <br>
-                </li>
+            <ul class="timeline2">
+                   <li>
+                <p>4. Dictionary </p>
+                <br> 
+                <br>
+              </li>
+           
+            </ul>
 
-                <li>
-                  <p>5. Lists </p>
-                  <br> <br>
-                </li>
-              </ul>
+            <ul class="timeline3">
+
+              <li>
+                <p>5. Nested Loop </p>
+                <br> <br>
+              </li>
+            </ul>
             </b-col>
           </b-row>   
         </b-col>
@@ -50,24 +54,27 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 1: Variable Types </span>
+              <span id='qn'> Question 4: Dictionary </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
-              <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
+               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> var1 = 1
-                <br> var2 = 2
-                <br> var3 = 'c'
-                <br> print(var1 + var2 + var3)
+                <pre> <code> <br> thisdict = {
+                <br> "brand": "Ford",
+                <br> "model": "Mustang",
+                <br> "year": 1964
+                <br> }
+                <br> x = thisdict.get("model")
+                <br> print(x)
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> Consider the variable types </p>
+                    <p class="card-text"> 'get' access the value of the key</p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -106,7 +113,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/qn2" >
+              <router-link to="/Py_med_qn5" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -134,12 +141,11 @@ export default {
           test: '',
     
           options: [
-
-            { text: '12c', value: 'wrong', },
-            { text: '3c', value: 'wrong'},
-            { text: '3 + c', value: 'wrong'},
-            { text: 'TypeError: Unsupported operand type(s) for "int" and "str"', value: 'correct'},
-        
+     
+            { text: 'Ford', value: 'wrong'},
+            { text: 'Mustang', value: 'correct'},
+            { text: '1964', value: 'wrong'},
+            { text: 'model', value: 'wrong'}
           ]
         }
     },
@@ -216,7 +222,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 440%;
+    height: 150%;
     z-index: 400;
  
 }
@@ -234,7 +240,7 @@ ul.timeline > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #22c0e8;
+    border: 3px solid black;
     left: 17%;
     width: 20px;
     height: 20px;
@@ -249,6 +255,9 @@ ul.timeline2 {
  
 }
 
+
+
+
 /* words */
 ul.timeline2 > li {
     padding-left: 20%;
@@ -261,7 +270,7 @@ ul.timeline2 > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid #22c0e8;
     left: 17%;
     width: 20px;
     height: 20px;
@@ -274,29 +283,54 @@ ul.timeline2 > li:before {
 }
 
 #wrong {
-  
   font-family: Futura Hv BT;
   font-size: 16px;
-  /* padding-right:82%; */
+  padding-right:82%;
 
-} 
+}
 
 #correct {
-  
   font-family: Futura Hv BT;
   font-size: 16px;
-  /* padding-right:88%; */
+  padding-right:88%;
 
 }
 
 #empty {
-  
   font-family: Futura Hv BT;
   font-size: 16px;
-  /* padding-right:74%; */ 
+  padding-right:74%;
 
-} 
+}
 
 
+ul.timeline3 {
+    list-style-type: none;
+    position: relative;
+    width:100%;
+ 
+}
+
+
+
+/* words */
+ul.timeline3 > li {
+    padding-left: 20%;
+    width: 100%;
+
+}
+
+ul.timeline3 > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 17%;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
 
 </style>

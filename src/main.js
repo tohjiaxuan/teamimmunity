@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import firebase from 'firebase'
+import database from "./firebase.js";
 import store from './store.js'
 
 import VueRouter from 'vue-router'
@@ -40,11 +41,23 @@ import diff2 from './components/Vicki/Diff2.vue'
 import diff3 from './components/Vicki/Diff3.vue'
 
 import Page1 from './components/Charlotte/Page1.vue'
-import Question1 from './components/Charlotte/Question1.vue'
-import Question2 from './components/Charlotte/Question2.vue'
-import Question3 from './components/Charlotte/Question3.vue'
-import Question4 from './components/Charlotte/Question4.vue'
-import Question5 from './components/Charlotte/Question5.vue'
+import Py_easy_qn1 from './components/Charlotte/Py_easy_qn1.vue'
+import Py_easy_qn2 from './components/Charlotte/Py_easy_qn2.vue'
+import Py_easy_qn3 from './components/Charlotte/Py_easy_qn3.vue'
+import Py_easy_qn4 from './components/Charlotte/Py_easy_qn4.vue'
+import Py_easy_qn5 from './components/Charlotte/Py_easy_qn5.vue'
+
+import Py_med_qn1 from './components/Charlotte/Py_med_qn1.vue'
+import Py_med_qn2 from './components/Charlotte/Py_med_qn2.vue'
+import Py_med_qn3 from './components/Charlotte/Py_med_qn3.vue'
+import Py_med_qn4 from './components/Charlotte/Py_med_qn4.vue'
+import Py_med_qn5 from './components/Charlotte/Py_med_qn5.vue'
+
+import Py_hard_qn1 from './components/Charlotte/Py_hard_qn1.vue'
+import Py_hard_qn2 from './components/Charlotte/Py_hard_qn2.vue'
+import Py_hard_qn3 from './components/Charlotte/Py_hard_qn3.vue'
+import Py_hard_qn4 from './components/Charlotte/Py_hard_qn4.vue'
+import Py_hard_qn5 from './components/Charlotte/Py_hard_qn5.vue'
 
 Vue.use(VueRouter);
 
@@ -85,11 +98,27 @@ const router = new VueRouter ({
     {path: '/account/edit', component:Account}, 
 
     { path:'/exercise', component: Page1, meta: {requiresAuth: true}},
-    { path: '/qn1', component: Question1},
-    { path: '/qn2', component: Question2},
-    { path: '/qn3', component: Question3},
-    { path: '/qn4', component: Question4},
-    { path: '/qn5', component: Question5}
+    { path: '/Py_easy_qn1', component: Py_easy_qn1},
+    { path: '/Py_easy_qn2', component: Py_easy_qn2},
+    { path: '/Py_easy_qn3', component: Py_easy_qn3},
+    { path: '/Py_easy_qn4', component: Py_easy_qn4},
+    { path: '/Py_easy_qn5', component: Py_easy_qn5},
+
+    { path: '/Py_med_qn1', component: Py_med_qn1},
+    { path: '/Py_med_qn2', component: Py_med_qn2},
+    { path: '/Py_med_qn3', component: Py_med_qn3},
+    { path: '/Py_med_qn4', component: Py_med_qn4},
+    { path: '/Py_med_qn5', component: Py_med_qn5},
+
+    { path: '/Py_hard_qn1', component: Py_hard_qn1},
+    { path: '/Py_hard_qn2', component: Py_hard_qn2},
+    { path: '/Py_hard_qn3', component: Py_hard_qn3},
+    { path: '/Py_hard_qn4', component: Py_hard_qn4},
+    { path: '/Py_hard_qn5', component: Py_hard_qn5}
+
+
+
+    
 
   ],
   mode: 'history',
@@ -102,6 +131,10 @@ firebase.auth().onAuthStateChanged(user => {
   if (user) {
     store.commit('setCurrentUser', user)
     store.dispatch('fetchUserProfile')
+
+    database.collection('users').doc(user.uid).onSnapshot(doc => {
+      store.commit('setUserProfile', doc.data())
+    })
   }
 })
 

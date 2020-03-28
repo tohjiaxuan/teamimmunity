@@ -58,6 +58,26 @@ import Py_hard_qn3 from './components/Charlotte/Py_hard_qn3.vue'
 import Py_hard_qn4 from './components/Charlotte/Py_hard_qn4.vue'
 import Py_hard_qn5 from './components/Charlotte/Py_hard_qn5.vue'
 
+import Java_easy_qn1 from './components/Charlotte/Java_easy_qn1.vue'
+import Java_easy_qn2 from './components/Charlotte/Java_easy_qn2.vue'
+import Java_easy_qn3 from './components/Charlotte/Java_easy_qn3.vue'
+import Java_easy_qn4 from './components/Charlotte/Java_easy_qn4.vue'
+import Java_easy_qn5 from './components/Charlotte/Java_easy_qn5.vue'
+
+import Java_med_qn1 from './components/Charlotte/Java_med_qn1.vue'
+import Java_med_qn2 from './components/Charlotte/Java_med_qn2.vue'
+import Java_med_qn3 from './components/Charlotte/Java_med_qn3.vue'
+import Java_med_qn4 from './components/Charlotte/Java_med_qn4.vue'
+import Java_med_qn5 from './components/Charlotte/Java_med_qn5.vue'
+
+import Java_hard_qn1 from './components/Charlotte/Java_hard_qn1.vue'
+import Java_hard_qn2 from './components/Charlotte/Java_hard_qn2.vue'
+import Java_hard_qn3 from './components/Charlotte/Java_hard_qn3.vue'
+import Java_hard_qn4 from './components/Charlotte/Java_hard_qn4.vue'
+import Java_hard_qn5 from './components/Charlotte/Java_hard_qn5.vue'
+
+
+
 Vue.use(VueRouter);
 
 Vue.use(BootstrapVue);
@@ -113,8 +133,28 @@ const router = new VueRouter ({
     { path: '/Py_hard_qn2', component: Py_hard_qn2},
     { path: '/Py_hard_qn3', component: Py_hard_qn3},
     { path: '/Py_hard_qn4', component: Py_hard_qn4},
-    { path: '/Py_hard_qn5', component: Py_hard_qn5}
+    { path: '/Py_hard_qn5', component: Py_hard_qn5}, 
 
+    { path: '/Java_easy_qn1', component: Java_easy_qn1}, 
+    { path: '/Java_easy_qn2', component: Java_easy_qn2}, 
+    { path: '/Java_easy_qn3', component: Java_easy_qn3}, 
+    { path: '/Java_easy_qn4', component: Java_easy_qn4}, 
+    { path: '/Java_easy_qn5', component: Java_easy_qn5}, 
+
+    { path: '/Java_med_qn1', component: Java_med_qn1}, 
+    { path: '/Java_med_qn2', component: Java_med_qn2}, 
+    { path: '/Java_med_qn3', component: Java_med_qn3}, 
+    { path: '/Java_med_qn4', component: Java_med_qn4}, 
+    { path: '/Java_med_qn5', component: Java_med_qn5}, 
+
+    { path: '/Java_hard_qn1', component: Java_hard_qn1}, 
+    { path: '/Java_hard_qn2', component: Java_hard_qn2}, 
+    { path: '/Java_hard_qn3', component: Java_hard_qn3}, 
+    { path: '/Java_hard_qn4', component: Java_hard_qn4}, 
+    { path: '/Java_hard_qn5', component: Java_hard_qn5}, 
+  
+  
+  
 
 
     

@@ -19,22 +19,21 @@
                 <br>
                 <br>
               </li>
-            </ul>
-
-            <ul class="timeline2">
-              <li>
+               <li>
                 <p>2. Casting/Syntax </p>
                 <br> <br>
               </li>
             </ul>
 
-            <ul class="timeline3">
-              
-              <li>
+            <ul class="timeline2">
+                <li>
                 <p>3. Python Operators</p>
                 <br> <br>
               </li>
+             
+            </ul>
 
+            <ul class="timeline3">
               <li>
                 <p>4. Strings </p>
                 <br> 
@@ -53,7 +52,7 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 2: Syntax </span>
+              <span id='qn'> Question 3: Python Operators </span>
             </b-col>
           </b-row>
 
@@ -61,15 +60,14 @@
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = int(2.876)
-                
-                <br> print(x)
+                <pre> <code> <br> print(9//2)
+        
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> Integer rounds down </p>
+                    <p class="card-text"> The ‘//’ operator in Python returns the integer part of the floating number </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -108,7 +106,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/qn3" >
+              <router-link to="/Py_easy_qn4" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -137,10 +135,10 @@ export default {
     
           options: [
      
-            { text: '3', value: 'wrong'},
-            { text: '2.9', value: 'wrong'},
-            { text: '2.8', value: 'wrong'},
-            { text: '2', value: 'correct'}
+            { text: '4', value: 'correct'},
+            { text: '4.0', value: 'wrong'},
+            { text: '4.5', value: 'wrong'},
+            { text: 'Error', value: 'wrong'}
           ]
         }
     },
@@ -217,7 +215,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 450%;
+    height: 230%;
     z-index: 400;
  
 }

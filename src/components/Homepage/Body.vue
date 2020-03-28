@@ -9,7 +9,8 @@
 
         <b-row align-h="center" class='my-row'>
             <b-col cols='5.5' class='my-col'>
-                <h2 class='pt-3'>{{text2}}</h2>
+                <h2 class='pt-3' v-if='!currentUser'>{{text2}}</h2>
+                <h2 class='pt-5' v-if='currentUser'>Welcome back, {{userProfile.name}}!</h2>
             </b-col>
         </b-row>
 
@@ -66,7 +67,7 @@ export default {
       }
     },
     computed: {
-        ...mapState(['currentUser'])
+        ...mapState(['currentUser', 'userProfile'])
     }
 }
 </script>

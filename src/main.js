@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import firebase from 'firebase'
+import database from "./firebase.js";
 import store from './store.js'
 
 import VueRouter from 'vue-router'
@@ -102,6 +103,10 @@ firebase.auth().onAuthStateChanged(user => {
   if (user) {
     store.commit('setCurrentUser', user)
     store.dispatch('fetchUserProfile')
+
+    database.collection('users').doc(user.uid).onSnapshot(doc => {
+      store.commit('setUserProfile', doc.data())
+    })
   }
 })
 

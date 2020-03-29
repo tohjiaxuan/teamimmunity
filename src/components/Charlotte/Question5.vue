@@ -91,9 +91,9 @@
             <b-col align='right'>
                 <b-button v-b-toggle.collapse-2 variant="outline-dark"  v-on:click="check(selected)"> Submit </b-button>
                 <b-collapse id="collapse-2" class="mt-2" >
-                  <b-card>
-                    <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
+                  <b-card class='text-right'>
+                    <div >
+                      <span id='correct' v-if="selected =='correct'" > Good job! </span>
                       <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='empty' v-else> Please enter an answer! </span>
                     </div>
@@ -105,9 +105,14 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/qn3" >
-              <b-button variant="outline-dark" id = "next" > Next </b-button>
-              </router-link>
+              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')"> Complete </b-button>
+              <b-modal ref="my-modal" hide-footer id="complete">
+                <div class="d-block text-center">
+                  <h3>Congrats! You have completed the exercise!</h3>
+                </div>
+                <b-button class="mt-3" variant="outline-danger" block to='/exercise'>Try New Exercise</b-button>
+                <b-button class="mt-2" variant="outline-secondary" block to='/account'>Bring Me Back</b-button>
+                </b-modal>
               </b-col>
           </b-row>
         </b-col>

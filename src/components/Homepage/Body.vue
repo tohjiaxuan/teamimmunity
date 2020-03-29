@@ -37,7 +37,7 @@
                 <b-img center fluid src='assets/pitch.png' class='w-25'></b-img>
             </b-col>
             <b-col>
-                <b-img center fluid src='assets/gamepad.png' class='w-25'></b-img>
+                <b-img center fluid src='assets/leaderboard.png' class='w-25 '></b-img>
             </b-col>
         </b-row>
 
@@ -49,7 +49,7 @@
                 <span>Detailed<br/>explanation</span>
             </b-col>
             <b-col>
-                <span>Gamelike<br/>exercises</span>
+                <span>Leaderboard<br/>ranking</span>
             </b-col>
         </b-row>
     </b-container>
@@ -88,7 +88,7 @@ img {
 }
 
 h1, h2, .b-button {
-    font-family: Futura Hv Bt;
+    font-family: BebasNeue-Bold;
 }
 
 span{

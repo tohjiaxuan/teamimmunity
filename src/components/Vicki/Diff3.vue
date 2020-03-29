@@ -149,8 +149,8 @@
 
     </div>
     <br>
-    <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info float-left">Back</button></router-link>
-    <router-link to="/exercise" id="getstarted5"><button type="button" class="btn btn-info float-right">Try Exercises!</button></router-link>
+    <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info ml-5">Back</button></router-link>
+    <router-link to="/exercise" id="getstarted5"><button type="button" class="btn btn-info float-right mr-5">Try Exercises!</button></router-link>
   </div>
   
   

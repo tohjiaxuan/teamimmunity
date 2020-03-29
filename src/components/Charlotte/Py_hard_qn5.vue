@@ -105,7 +105,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/Py_hard_qn5" >
+              <router-link to="/exercise" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>

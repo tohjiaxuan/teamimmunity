@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Javascript: Medium </span>
             </b-col>
           </b-row>
           <br>
@@ -15,33 +15,36 @@
             <b-col>
               <ul class="timeline">
               <li>
-                <p> 1. Variable Types </p>
+                <p> 1. Error Handling </p>
                 <br>
                 <br>
               </li>
 
               <li>
-                <p>2. Casting/Syntax </p>
+                <p>2. Event Handling </p>
                 <br> <br>
               </li>
+
               <li>
-                <p>3. Python Operators</p>
+                <p>3. While Loop With Functions </p>
                 <br> <br>
-              </li>
-               <li>
-                <p>4. Strings </p>
-                <br> 
-                <br>
               </li>
             </ul>
-            
 
             <ul class="timeline2">
                 <li>
-                <p>5. Lists </p>
-                <br> <br>
-                </li>
+                    <p>4. Callbacks </p>
+                    <br> <br>
+              </li>
               
+            </ul>
+
+            <ul class="timeline3">
+              
+              <li>
+                <p>5. Lazy Loading </p>
+                <br> <br>
+              </li>
             </ul>
             </b-col>
           </b-row>   
@@ -50,27 +53,23 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 5: Lists </span>
+              <span id='qn'> Question 4: Callbacks </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
-                <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = ["i", ["really", "love"], "python"] 
-                
-                <br> print(x[1])
-                </code> </pre>
+                <p id="description"> Which of the following is correct about callbacks? </p>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> How should we slice nested list? </p>
+                    <p class="card-text"> Callbacks might be events! </p>
                   </b-card>
                 </b-collapse>
               </div>
-            </b-col> 
+            </b-col>
           </b-row>
 
           <b-row>
@@ -93,7 +92,8 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
+                      <span id='correct' v-if="selected =='correct'"> Good job! A callback is a plain JavaScript function passed to some method as an argument or option. 
+                          Some callbacks are just events, called to give the user a chance to react when a certain state is triggered. </span>
                       <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='empty' v-else> Please enter an answer! </span>
                     </div>
@@ -105,7 +105,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/exercise" >
+              <router-link to="/Javascript_med_qn5" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -134,10 +134,10 @@ export default {
     
           options: [
      
-            { text: 'python', value: 'wrong'},
-            { text: 'really love', value: 'wrong'},
-            { text: '["really", "love"]', value: 'correct'},
-            { text: 'really', value: 'wrong'}
+            { text: 'A callback is a plain JavaScript function passed to some method as an argument or option', value: 'wrong'},
+            { text: 'Some callbacks are just events, called to give the user a chance to react when a certain state is triggered.', value: 'wrong'},
+            { text: 'Both of the above', value: 'correct'},
+            { text: 'None of the above', value: 'wrong'}
           ]
         }
     },
@@ -214,7 +214,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 110%;
+    height: 150%;
     z-index: 400;
  
 }
@@ -293,6 +293,36 @@ ul.timeline2 > li:before {
   font-size: 16px;
   padding-right:74%;
 
+}
+
+
+ul.timeline3 {
+    list-style-type: none;
+    position: relative;
+    width:100%;
+ 
+}
+
+
+
+/* words */
+ul.timeline3 > li {
+    padding-left: 20%;
+    width: 100%;
+
+}
+
+ul.timeline3 > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 17%;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
 }
 
 </style>

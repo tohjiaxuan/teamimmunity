@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Javascript: Easy </span>
             </b-col>
           </b-row>
           <br>
@@ -21,15 +21,15 @@
               </li>
 
               <li>
-                <p>2. Casting/Syntax </p>
+                <p>2. Loop </p>
                 <br> <br>
               </li>
               <li>
-                <p>3. Python Operators</p>
+                <p>3. Array </p>
                 <br> <br>
               </li>
                <li>
-                <p>4. Strings </p>
+                <p>4. Functions </p>
                 <br> 
                 <br>
               </li>
@@ -38,7 +38,7 @@
 
             <ul class="timeline2">
                 <li>
-                <p>5. Lists </p>
+                <p>5. Functional Programming </p>
                 <br> <br>
                 </li>
               
@@ -50,23 +50,22 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 5: Lists </span>
+              <span id='qn'> Question 5: Functional Programming </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
-                <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = ["i", ["really", "love"], "python"] 
-                
-                <br> print(x[1])
+                <p id="description"> What will be the output of the following code? </p>
+                <pre> <code> <br> var string2Num=parseInt("123xyz");  
+          
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> How should we slice nested list? </p>
+                    <p class="card-text"> Function returns the first integer contained in a string. </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -93,7 +92,10 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
+                      <span id='correct' v-if="selected =='correct'"> Good job! 
+                          The parseInt() function parses a string and returns an integer. 
+                          The function returns the first integer contained in the string or 0 if the string does not begin with an integer.
+                          </span>
                       <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='empty' v-else> Please enter an answer! </span>
                     </div>
@@ -134,10 +136,10 @@ export default {
     
           options: [
      
-            { text: 'python', value: 'wrong'},
-            { text: 'really love', value: 'wrong'},
-            { text: '["really", "love"]', value: 'correct'},
-            { text: 'really', value: 'wrong'}
+            { text: '123', value: 'correct'},
+            { text: 'NaN', value: 'wrong'},
+            { text: '123xyz', value: 'wrong'},
+            { text: 'Exception', value: 'wrong'}
           ]
         }
     },

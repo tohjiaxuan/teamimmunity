@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Javascript: Hard </span>
             </b-col>
           </b-row>
           <br>
@@ -15,33 +15,36 @@
             <b-col>
               <ul class="timeline">
               <li>
-                <p> 1. Variable Types </p>
+                <p> 1. Shorthand Functions </p>
                 <br>
                 <br>
               </li>
 
               <li>
-                <p>2. Casting/Syntax </p>
+                <p>2. Pattern Matching </p>
                 <br> <br>
               </li>
+
               <li>
-                <p>3. Python Operators</p>
+                <p>3. Javascript Promises </p>
                 <br> <br>
-              </li>
-               <li>
-                <p>4. Strings </p>
-                <br> 
-                <br>
               </li>
             </ul>
-            
 
             <ul class="timeline2">
                 <li>
-                <p>5. Lists </p>
-                <br> <br>
-                </li>
+                  <p>4. Function Overloading </p>
+                  <br> <br>
+              </li>
               
+            </ul>
+
+            <ul class="timeline3">
+              
+              <li>
+                <p>5. Change Nodes </p>
+                <br> <br>
+              </li>
             </ul>
             </b-col>
           </b-row>   
@@ -50,7 +53,7 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 5: Lists </span>
+              <span id='qn'> Question 4: Function Overloading </span>
             </b-col>
           </b-row>
 
@@ -58,19 +61,25 @@
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = ["i", ["really", "love"], "python"] 
-                
-                <br> print(x[1])
+                <pre> <code> <br> function funcONE(x,y) {  
+                <br>    return x*y;
+                <br>}
+                <br> function funcONE(z) { 
+                <br>    return z;
+                <br>}
+                <br>funcONE(5);
+                <br>funcONE(5,6);
+
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> How should we slice nested list? </p>
+                    <p class="card-text"> JavaScript does not support function overloading natively </p>
                   </b-card>
                 </b-collapse>
               </div>
-            </b-col> 
+            </b-col>
           </b-row>
 
           <b-row>
@@ -93,7 +102,7 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
+                      <span id='correct' v-if="selected =='correct'"> Good job! If we will add functions with the same name and different arguments, it considers the last defined function. </span>
                       <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='empty' v-else> Please enter an answer! </span>
                     </div>
@@ -105,7 +114,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/exercise" >
+              <router-link to="/Javascript_hard_qn5" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -134,10 +143,11 @@ export default {
     
           options: [
      
-            { text: 'python', value: 'wrong'},
-            { text: 'really love', value: 'wrong'},
-            { text: '["really", "love"]', value: 'correct'},
-            { text: 'really', value: 'wrong'}
+            { text: '5 5', value: 'correct'},
+            { text: '5 30', value: 'wrong'},
+            { text: '30 5', value: 'wrong'},
+            { text: '30 30', value: 'wrong'}
+
           ]
         }
     },
@@ -214,7 +224,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 110%;
+    height: 150%;
     z-index: 400;
  
 }
@@ -293,6 +303,36 @@ ul.timeline2 > li:before {
   font-size: 16px;
   padding-right:74%;
 
+}
+
+
+ul.timeline3 {
+    list-style-type: none;
+    position: relative;
+    width:100%;
+ 
+}
+
+
+
+/* words */
+ul.timeline3 > li {
+    padding-left: 20%;
+    width: 100%;
+
+}
+
+ul.timeline3 > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 17%;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
 }
 
 </style>

@@ -77,7 +77,23 @@ import Java_hard_qn3 from './components/Charlotte/Java_hard_qn3.vue'
 import Java_hard_qn4 from './components/Charlotte/Java_hard_qn4.vue'
 import Java_hard_qn5 from './components/Charlotte/Java_hard_qn5.vue'
 
+import Javascript_easy_qn1 from './components/Charlotte/Javascript_easy_qn1.vue'
+import Javascript_easy_qn2 from './components/Charlotte/Javascript_easy_qn2.vue'
+import Javascript_easy_qn3 from './components/Charlotte/Javascript_easy_qn3.vue'
+import Javascript_easy_qn4 from './components/Charlotte/Javascript_easy_qn4.vue'
+import Javascript_easy_qn5 from './components/Charlotte/Javascript_easy_qn5.vue'
 
+import Javascript_med_qn1 from './components/Charlotte/Javascript_med_qn1.vue'
+import Javascript_med_qn2 from './components/Charlotte/Javascript_med_qn2.vue'
+import Javascript_med_qn3 from './components/Charlotte/Javascript_med_qn3.vue'
+import Javascript_med_qn4 from './components/Charlotte/Javascript_med_qn4.vue'
+import Javascript_med_qn5 from './components/Charlotte/Javascript_med_qn5.vue'
+
+import Javascript_hard_qn1 from './components/Charlotte/Javascript_hard_qn1.vue'
+import Javascript_hard_qn2 from './components/Charlotte/Javascript_hard_qn2.vue'
+import Javascript_hard_qn3 from './components/Charlotte/Javascript_hard_qn3.vue'
+import Javascript_hard_qn4 from './components/Charlotte/Javascript_hard_qn4.vue'
+import Javascript_hard_qn5 from './components/Charlotte/Javascript_hard_qn5.vue'
 
 Vue.use(VueRouter);
 
@@ -153,12 +169,27 @@ const router = new VueRouter ({
     { path: '/Java_hard_qn3', component: Java_hard_qn3}, 
     { path: '/Java_hard_qn4', component: Java_hard_qn4}, 
     { path: '/Java_hard_qn5', component: Java_hard_qn5}, 
-  
-  
-  
+
+    { path: '/Javascript_easy_qn1', component: Javascript_easy_qn1},
+    { path: '/Javascript_easy_qn2', component: Javascript_easy_qn2},
+    { path: '/Javascript_easy_qn3', component: Javascript_easy_qn3},
+    { path: '/Javascript_easy_qn4', component: Javascript_easy_qn4},
+    { path: '/Javascript_easy_qn5', component: Javascript_easy_qn5},
+
+    { path: '/Javascript_med_qn1', component: Javascript_med_qn1},
+    { path: '/Javascript_med_qn2', component: Javascript_med_qn2},
+    { path: '/Javascript_med_qn3', component: Javascript_med_qn3},
+    { path: '/Javascript_med_qn4', component: Javascript_med_qn4},
+    { path: '/Javascript_med_qn5', component: Javascript_med_qn5},
 
 
-    
+
+    { path: '/Javascript_hard_qn1', component: Javascript_hard_qn1}, 
+    { path: '/Javascript_hard_qn2', component: Javascript_hard_qn2}, 
+    { path: '/Javascript_hard_qn3', component: Javascript_hard_qn3}, 
+    { path: '/Javascript_hard_qn4', component: Javascript_hard_qn4}, 
+    { path: '/Javascript_hard_qn5', component: Javascript_hard_qn5}, 
+
 
   ],
   mode: 'history',

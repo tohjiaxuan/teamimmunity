@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Javascript: Medium </span>
             </b-col>
           </b-row>
           <br>
@@ -14,35 +14,35 @@
           <b-row>
             <b-col>
               <ul class="timeline">
-              <li>
-                <p> 1. Variable Types </p>
-                <br>
-                <br>
-              </li>
-
-              <li>
-                <p>2. Casting/Syntax </p>
-                <br> <br>
-              </li>
-              <li>
-                <p>3. Python Operators</p>
-                <br> <br>
-              </li>
-               <li>
-                <p>4. Strings </p>
-                <br> 
-                <br>
-              </li>
-            </ul>
-            
-
-            <ul class="timeline2">
                 <li>
-                <p>5. Lists </p>
-                <br> <br>
+                  <p> 1. Error Handling </p>
+                  <br>
+                  <br> 
                 </li>
-              
-            </ul>
+              </ul>
+
+              <ul class="timeline2">
+                <li>
+                  <p>2. Event Handling </p>
+                  <br> <br>
+                </li>
+
+                <li>
+                  <p>3. While Loop With Functions </p>
+                  <br> <br>
+                </li>
+
+                <li>
+                  <p>4. Callbacks </p>
+                  <br> 
+                  <br>
+                </li>
+
+                <li>
+                  <p>5. Lazy Loading </p>
+                  <br> <br>
+                </li>
+              </ul>
             </b-col>
           </b-row>   
         </b-col>
@@ -50,27 +50,23 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 5: Lists </span>
+              <span id='qn'> Question 1: Error Handling </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
-                <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = ["i", ["really", "love"], "python"] 
-                
-                <br> print(x[1])
-                </code> </pre>
+                <p id="description"> What kind of an exception will be thrown if the string to parse is not valid JSON? </p>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> How should we slice nested list? </p>
+                    <p class="card-text"> The JSON.parse() method parses a string and returns a JavaScript object </p>
                   </b-card>
                 </b-collapse>
               </div>
-            </b-col> 
+            </b-col>
           </b-row>
 
           <b-row>
@@ -93,7 +89,7 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
+                      <span id='correct' v-if="selected =='correct'"> Good job! JSON.parse()throws a SyntaxError exception if the string to parse is not valid JSON.</span>
                       <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='empty' v-else> Please enter an answer! </span>
                     </div>
@@ -105,7 +101,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/exercise" >
+              <router-link to="/Javascript_med_qn2" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -133,11 +129,12 @@ export default {
           test: '',
     
           options: [
-     
-            { text: 'python', value: 'wrong'},
-            { text: 'really love', value: 'wrong'},
-            { text: '["really", "love"]', value: 'correct'},
-            { text: 'really', value: 'wrong'}
+
+            { text: 'SyntaxError', value: 'correct', },
+            { text: 'ArrayOutOfBoundException', value: 'wrong'},
+            { text: 'Compilation error', value: 'wrong'},
+            { text: 'Both SyntaxError and ArrayOutOfBoundException', value: 'wrong'},
+        
           ]
         }
     },
@@ -214,7 +211,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 110%;
+    height: 440%;
     z-index: 400;
  
 }
@@ -232,7 +229,7 @@ ul.timeline > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid #22c0e8;
     left: 17%;
     width: 20px;
     height: 20px;
@@ -247,9 +244,6 @@ ul.timeline2 {
  
 }
 
-
-
-
 /* words */
 ul.timeline2 > li {
     padding-left: 20%;
@@ -262,7 +256,7 @@ ul.timeline2 > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #22c0e8;
+    border: 3px solid black;
     left: 17%;
     width: 20px;
     height: 20px;
@@ -275,24 +269,29 @@ ul.timeline2 > li:before {
 }
 
 #wrong {
+  
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:82%;
+  /* padding-right:82%; */
 
-}
+} 
 
 #correct {
+  
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:88%;
+  /* padding-right:88%; */
 
 }
 
 #empty {
+  
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:74%;
+  /* padding-right:74%; */ 
 
-}
+} 
+
+
 
 </style>

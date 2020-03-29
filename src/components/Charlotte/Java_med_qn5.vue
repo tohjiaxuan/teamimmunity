@@ -101,7 +101,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/Java_easy_qn5" >
+              <router-link to="/exercise" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>

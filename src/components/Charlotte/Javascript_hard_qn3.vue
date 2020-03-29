@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Javascript: Hard </span>
             </b-col>
           </b-row>
           <br>
@@ -15,33 +15,37 @@
             <b-col>
               <ul class="timeline">
               <li>
-                <p> 1. Variable Types </p>
+                <p> 1. Shorthand Functions </p>
                 <br>
                 <br>
               </li>
 
               <li>
-                <p>2. Casting/Syntax </p>
+                <p>2. Pattern Matching </p>
                 <br> <br>
-              </li>
-              <li>
-                <p>3. Python Operators</p>
-                <br> <br>
-              </li>
-               <li>
-                <p>4. Strings </p>
-                <br> 
-                <br>
               </li>
             </ul>
-            
 
             <ul class="timeline2">
                 <li>
-                <p>5. Lists </p>
+                <p>3. Javascript Promises </p>
                 <br> <br>
-                </li>
+              </li>
               
+            </ul>
+
+            <ul class="timeline3">
+              
+              <li>
+                <p>4. Function Overloading </p>
+                <br> 
+                <br>
+              </li>
+
+              <li>
+                <p>5. Change Nodes </p>
+                <br> <br>
+              </li>
             </ul>
             </b-col>
           </b-row>   
@@ -50,30 +54,51 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 5: Lists </span>
+              <span id='qn'> Question 3: Javascript Promises </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
-              <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
+               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = ["i", ["really", "love"], "python"] 
                 
-                <br> print(x[1])
+                <pre> <code> <br> function job() {  
+                <br> return new Promise(function(resolve, reject) {
+                <br>   reject();
+                <br>  });
+                <br> }
+                <br> let promise = job();
+                <br> promise
+                <br> .then(function() {
+    console.log('Success 1');
+}) 
+                <br> .then(function() {
+    console.log('Success 2');
+})
+                <br> .then(function() {
+    console.log('Success 3');
+}) 
+                <br> .catch(function() {
+    console.log('Error 1');
+}) 
+                <br> .then(function() {
+    console.log('Success 4');
+});
+
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> How should we slice nested list? </p>
+                    <p class="card-text"> Look at which is 'catch' and 'then'! </p>
                   </b-card>
                 </b-collapse>
               </div>
-            </b-col> 
+            </b-col>
           </b-row>
 
-          <b-row>
+        <b-row>
               <div id = "options">  
                 <b-form-group>
                   <b-form-radio-group size="lg"
@@ -95,7 +120,8 @@
                     <div>
                       <span id='correct' v-if="selected =='correct'"> Good job! </span>
                       <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
-                      <span id='empty' v-else> Please enter an answer! </span>
+                      <span id='empty' v-else> Please enter an answer! </span>>
+                  
                     </div>
                   </b-card>
                 </b-collapse>
@@ -105,7 +131,7 @@
           <b-row>
             
             <b-col align='right' >
-              <router-link to="/exercise" >
+              <router-link to="/Javascript_hard_qn4" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -134,11 +160,12 @@ export default {
     
           options: [
      
-            { text: 'python', value: 'wrong'},
-            { text: 'really love', value: 'wrong'},
-            { text: '["really", "love"]', value: 'correct'},
-            { text: 'really', value: 'wrong'}
+            { text: 'Error 1', value: 'wrong'},
+            { text: 'Error 1, Success 4', value: 'correct'},
+            { text: 'Success 1, Success 2, Success 3, Error 1, Success 4', value: 'wrong'},
+            { text: 'Success 1, Success 2, Success 3, Success 4', value: 'wrong'}
           ]
+      
         }
     },
     components: {
@@ -214,7 +241,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 110%;
+    height: 230%;
     z-index: 400;
  
 }
@@ -288,11 +315,46 @@ ul.timeline2 > li:before {
 
 }
 
+#options {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
 #empty {
   font-family: Futura Hv BT;
   font-size: 16px;
   padding-right:74%;
 
+}
+
+
+ul.timeline3 {
+    list-style-type: none;
+    position: relative;
+    width:100%;
+ 
+}
+
+
+
+/* words */
+ul.timeline3 > li {
+    padding-left: 20%;
+    width: 100%;
+
+}
+
+ul.timeline3 > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 17%;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
 }
 
 </style>

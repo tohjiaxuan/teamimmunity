@@ -20,7 +20,7 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters>
+                      <b-row class="text-center pb-4" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="python-drop" text="Select Difficulty Level" block variant="info">
@@ -57,7 +57,7 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters>
+                      <b-row class="text-center pb-4" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javadrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
@@ -94,7 +94,7 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters>
+                      <b-row class="text-center pb-1" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
@@ -106,7 +106,7 @@
                       </b-row>
                       <br>
                       <hr>
-                      <b-row>
+                      <b-row class='pb-3'>
                           <b-col><h6 class="number">Total No. Of Exercises</h6></b-col>
                           <b-col><h6 class="hours">Time Needed</h6></b-col>
                       </b-row>

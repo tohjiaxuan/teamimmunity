@@ -89,7 +89,6 @@ import firebase from 'firebase';
         show: true,
         options: [
             { value: null, text: 'Year of study' },
-            { value: 'new', text: 'Prospective Freshmen' },
             { value: '1', text: 'Year 1' },
             { value: '2', text: 'Year 2' },
             { value: '3', text: 'Year 3' },

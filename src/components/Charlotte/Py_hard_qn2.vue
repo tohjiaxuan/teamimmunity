@@ -95,7 +95,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                     <span id='correct' v-if="selected =='9'"> Good job! </span>
+                     <span id='correct' v-if="selected =='9'"> Good job! Since  </span>
                       <span id='empty' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='wrong' v-else > Please try again! </span>
                       </p>

@@ -12,7 +12,7 @@
                         <div id="search-box" class="form-row">
                                 <div id="search" class="pl-4 pt-5 form-group col-md-6 display-4">
                                     <!-- <label for="subjectarea">Subject Area</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area" v-model="subject">
+                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area" v-model="subject" v-on:keyup.enter="submit(subject,catnum)">
                                     <!-- <select id="font" class="custom-select" v-model="subject">
                                         <option disabled selected value="null">Select Subject Area</option>
                                         <option value="bt">BT</option>
@@ -21,7 +21,7 @@
                                 </div>
                                 <div id="search" class="pl-2 form-group col-md-6 display-4 pl-2 pt-4 mt-4">
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number" v-model="catnum">
+                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number" v-model="catnum" v-on:keyup.enter="submit(subject,catnum)">
                                     <!-- <select id="font" class="custom-select" v-model="catnum">
                                         <option disabled selected value="null">Select Catalogue Number</option>
                                         <option value="1010">1010</option>
@@ -60,9 +60,9 @@
                 <b-row class='mb-4'>
                     <b-col cols="3" class="pl-5 ml-5"><span id='title'>Recommended Ex. : </span></b-col>
                     <b-col class="pl-1 pr-5 mr-5">
-                        <span><b-button id="ex-btn">{{lang1}}</b-button></span>
-                        <span class="pl-2"><b-button id="ex-btn">{{lang2}}</b-button></span>
-                        <span class="pl-2"><b-button id="ex-btn">{{lang3}}</b-button></span>     
+                        <span><router-link to="/Java_easy_qn1"><b-button id="ex-btn">{{lang1}}</b-button></router-link></span>
+                        <span class="pl-2"><router-link to="/Java_med_qn1"><b-button id="ex-btn">{{lang2}}</b-button></router-link></span>
+                        <span class="pl-2"><router-link to="/Java_hard_qn1"><b-button id="ex-btn">{{lang3}}</b-button></router-link></span>     
                     </b-col>
                 </b-row>
 

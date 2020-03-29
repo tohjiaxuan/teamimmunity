@@ -24,9 +24,9 @@
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="python-drop" text="Select Difficulty Level" block variant="info">
-                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
+                                <b-dropdown-item to="/Py_easy_qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/Py_med_qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/Py_hard_qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
@@ -61,9 +61,9 @@
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javadrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
-                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
+                                <b-dropdown-item to="/Java_easy_qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/Java_med_qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/Java_hard_qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
@@ -98,9 +98,9 @@
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
-                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
+                                <b-dropdown-item to="/Javascript_easy_qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/Javascript_med_qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/Javascript_hard_qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>

@@ -89,7 +89,6 @@ import firebase from 'firebase';
         show: true,
         options: [
             { value: null, text: 'Year of study' },
-            { value: 'new', text: 'Prospective Freshmen' },
             { value: '1', text: 'Year 1' },
             { value: '2', text: 'Year 2' },
             { value: '3', text: 'Year 3' },
@@ -130,6 +129,14 @@ import firebase from 'firebase';
                 password2: this.form.password2,
                 course: this.form.course,
                 year: this.form.year,
+                badges: 0,
+                rank: 0,
+                oValue: 0,
+                pValue: 0,
+                jValue: 0,
+                jsValue: 0,
+                current: 'None',
+                recommended: 'None'
             }).then(() => {
                 this.$store.dispatch('fetchUserProfile')
                 this.$router.replace('/')

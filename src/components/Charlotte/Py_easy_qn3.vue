@@ -14,35 +14,37 @@
           <b-row>
             <b-col>
               <ul class="timeline">
-                <li>
-                  <p> 1. Variable Types </p>
-                  <br>
-                  <br>
-                </li>
-              </ul>
+              <li>
+                <p> 1. Variable Types </p>
+                <br>
+                <br>
+              </li>
+               <li>
+                <p>2. Casting/Syntax </p>
+                <br> <br>
+              </li>
+            </ul>
 
-              <ul class="timeline2">
+            <ul class="timeline2">
                 <li>
-                  <p>2. Casting/Syntax </p>
-                  <br> <br>
-                </li>
+                <p>3. Python Operators</p>
+                <br> <br>
+              </li>
+             
+            </ul>
 
-                <li>
-                  <p>3. Python Operators</p>
-                  <br> <br>
-                </li>
+            <ul class="timeline3">
+              <li>
+                <p>4. Strings </p>
+                <br> 
+                <br>
+              </li>
 
-                <li>
-                  <p>4. Strings </p>
-                  <br> 
-                  <br>
-                </li>
-
-                <li>
-                  <p>5. Lists </p>
-                  <br> <br>
-                </li>
-              </ul>
+              <li>
+                <p>5. Lists </p>
+                <br> <br>
+              </li>
+            </ul>
             </b-col>
           </b-row>   
         </b-col>
@@ -50,7 +52,7 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 1: Variable Types </span>
+              <span id='qn'> Question 3: Python Operators </span>
             </b-col>
           </b-row>
 
@@ -58,16 +60,14 @@
             <b-col>
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> var1 = 1
-                <br> var2 = 2
-                <br> var3 = 'c'
-                <br> print(var1 + var2 + var3)
+                <pre> <code> <br> print(9//2)
+        
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> Consider the variable types </p>
+                    <p class="card-text"> The ‘//’ operator in Python returns the integer part of the floating number </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -94,9 +94,11 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
-                      <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
-                      <span id='empty' v-else> Please enter an answer! </span>
+                      <p class="text-left">
+                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
+                      <span id='text' v-else> Please enter an answer! </span>
+                      </p>
                     </div>
                   </b-card>
                 </b-collapse>
@@ -104,9 +106,16 @@
             </b-row>
 
           <b-row>
+
+            <b-col align='left' >
+            <router-link to="Py_easy_qn2" >
+            <b-button variant="outline-dark" id = "next" > Back </b-button>
+            </router-link>
+            </b-col>
+
             
             <b-col align='right' >
-              <router-link to="/qn2" >
+              <router-link to="/Py_easy_qn4" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -134,12 +143,11 @@ export default {
           test: '',
     
           options: [
-
-            { text: '12c', value: 'wrong', },
-            { text: '3c', value: 'wrong'},
-            { text: '3 + c', value: 'wrong'},
-            { text: 'TypeError: Unsupported operand type(s) for "int" and "str"', value: 'correct'},
-        
+     
+            { text: '4', value: 'correct'},
+            { text: '4.0', value: 'wrong'},
+            { text: '4.5', value: 'wrong'},
+            { text: 'Error', value: 'wrong'}
           ]
         }
     },
@@ -216,7 +224,7 @@ ul.timeline:before {
     position: absolute;
     left: 20%;
     width: 1%;
-    height: 440%;
+    height: 230%;
     z-index: 400;
  
 }
@@ -234,7 +242,7 @@ ul.timeline > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #22c0e8;
+    border: 3px solid black;
     left: 17%;
     width: 20px;
     height: 20px;
@@ -249,6 +257,9 @@ ul.timeline2 {
  
 }
 
+
+
+
 /* words */
 ul.timeline2 > li {
     padding-left: 20%;
@@ -261,7 +272,7 @@ ul.timeline2 > li:before {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid #22c0e8;
     left: 17%;
     width: 20px;
     height: 20px;
@@ -273,30 +284,39 @@ ul.timeline2 > li:before {
   margin-top:2%;
 }
 
-#wrong {
-  
+#text {
   font-family: Futura Hv BT;
   font-size: 16px;
-  /* padding-right:82%; */
-
-} 
-
-#correct {
-  
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  /* padding-right:88%; */
 
 }
 
-#empty {
-  
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  /* padding-right:74%; */ 
+ul.timeline3 {
+    list-style-type: none;
+    position: relative;
+    width:100%;
+ 
+}
 
-} 
 
 
+/* words */
+ul.timeline3 > li {
+    padding-left: 20%;
+    width: 100%;
+
+}
+
+ul.timeline3 > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid black;
+    left: 17%;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
 
 </style>

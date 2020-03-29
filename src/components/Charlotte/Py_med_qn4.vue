@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Python: Medium </span>
             </b-col>
           </b-row>
           <br>
@@ -15,35 +15,35 @@
             <b-col>
               <ul class="timeline">
               <li>
-                <p> 1. Variable Types </p>
+                <p> 1. For Loop </p>
                 <br>
                 <br>
               </li>
 
-              <li>
-                <p>2. Casting/Syntax </p>
+                 <li>
+                <p>2. While Loop </p>
                 <br> <br>
               </li>
 
-              <li>
-                <p>3. Python Operators</p>
+                <li>
+                <p>3. List </p>
                 <br> <br>
               </li>
             </ul>
 
             <ul class="timeline2">
-                <li>
-                    <p>4. Strings </p>
-                    <br> 
-                    <br>
+                   <li>
+                <p>4. Dictionary </p>
+                <br> 
+                <br>
               </li>
-              
+           
             </ul>
 
             <ul class="timeline3">
-              
+
               <li>
-                <p>5. Lists </p>
+                <p>5. Nested Loop </p>
                 <br> <br>
               </li>
             </ul>
@@ -54,23 +54,27 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 4: Strings </span>
+              <span id='qn'> Question 4: Dictionary </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
-              <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
+               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> x = 'ilovepython'
-                
-                <br> print(x[:3])
+                <pre> <code> <br> thisdict = {
+                <br> "brand": "Ford",
+                <br> "model": "Mustang",
+                <br> "year": 1964
+                <br> }
+                <br> x = thisdict.get("model")
+                <br> print(x)
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> Ending index is not included in String Slicing </p>
+                    <p class="card-text"> 'get' access the value of the key</p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -97,9 +101,11 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
-                      <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
-                      <span id='empty' v-else> Please enter an answer! </span>
+                      <p class="text-left">
+                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
+                      <span id='text' v-else> Please enter an answer! </span>
+                      </p>
                     </div>
                   </b-card>
                 </b-collapse>
@@ -107,9 +113,14 @@
             </b-row>
 
           <b-row>
+            <b-col align='left' >
+              <router-link to="/Py_med_qn3" >
+              <b-button variant="outline-dark" id = "next" > Back </b-button>
+              </router-link>
+              </b-col>
             
             <b-col align='right' >
-              <router-link to="/qn5" >
+              <router-link to="/Py_med_qn5" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -138,10 +149,10 @@ export default {
     
           options: [
      
-            { text: 'o', value: 'wrong'},
-            { text: 'ilo', value: 'correct'},
-            { text: 'ilove', value: 'wrong'},
-            { text: 'vepython', value: 'wrong'}
+            { text: 'Ford', value: 'wrong'},
+            { text: 'Mustang', value: 'correct'},
+            { text: '1964', value: 'wrong'},
+            { text: 'model', value: 'wrong'}
           ]
         }
     },
@@ -278,24 +289,9 @@ ul.timeline2 > li:before {
   margin-top:2%;
 }
 
-#wrong {
+#text{
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:82%;
-
-}
-
-#correct {
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  padding-right:88%;
-
-}
-
-#empty {
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  padding-right:74%;
 
 }
 

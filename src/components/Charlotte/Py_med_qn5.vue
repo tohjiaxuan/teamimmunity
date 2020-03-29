@@ -96,9 +96,11 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='[1, 2, 3, 4, 5, 6, 7, 8, 9]'"> Good job! </span>
-                      <span id='empty' v-else-if="selected ==''"> Please enter an answer! </span>
-                      <span id='wrong' v-else > Please try again! </span>
+                      <p class="text-left">
+                      <span id='text' v-if="selected =='[1, 2, 3, 4, 5, 6, 7, 8, 9]'"> Good job! </span>
+                      <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
+                      <span id='text' v-else > Please try again! </span>
+                      </p>
                   
                     </div>
                   </b-card>
@@ -107,6 +109,12 @@
             </b-row>
 
           <b-row>
+            <b-col align='left' >
+              <router-link to="/Py_med_qn4" >
+              <b-button variant="outline-dark" id = "next" > Back </b-button>
+              </router-link>
+              </b-col>
+
             
             <b-col align='right' >
               <router-link to="/exercise" >
@@ -270,32 +278,16 @@ ul.timeline2 > li:before {
   margin-top:2%;
 }
 
-#wrong {
+#text {
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:82%;
 
 }
 
-#correct {
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  padding-right:88%;
-
-}
 
 #options {
     width: 100%;
     margin-bottom: 2%;
 }
-
-#empty {
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  padding-right:74%;
-
-}
-
-
 
 </style>

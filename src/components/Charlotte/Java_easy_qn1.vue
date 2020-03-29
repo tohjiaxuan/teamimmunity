@@ -92,9 +92,11 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
-                      <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
-                      <span id='empty' v-else> Please enter an answer! </span>
+                      <p class="text-left">
+                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
+                      <span id='text' v-else> Please enter an answer! </span>
+                      </p>
                     </div>
                   </b-card>
                 </b-collapse>
@@ -103,6 +105,12 @@
 
           <b-row>
             
+             <b-col align='left' >
+              <router-link to="/exercise" >
+              <b-button variant="outline-dark" id = "next" > Back </b-button>
+              </router-link>
+              </b-col>
+
             <b-col align='right' >
               <router-link to="/Java_easy_qn2" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
@@ -271,30 +279,12 @@ ul.timeline2 > li:before {
   margin-top:2%;
 }
 
-#wrong {
+#text {
   
   font-family: Futura Hv BT;
   font-size: 16px;
-  /* padding-right:82%; */
 
 } 
-
-#correct {
-  
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  /* padding-right:88%; */
-
-}
-
-#empty {
-  
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  /* padding-right:74%; */ 
-
-} 
-
 
 
 </style>

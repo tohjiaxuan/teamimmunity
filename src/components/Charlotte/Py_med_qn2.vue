@@ -136,6 +136,7 @@
 <script>
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
+import clicks from "../Common/clicks.js"
 export default {
     data() {
 
@@ -168,6 +169,10 @@ export default {
             }
       }
 
+  },
+  mixins: [clicks],
+  created() {
+    this.incrementClick("exercise_python_med_2")
   }
 }
 

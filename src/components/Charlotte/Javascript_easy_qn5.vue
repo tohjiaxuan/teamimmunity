@@ -116,7 +116,7 @@
             
             
             <b-col align='right' >
-              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')"> Complete </b-button>
+              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge()'> Complete </b-button>
               <b-modal ref="my-modal" hide-footer id="complete">
                 <div class="d-block text-center">
                   <h3>Congrats! You have completed the exercise!</h3>
@@ -141,6 +141,8 @@
 <script>
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
+import { mapState } from 'vuex'
+import db from "../../firebase.js";
 export default {
     data() {
 
@@ -171,8 +173,16 @@ export default {
             else {
               this.test='h'
             }
+      },
+      addBadge() {
+        db.collection('users').doc(this.currentUser.uid).set({
+          badges: this.userProfile.badges + 1
+        }, {merge: true})
       }
 
+  },
+  computed: {
+    ...mapState(['userProfile', 'currentUser']),
   }
 }
 

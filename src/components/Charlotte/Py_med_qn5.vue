@@ -97,7 +97,9 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='[1, 2, 3, 4, 5, 6, 7, 8, 9]'"> Good job! </span>
+                      <span id='text' v-if="selected =='[1, 2, 3, 4, 5, 6, 7, 8, 9]'"> Good job! For nexted loops, the programme first encounters the outer loop, executing its first iteration. 
+                        The first iteration triggers the nested loop and then returns back to the top of the outer loop, completing the second iteration. This will go on 
+                        until all the loops are completed. </span>
                       <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='text' v-else > Please try again! </span>
                       </p>

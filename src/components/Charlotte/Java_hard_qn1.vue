@@ -91,7 +91,8 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-if="selected =='correct'"> Good job! Interface variables are static because Java interfaces cannot be instantiated in their own right; the value of the variable must be assigned in a static context in which no instance exists. 
+                        The final modifier ensures the value assigned to the interface variable is a true constant that cannot be re-assigned by program code. </span>
                       <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='text' v-else> Please enter an answer! </span>
                       </p>

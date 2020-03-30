@@ -98,7 +98,8 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-if="selected =='correct'"> Good job! String slicing is inclusive of the first index and exclusive of the last index.
+                        If the first index is not specified, the default index is 0.  </span>
                       <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='text' v-else> Please enter an answer! </span>
                       </p>

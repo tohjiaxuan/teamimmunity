@@ -95,7 +95,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-if="selected =='correct'"> Good job! A String and an interger cannot be concatenated together. </span>
                       <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='text' v-else> Please enter an answer! </span>
                       </p>

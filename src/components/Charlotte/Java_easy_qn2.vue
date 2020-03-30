@@ -62,7 +62,7 @@
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
                 <pre> <code> <br> int values[ ] = {1,2,3,4,5,6,7,8,9,10}; 
-                <br> for(int i=0;i = Y; ++i)  
+                <br> for(int i=0;i = y; ++i)  
                 <br> System.out.println(values[i]);  
                 <br> 
                 </code> </pre>
@@ -98,7 +98,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-if="selected =='correct'"> Good job! Local variables must be initialize before accessing.</span>
                       <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='text' v-else> Please enter an answer! </span>
                       </p>

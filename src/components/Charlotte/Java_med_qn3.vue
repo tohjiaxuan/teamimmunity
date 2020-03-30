@@ -102,7 +102,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='19'"> Good job! </span>
+                      <span id='text' v-if="selected =='19'"> Good job! The loop will always be executed at least once, even if the condition is false. </span>
                       <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='text' v-else > Please try again! </span>
                       </p>

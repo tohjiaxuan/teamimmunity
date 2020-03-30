@@ -93,7 +93,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='correct'"> Good job! </span>
+                      <span id='text' v-if="selected =='correct'"> Good job! By default, ArrayList capacity is 10. All of them are null by default until you add your elements into it.</span>
                       <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='text' v-else> Please enter an answer! </span>
                       </p>

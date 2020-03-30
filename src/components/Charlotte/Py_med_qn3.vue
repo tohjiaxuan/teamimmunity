@@ -96,7 +96,9 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='[1, 2, 3, 4, 5]'"> Good job! </span>
+                      <span id='text' v-if="selected =='[1, 2, 3, 4, 5]'"> Good job! '+' can be used to concatenate 2 lists together. Another
+                        way to do it is to use the function append.
+                      </span>
                       <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='text' v-else > Please try again! </span>
                       </p>

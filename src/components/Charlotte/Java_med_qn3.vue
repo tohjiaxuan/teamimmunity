@@ -6,7 +6,7 @@
       <b-row>
         <b-col class='first-section'>
           <b-row class='mt-5 pt-5'>
-            <b-col align='center' class='pt-3'><span id='title'> Python: Easy </span>
+            <b-col align='center' class='pt-3'><span id='title'> Java: Medium </span>
             </b-col>
           </b-row>
           <br>
@@ -15,33 +15,35 @@
             <b-col>
               <ul class="timeline">
               <li>
-                <p> 1. Variable Types </p>
+                <p> 1. For Loop </p>
                 <br>
                 <br>
               </li>
-               <li>
-                <p>2. Casting/Syntax </p>
+
+              <li>
+                <p>2. While Loop </p>
                 <br> <br>
               </li>
             </ul>
 
             <ul class="timeline2">
                 <li>
-                <p>3. Python Operators</p>
+                <p>3. Do-while Loop </p>
                 <br> <br>
               </li>
-             
+              
             </ul>
 
             <ul class="timeline3">
+              
               <li>
-                <p>4. Strings </p>
+                <p>4. Break </p>
                 <br> 
                 <br>
               </li>
 
               <li>
-                <p>5. Lists </p>
+                <p>5. Static Variable </p>
                 <br> <br>
               </li>
             </ul>
@@ -52,22 +54,30 @@
         <b-col cols='7' class='second-section p-5' >
           <b-row>
             <b-col align='center' class='pt-5 pb-5'>
-              <span id='qn'> Question 3: Python Operators </span>
+              <span id='qn'> Question 3: Do-while Loop </span>
             </b-col>
           </b-row>
 
           <b-row>
             <b-col>
-              <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
+               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> What is the output of the following code? </p>
-                <pre> <code> <br> print(9//2)
-        
+                <pre> <code> <br> class dowhileloopDemo {
+                <br> public static void main(String args[]) {
+                <br> int x = 19; 
+                <br> do {
+                <br>   System.out.println(x);
+                <br>   x++; }
+                <br> while (x > 22);
+                <br> }}
+
+
                 </code> </pre>
 
                 <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
-                    <p class="card-text"> The ‘//’ operator in Python returns the integer part of the floating number </p>
+                    <p class="card-text"> There is no checking of any condition for the first time in the do-while loop </p>
                   </b-card>
                 </b-collapse>
               </div>
@@ -76,17 +86,14 @@
 
           <b-row>
               <div id = "options">  
-                <b-form-group>
-                  <b-form-radio-group size="lg"
-                  v-model="selected"
-                  :options="options"
-                  name="radios-stacked"
-                  stacked>
-                  </b-form-radio-group>
-                </b-form-group> 
+               <b-form-textarea
+                id="textarea"
+                v-model="selected" ></b-form-textarea>
         
               </div> 
           </b-row>
+
+
 
           <b-row>
             <b-col align='right'>
@@ -94,9 +101,12 @@
                 <b-collapse id="collapse-2" class="mt-2" >
                   <b-card>
                     <div>
-                      <span id='correct' v-if="selected =='correct'"> Good job! </span>
-                      <span id='wrong' v-else-if="selected =='wrong'"> Please try again! </span>
-                      <span id='empty' v-else> Please enter an answer! </span>
+                      <p class="text-left">
+                      <span id='text' v-if="selected =='19'"> Good job! The loop will always be executed at least once, even if the condition is false. </span>
+                      <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
+                      <span id='text' v-else > Please try again! </span>
+                      </p>
+                  
                     </div>
                   </b-card>
                 </b-collapse>
@@ -104,9 +114,16 @@
             </b-row>
 
           <b-row>
+
+            <b-col align='left' >
+              <router-link to="/Javascript_med_qn2" >
+              <b-button variant="outline-dark" id = "next" > Back </b-button>
+              </router-link>
+              </b-col>
+
             
             <b-col align='right' >
-              <router-link to="/qn4" >
+              <router-link to="/Java_med_qn4" >
               <b-button variant="outline-dark" id = "next" > Next </b-button>
               </router-link>
               </b-col>
@@ -131,15 +148,7 @@ export default {
 
         return {
           selected: '',
-          test: '',
-    
-          options: [
-     
-            { text: '4', value: 'correct'},
-            { text: '4.0', value: 'wrong'},
-            { text: '4.5', value: 'wrong'},
-            { text: 'Error', value: 'wrong'}
-          ]
+      
         }
     },
     components: {
@@ -275,25 +284,15 @@ ul.timeline2 > li:before {
   margin-top:2%;
 }
 
-#wrong {
+#text {
   font-family: Futura Hv BT;
   font-size: 16px;
-  padding-right:82%;
 
 }
 
-#correct {
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  padding-right:88%;
-
-}
-
-#empty {
-  font-family: Futura Hv BT;
-  font-size: 16px;
-  padding-right:74%;
-
+#options {
+    width: 100%;
+    margin-bottom: 2%;
 }
 
 

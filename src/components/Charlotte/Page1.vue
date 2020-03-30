@@ -10,7 +10,7 @@
           <!-- Python -->
           <b-col>
               <b-card-group deck>
-                  <b-card>
+                  <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="4">
                             <b-card-img alt src="/assets/python2.png" left id="pythonimg"></b-card-img>
@@ -20,13 +20,13 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters>
+                      <b-row class="text-center pb-4" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="python-drop" text="Select Difficulty Level" block variant="info">
-                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
+                                <b-dropdown-item to="/Py_easy_qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/Py_med_qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/Py_hard_qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
@@ -47,7 +47,7 @@
           <!-- Java --> 
           <b-col>
               <b-card-group deck>
-                  <b-card>
+                  <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="4">
                             <b-card-img alt src="/assets/java2.png" left id="javaimg"></b-card-img>
@@ -57,13 +57,13 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters>
+                      <b-row class="text-center pb-4" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javadrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
-                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
+                                <b-dropdown-item to="/Java_easy_qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/Java_med_qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/Java_hard_qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
@@ -94,19 +94,19 @@
                         </b-col>
                       </b-row>
                       <br>
-                      <b-row class="text-center" align-content="center" no-gutters>
+                      <b-row class="text-center pb-1" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
                             <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
-                                <b-dropdown-item to="/qn1"> Easy (1) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Medium (2) </b-dropdown-item>
-                                <b-dropdown-item to="/qn1"> Hard (3) </b-dropdown-item>
+                                <b-dropdown-item to="/Javascript_easy_qn1"> Easy (1) </b-dropdown-item>
+                                <b-dropdown-item to="/Javascript_med_qn1"> Medium (2) </b-dropdown-item>
+                                <b-dropdown-item to="/Javascript_hard_qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
                       <br>
                       <hr>
-                      <b-row>
+                      <b-row class='pb-3'>
                           <b-col><h6 class="number">Total No. Of Exercises</h6></b-col>
                           <b-col><h6 class="hours">Time Needed</h6></b-col>
                       </b-row>

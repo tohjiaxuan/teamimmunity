@@ -9,7 +9,8 @@
 
         <b-row align-h="center" class='my-row'>
             <b-col cols='5.5' class='my-col'>
-                <h2 class='pt-3'>{{text2}}</h2>
+                <h2 class='pt-3' v-if='!currentUser'>{{text2}}</h2>
+                <h2 class='pt-5' v-if='currentUser'>Welcome back, {{userProfile.name}}!</h2>
             </b-col>
         </b-row>
 
@@ -37,7 +38,7 @@
                 <b-img center fluid src='assets/pitch.png' class='w-25'></b-img>
             </b-col>
             <b-col>
-                <b-img center fluid src='assets/gamepad.png' class='w-25'></b-img>
+                <b-img center fluid src='assets/leaderboard.png' class='w-25 '></b-img>
             </b-col>
         </b-row>
 
@@ -49,7 +50,7 @@
                 <span>Detailed<br/>explanation</span>
             </b-col>
             <b-col>
-                <span>Gamelike<br/>exercises</span>
+                <span>Leaderboard<br/>ranking</span>
             </b-col>
         </b-row>
     </b-container>
@@ -66,7 +67,7 @@ export default {
       }
     },
     computed: {
-        ...mapState(['currentUser'])
+        ...mapState(['currentUser', 'userProfile'])
     }
 }
 </script>
@@ -88,7 +89,7 @@ img {
 }
 
 h1, h2, .b-button {
-    font-family: Futura Hv Bt;
+    font-family: BebasNeue-Bold;
 }
 
 span{

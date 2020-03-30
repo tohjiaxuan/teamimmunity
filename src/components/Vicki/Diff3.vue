@@ -12,7 +12,7 @@
     
       <!-- Python Tier -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
+        <div class="card mb-5 mb-lg-0 w-75 ml-5">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">VARIABLE DECLARATION</h5>
             <h6 class="card-price text-center">
@@ -23,7 +23,7 @@
                 
             </h6>
             <hr>
-            <ul class="fa-ul">
+            <ul class="fa-ul mb-5">
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Don't need to declare data type(s)</li>
               
               
@@ -58,7 +58,7 @@
       </div>
       <!-- Java Tier -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
+        <div class="card mb-5 mb-lg-0 w-75 ml-5">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">VARIABLE DECLARATION</h5>
             <h6 class="card-price text-center">
@@ -68,7 +68,7 @@
                
             </h6>
             <hr>
-            <ul class="fa-ul">
+            <ul class="fa-ul mb-5">
               <li><span class="fa-li"><i class="fas fa-check"></i></span>Data type(s) need to be declared</li>
               
             </ul>
@@ -101,7 +101,7 @@
       </div>
       <!-- JS Tier -->
       <div class="col-lg-4">
-        <div class="card">
+        <div class="card mb-5 mb-lg-0 w-75 ml-5">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">VARIABLE DECLARATION</h5>
             <h6 class="card-price text-center">
@@ -111,7 +111,7 @@
                 
             </h6>
             <hr>
-            <ul class="fa-ul">
+            <ul class="fa-ul mb-5">
               <li><span class="fa-li"><i class="fas fa-check"></i></span>var is used for variable declaration</li>
               
             </ul>
@@ -149,8 +149,8 @@
 
     </div>
     <br>
-    <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info float-left">Back</button></router-link>
-    <router-link to="/exercise" id="getstarted5"><button type="button" class="btn btn-info float-right">Try Exercises!</button></router-link>
+    <router-link to="/diff2" id="getstarted5"><button type="button" class="btn btn-info ml-5">Back</button></router-link>
+    <router-link to="/exercise" id="getstarted5"><button type="button" class="btn btn-info float-right mr-5">Try Exercises!</button></router-link>
   </div>
   
   

@@ -99,7 +99,7 @@
           </div>
         </div>
       </div>
-      <!-- JS Tier -->
+      <!-- JavaScript Tier -->
       <div class="col-lg-4">
         <div class="card mb-5 mb-lg-0 w-75 ml-5">
           <div class="card-body">

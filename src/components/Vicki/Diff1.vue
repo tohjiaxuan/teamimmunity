@@ -105,7 +105,7 @@
         </div>
       </div>
       
-      <!-- JS Tier -->
+      <!-- JavaScript Tier -->
       <div class="col-lg-4">
         <div class="card w-75 ml-5">
           <div class="card-body">

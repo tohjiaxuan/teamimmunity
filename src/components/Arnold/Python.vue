@@ -13,18 +13,13 @@
           <h3 class='pt-5 pb-4'>{{text1}}</h3>
           <b-container fluid>
             <b-row>
-              <b-col><b-img fluid src="/assets/p1.jpg"></b-img></b-col>
-              <b-col><b-img fluid src="/assets/p2.jpg"></b-img></b-col>
-              <b-col><b-img fluid src="/assets/p3.jpg"></b-img></b-col>
+              <b-col><router-link to='/Py_easy_qn1'><b-img fluid src="/assets/p1.jpg"></b-img></router-link></b-col>
+              <b-col><router-link to='/Py_med_qn1'><b-img fluid src="/assets/p2.jpg"></b-img></router-link></b-col>
+              <b-col><router-link to='/Py_hard_qn1'><b-img fluid src="/assets/p3.jpg"></b-img></router-link></b-col>
             </b-row>
-            <!-- <b-row>
-              <b-col><b-img fluid src="/assets/p1.jpg" class='h-50'></b-img></b-col>
-              <b-col><b-img fluid src="/assets/p1.jpg" class='h-50'></b-img></b-col>
-              <b-col><b-img fluid src="/assets/p1.jpg" class='h-50'></b-img></b-col>
-            </b-row> -->
           </b-container>
 
-          <b-button variant='info' class='mt-5' to='/btn'>Let's Get Started</b-button>
+          <b-button variant='info' class='mt-5' to='/btn' v-on:click='incrementClick("language_differences")'>Let's Get Started</b-button>
 
         </b-col>
 
@@ -71,7 +66,7 @@
 import Navbar from '../Common/Navbar.vue'
 import Title from './Title.vue'
 import Footer from '../Common/Footer.vue'
-
+import clicks from "../Common/clicks.js"
 export default {
   name: 'Python',
   components: {
@@ -88,7 +83,8 @@ export default {
       mod: 'Modules that require Python',
       com: 'School of Computing:'
     }
-  }  
+  },
+  mixins: [clicks]  
 }
 </script>
 

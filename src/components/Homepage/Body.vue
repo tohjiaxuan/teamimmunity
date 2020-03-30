@@ -24,7 +24,7 @@
                         <b-button class='b-button' variant="outline-primary">Sign In</b-button>
                     </router-link>
                 </b-button-group>
-                <div v-if='currentUser'>You are logged in!</div>
+                <div v-if='currentUser' id='loggedin'><span>You are logged in!</span></div>
             </b-col>
         </b-row>
     </b-container>
@@ -89,11 +89,20 @@ img {
 }
 
 h1, h2, .b-button {
-    font-family: BebasNeue-Bold;
+    font-family: Futura Hv Bt;
 }
 
 span{
     font-family: Futura Hv Bt;
     color: rgb(33, 32, 58);
+}
+
+#loggedin {
+    padding:10px;
+    background: rgb(255, 255, 255, 0.4);
+    border-radius: 5px;
+    padding-left:20px;
+    padding-right:20px;
+
 }
 </style>

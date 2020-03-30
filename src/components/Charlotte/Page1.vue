@@ -84,29 +84,29 @@
           <!-- Javascript --> 
           <b-col>
               <b-card-group deck>
-                  <b-card>
+                  <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>
                         <b-col md="3">
                             <b-card-img alt src="/assets/javascript.png" left id="javascriptimg"></b-card-img>
                         </b-col>
                         <b-col align-self="center">
-                            <h2 id="javascripttitle" class='mt-n1'> Javascript Tutorial </h2>
+                            <h2 id="javascripttitle" class='mt-n2'> Javascript Tutorial </h2>
                         </b-col>
                       </b-row>
                       <br>
                       <b-row class="text-center pb-1" align-content="center" no-gutters>
                           <b-col md="4"></b-col>
                           <b-col align-self="center">
-                            <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info" class='mt-n1'>
+                            <b-dropdown id="javascriptdrop" text="Select Difficulty Level" block variant="info" class=''>
                                 <b-dropdown-item to="/Javascript_easy_qn1"> Easy (1) </b-dropdown-item>
                                 <b-dropdown-item to="/Javascript_med_qn1"> Medium (2) </b-dropdown-item>
                                 <b-dropdown-item to="/Javascript_hard_qn1"> Hard (3) </b-dropdown-item>
                             </b-dropdown>
                           </b-col>
                       </b-row>
-                      <br>
+                      <br class='mb-3'>
                       <hr>
-                      <b-row class='pb-3'>
+                      <b-row>
                           <b-col><h6 class="number">Total No. Of Exercises</h6></b-col>
                           <b-col><h6 class="hours">Time Needed</h6></b-col>
                       </b-row>
@@ -128,11 +128,13 @@
 <script>
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
+import clicks from "../Common/clicks.js"
 export default {
     components: {
         Navbar,
         Footer,
-    }
+    },
+    mixins: [clicks]
 }
 </script>
 

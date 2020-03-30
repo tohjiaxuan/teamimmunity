@@ -60,13 +60,13 @@
 
                 <b-row align-h="center">
                         <router-link to="/language/python">
-                            <b-button id="logo-btn" type="button"><b-img fluid src="/assets/icons8-python-144.png" alt="python" v-b-popover.hover.bottom.v-warning="'Did you know? Many big companies such as Google, Netflix and Spotify use Python for their products and/or services. Click to learn more!'"></b-img></b-button>
+                            <b-button id="logo-btn" type="button" v-on:click='incrementClick("language_python")'><b-img fluid src="/assets/icons8-python-144.png" alt="python" v-b-popover.hover.top.v-warning="'Did you know? Many big companies such as Google, Netflix and Spotify use Python for their products and/or services. Click to learn more!'"></b-img></b-button>
                         </router-link>
                         <router-link to="/language/java">
-                            <b-button id="logo-btn" type="button"><b-img fluid src="/assets/icons8-java-144.png" alt="java" v-b-popover.hover.bottom.v-warning="'Did you know? Minecraft, one of the most popular video games of all time, was first written in Java. Click to learn more!'"></b-img></b-button>
+                            <b-button id="logo-btn" type="button" v-on:click='incrementClick("language_java")'><b-img fluid src="/assets/icons8-java-144.png" alt="java" v-b-popover.hover.top.v-warning="'Did you know? Minecraft, one of the most popular video games of all time, was first written in Java. Click to learn more!'"></b-img></b-button>
                         </router-link>
                         <router-link to="/language/javascript">
-                            <b-button id="logo-btn" type="button"><b-img fluid src="/assets/icons8-javascript-144.png" alt="js" v-b-popover.hover.bottom.v-warning="'Did you know? In Javascript, equal is not always equal. For e.g. 1==1 may be true, but [1,2,3]==[1,2,3] would be false as the array [1,2,3] is simply a reference type. Click to learn more!'"></b-img></b-button>
+                            <b-button id="logo-btn" type="button" v-on:click='incrementClick("language_javascript")'><b-img fluid src="/assets/icons8-javascript-144.png" alt="js" v-b-popover.hover.top.v-warning="'Did you know? In Javascript, equal is not always equal. For e.g. 1==1 may be true, but [1,2,3]==[1,2,3] would be false as the array [1,2,3] is simply a reference type. Click to learn more!'"></b-img></b-button>
                         </router-link> 
                 </b-row> 
             
@@ -79,6 +79,7 @@
 <script>
 import navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
+import clicks from "../Common/clicks.js"
 export default {
     data() {
         return {
@@ -136,7 +137,8 @@ export default {
                 alert("Please select a valid subject area and catalogue number")
             }
         }
-    }
+    },
+    mixins: [clicks]
 }
 </script>
 

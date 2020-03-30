@@ -35,7 +35,7 @@
                             </div>    
                         </b-col>
                     </b-row>
-                    <b-button block variant="primary" class="my-1 w-75 ml-4" pill v-on:click.prevent="submitMessage">Submit Message</b-button>
+                    <b-button block variant="primary" class="my-1 w-75 ml-4 mt-4" pill v-on:click.prevent="submitMessage">Submit Message</b-button>
                     </b-jumbotron>
                 </b-container>
 

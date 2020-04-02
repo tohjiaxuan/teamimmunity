@@ -17,7 +17,7 @@
                             <div class="form-row">
                                 <div id="search" class="form-group col-md-6 display-4">
                                     <!-- <label for="subjectarea">Subject Area</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area" v-model="subject">
+                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area" v-model="subject" v-on:keyup.enter="submit(subject,catnum)">
                                     <!-- <select id="font" class="custom-select" v-model="subject">
                                         <option disabled selected value="null"> Select Subject Area</option>
                                         <option value="bt">BT</option>
@@ -26,7 +26,7 @@
                                 </div>
                                 <div id="search" class="w-75 form-group col-md-6 display-4">
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number" v-model="catnum">
+                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number" v-model="catnum" v-on:keyup.enter="submit(subject,catnum)">
                                     <!-- <select id="font" class="custom-select" v-model="catnum">
                                         <option disabled selected value="null">Select Catalogue Number</option>
                                         <option value="1010">1010</option>

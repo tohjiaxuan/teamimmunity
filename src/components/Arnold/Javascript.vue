@@ -18,9 +18,9 @@
             <b-container fluid>
               <b-row class="pt-1">
                 <b-col class="pl-1 pr-5 mr-5">
-                  <span><router-link to="/Py_easy_qn1"><b-button id="ex-btn">{{lang1}}</b-button></router-link></span>
-                  <span class="pl-2"><router-link to="/Py_med_qn1"><b-button id="ex-btn">{{lang2}}</b-button></router-link></span>
-                  <span class="pl-2"><router-link to="/Py_hard_qn1"><b-button id="ex-btn">{{lang3}}</b-button></router-link></span>     
+                  <span><router-link to="/Javascript_easy_qn1"><b-button id="ex-btn">{{lang1}}</b-button></router-link></span>
+                  <span class="pl-2"><router-link to="/Javascript_med_qn1"><b-button id="ex-btn">{{lang2}}</b-button></router-link></span>
+                  <span class="pl-2"><router-link to="/Javascript_hard_qn1"><b-button id="ex-btn">{{lang3}}</b-button></router-link></span>     
                 </b-col>  
               </b-row>
             </b-container>

@@ -121,7 +121,7 @@
             
             <b-col align='right' >
               <router-link to="/Py_med_qn5" >
-              <b-button variant="outline-dark" id = "next" > Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>
@@ -141,6 +141,7 @@
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 import clicks from "../Common/clicks.js"
+import updateProgress from '../Common/updateProgress_python.js'
 export default {
     data() {
 
@@ -174,9 +175,11 @@ export default {
       }
 
   },
-  mixins: [clicks],
+  mixins: [clicks, updateProgress],
   created() {
     this.incrementClick("exercise_python_med_4")
+    this.updateCurrentlyOn('Python (Medium) Question 4')
+    this.updateRecommended('Python (Medium) Question 5')
   }
 }
 

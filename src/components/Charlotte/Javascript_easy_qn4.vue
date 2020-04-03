@@ -114,7 +114,7 @@
             
             <b-col align='right' >
               <router-link to="/Javascript_easy_qn5" >
-              <b-button variant="outline-dark" id = "next" > Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>
@@ -134,6 +134,7 @@
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 import clicks from "../Common/clicks.js"
+import updateProgress from '../Common/updateProgress_javascript.js'
 export default {
     data() {
 
@@ -167,9 +168,11 @@ export default {
       }
 
   },
-  mixins: [clicks],
+  mixins: [clicks, updateProgress],
   created() {
     this.incrementClick("exercise_javascript_easy_4")
+    this.updateCurrentlyOn('Javascript (Easy) Question 4')
+    this.updateRecommended('Javascript (Easy) Question 5')
   }
 }
 

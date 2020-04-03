@@ -109,7 +109,7 @@
 
             
             <b-col align='right' >
-              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge()'> Complete </b-button>
+              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress()'> Complete </b-button>
               <b-modal ref="my-modal" hide-footer id="complete">
                 <div class="d-block text-center">
                   <h3>Congrats! You have completed the exercise!</h3>
@@ -137,6 +137,7 @@ import Footer from '../Common/Footer.vue'
 import clicks from "../Common/clicks.js"
 import { mapState } from 'vuex'
 import db from "../../firebase.js";
+import updateProgress from '../Common/updateProgress_javascript.js'
 export default {
     data() {
 
@@ -170,9 +171,11 @@ export default {
   computed: {
     ...mapState(['userProfile', 'currentUser']),
   },
-  mixins: [clicks],
+  mixins: [clicks, updateProgress],
   created() {
     this.incrementClick("exercise_javascript_hard_5")
+    this.updateCurrentlyOn('Javascript (Hard) Question 5')
+    this.updateRecommended('None')
   }
 }
 

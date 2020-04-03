@@ -131,7 +131,7 @@
             
             <b-col align='right' >
               <router-link to="/Java_hard_qn4" >
-              <b-button variant="outline-dark" id = "next" > Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>
@@ -151,6 +151,7 @@
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 import clicks from "../Common/clicks.js"
+import updateProgress from '../Common/updateProgress_java.js'
 export default {
     data() {
 
@@ -185,9 +186,11 @@ export default {
       }
 
   },
-  mixins: [clicks],
+  mixins: [clicks, updateProgress],
   created() {
     this.incrementClick("exercise_java_hard_3")
+    this.updateCurrentlyOn('Java (Hard) Question 3')
+    this.updateRecommended('Java (Hard) Question 4')
   }
 }
 

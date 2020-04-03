@@ -79,12 +79,12 @@
         </b-col>
         
       </b-row>
-
+      <Footer></Footer>
       </b-container>
     </div>
 
 
-    <Footer></Footer>
+
   </div>
 </template>
 
@@ -166,7 +166,7 @@ hr {
 
 #ex-btn {
     background-color:rgba(235, 181, 4, 0.959);
-    width:15%; 
+    width:18%; 
     font-family:'Futura Hv BT'; 
     font-size:17px; 
     color:#ffffff;

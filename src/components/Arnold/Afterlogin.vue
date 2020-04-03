@@ -81,7 +81,7 @@
                     <b-col class='mt-5'><span id='font25'>{{userProfile.current}}</span></b-col>
                 </b-row>
                 <b-row>
-                    <b-col class='mt-4'><b-button variant='info'>Continue</b-button></b-col>
+                    <b-col class='mt-4'><b-button variant='info' v-on:click='continueButton()'>Continue</b-button></b-col>
                 </b-row>
 
                 <b-row>
@@ -90,7 +90,7 @@
 
                 </b-row>
                 <b-row>
-                    <b-col class='mt-4'><b-button variant='info'>Start</b-button></b-col>
+                    <b-col class='mt-4'><b-button variant='info' v-on:click='startButton()'>Start</b-button></b-col>
                 </b-row>
 
                 <hr>
@@ -208,6 +208,286 @@ export default {
                 db.collection('users').doc(this.currentUser.uid).set({
                     rank: this.getRank()
                 }, {merge: true})
+            }
+        },
+        continueButton() {
+            if (this.userProfile.current == 'Python (Easy) Question 1') {
+                this.$router.push('/Py_easy_qn1')
+            }
+            else if (this.userProfile.current == 'Python (Easy) Question 2') {
+                this.$router.push('/Py_easy_qn2')
+            }
+            else if (this.userProfile.current == 'Python (Easy) Question 3') {
+                this.$router.push('/Py_easy_qn3')
+            }
+            else if (this.userProfile.current == 'Python (Easy) Question 4') {
+                this.$router.push('/Py_easy_qn4')
+            }
+            else if (this.userProfile.current == 'Python (Easy) Question 5') {
+                this.$router.push('/Py_easy_qn5')
+            } 
+            else if (this.userProfile.current == 'Python (Medium) Question 1') {
+                this.$router.push('/Py_med_qn1')
+            }
+            else if (this.userProfile.current == 'Python (Medium) Question 2') {
+                this.$router.push('/Py_med_qn2')
+            }
+            else if (this.userProfile.current == 'Python (Medium) Question 3') {
+                this.$router.push('/Py_med_qn3')
+            }
+            else if (this.userProfile.current == 'Python (Medium) Question 4') {
+                this.$router.push('/Py_med_qn4')
+            }
+            else if (this.userProfile.current == 'Python (Medium) Question 5') {
+                this.$router.push('/Py_med_qn5')
+            }
+            else if (this.userProfile.current == 'Python (Hard) Question 1') {
+                this.$router.push('/Py_hard_qn1')
+            }
+            else if (this.userProfile.current == 'Python (Hard) Question 2') {
+                this.$router.push('/Py_hard_qn2')
+            }
+            else if (this.userProfile.current == 'Python (Hard) Question 3') {
+                this.$router.push('/Py_hard_qn3')
+            }
+            else if (this.userProfile.current == 'Python (Hard) Question 4') {
+                this.$router.push('/Py_hard_qn4')
+            }
+            else if (this.userProfile.current == 'Python (Hard) Question 5') {
+                this.$router.push('/Py_hard_qn5')
+            }
+            else if (this.userProfile.current == 'Java (Easy) Question 1') {
+                this.$router.push('/Java_easy_qn1')
+            }
+            else if (this.userProfile.current == 'Java (Easy) Question 2') {
+                this.$router.push('/Java_easy_qn2')
+            }
+            else if (this.userProfile.current == 'Java (Easy) Question 3') {
+                this.$router.push('/Java_easy_qn3')
+            }
+            else if (this.userProfile.current == 'Java (Easy) Question 4') {
+                this.$router.push('/Java_easy_qn4')
+            }
+            else if (this.userProfile.current == 'Java (Easy) Question 5') {
+                this.$router.push('/Java_easy_qn5')
+            }
+            else if (this.userProfile.current == 'Java (Medium) Question 1') {
+                this.$router.push('/Java_med_qn1')
+            }
+            else if (this.userProfile.current == 'Java (Medium) Question 2') {
+                this.$router.push('/Java_med_qn2')
+            }
+            else if (this.userProfile.current == 'Java (Medium) Question 3') {
+                this.$router.push('/Java_med_qn3')
+            }
+            else if (this.userProfile.current == 'Java (Medium) Question 4') {
+                this.$router.push('/Java_med_qn4')
+            }
+            else if (this.userProfile.current == 'Java (Medium) Question 5') {
+                this.$router.push('/Java_med_qn5')
+            }
+            else if (this.userProfile.current == 'Java (Hard) Question 1') {
+                this.$router.push('/Java_hard_qn1')
+            }
+            else if (this.userProfile.current == 'Java (Hard) Question 2') {
+                this.$router.push('/Java_hard_qn2')
+            }
+            else if (this.userProfile.current == 'Java (Hard) Question 3') {
+                this.$router.push('/Java_hard_qn3')
+            }
+            else if (this.userProfile.current == 'Java (Hard) Question 4') {
+                this.$router.push('/Java_hard_qn4')
+            }
+            else if (this.userProfile.current == 'Java (Hard) Question 5') {
+                this.$router.push('/Java_hard_qn5')
+            }
+            else if (this.userProfile.current == 'Javascript (Easy) Question 1') {
+                this.$router.push('/Javascript_easy_qn1')
+            }
+            else if (this.userProfile.current == 'Javascript (Easy) Question 2') {
+                this.$router.push('/Javascript_easy_qn2')
+            }
+            else if (this.userProfile.current == 'Javascript (Easy) Question 3') {
+                this.$router.push('/Javascript_easy_qn3')
+            }
+            else if (this.userProfile.current == 'Javascript (Easy) Question 4') {
+                this.$router.push('/Javascript_easy_qn4')
+            }
+            else if (this.userProfile.current == 'Javascript (Easy) Question 5') {
+                this.$router.push('/Javascript_easy_qn5')
+            }
+            else if (this.userProfile.current == 'Javascript (Medium) Question 1') {
+                this.$router.push('/Javascript_med_qn1')
+            }
+            else if (this.userProfile.current == 'Javascript (Medium) Question 2') {
+                this.$router.push('/Javascript_med_qn2')
+            }
+            else if (this.userProfile.current == 'Javascript (Medium) Question 3') {
+                this.$router.push('/Javascript_med_qn3')
+            }
+            else if (this.userProfile.current == 'Javascript (Medium) Question 4') {
+                this.$router.push('/Javascript_med_qn4')
+            }
+            else if (this.userProfile.current == 'Javascript (Medium) Question 5') {
+                this.$router.push('/Javascript_med_qn5')
+            }
+            else if (this.userProfile.current == 'Javascript (Hard) Question 1') {
+                this.$router.push('/Javascript_hard_qn1')
+            }
+            else if (this.userProfile.current == 'Javascript (Hard) Question 2') {
+                this.$router.push('/Javascript_hard_qn2')
+            }
+            else if (this.userProfile.current == 'Javascript (Hard) Question 3') {
+                this.$router.push('/Javascript_hard_qn3')
+            }
+            else if (this.userProfile.current == 'Javascript (Hard) Question 4') {
+                this.$router.push('/Javascript_hard_qn4')
+            }
+            else if (this.userProfile.current == 'Javascript (Hard) Question 5') {
+                this.$router.push('/Javascript_hard_qn5')
+            }
+            else {
+                alert("Try out the other languages!")
+            }
+        },
+        startButton() {
+            if (this.userProfile.recommended == 'Python (Easy) Question 1') {
+                this.$router.push('/Py_easy_qn1')
+            }
+            else if (this.userProfile.recommended == 'Python (Easy) Question 2') {
+                this.$router.push('/Py_easy_qn2')
+            }
+            else if (this.userProfile.recommended == 'Python (Easy) Question 3') {
+                this.$router.push('/Py_easy_qn3')
+            }
+            else if (this.userProfile.recommended == 'Python (Easy) Question 4') {
+                this.$router.push('/Py_easy_qn4')
+            }
+            else if (this.userProfile.recommended == 'Python (Easy) Question 5') {
+                this.$router.push('/Py_easy_qn5')
+            } 
+            else if (this.userProfile.recommended == 'Python (Medium) Question 1') {
+                this.$router.push('/Py_med_qn1')
+            }
+            else if (this.userProfile.recommended == 'Python (Medium) Question 2') {
+                this.$router.push('/Py_med_qn2')
+            }
+            else if (this.userProfile.recommended == 'Python (Medium) Question 3') {
+                this.$router.push('/Py_med_qn3')
+            }
+            else if (this.userProfile.recommended == 'Python (Medium) Question 4') {
+                this.$router.push('/Py_med_qn4')
+            }
+            else if (this.userProfile.recommended == 'Python (Medium) Question 5') {
+                this.$router.push('/Py_med_qn5')
+            }
+            else if (this.userProfile.recommended == 'Python (Hard) Question 1') {
+                this.$router.push('/Py_hard_qn1')
+            }
+            else if (this.userProfile.recommended == 'Python (Hard) Question 2') {
+                this.$router.push('/Py_hard_qn2')
+            }
+            else if (this.userProfile.recommended == 'Python (Hard) Question 3') {
+                this.$router.push('/Py_hard_qn3')
+            }
+            else if (this.userProfile.recommended == 'Python (Hard) Question 4') {
+                this.$router.push('/Py_hard_qn4')
+            }
+            else if (this.userProfile.recommended == 'Python (Hard) Question 5') {
+                this.$router.push('/Py_hard_qn5')
+            }
+            else if (this.userProfile.recommended == 'Java (Easy) Question 1') {
+                this.$router.push('/Java_easy_qn1')
+            }
+            else if (this.userProfile.recommended == 'Java (Easy) Question 2') {
+                this.$router.push('/Java_easy_qn2')
+            }
+            else if (this.userProfile.recommended == 'Java (Easy) Question 3') {
+                this.$router.push('/Java_easy_qn3')
+            }
+            else if (this.userProfile.recommended == 'Java (Easy) Question 4') {
+                this.$router.push('/Java_easy_qn4')
+            }
+            else if (this.userProfile.recommended == 'Java (Easy) Question 5') {
+                this.$router.push('/Java_easy_qn5')
+            }
+            else if (this.userProfile.recommended == 'Java (Medium) Question 1') {
+                this.$router.push('/Java_med_qn1')
+            }
+            else if (this.userProfile.recommended == 'Java (Medium) Question 2') {
+                this.$router.push('/Java_med_qn2')
+            }
+            else if (this.userProfile.recommended == 'Java (Medium) Question 3') {
+                this.$router.push('/Java_med_qn3')
+            }
+            else if (this.userProfile.recommended == 'Java (Medium) Question 4') {
+                this.$router.push('/Java_med_qn4')
+            }
+            else if (this.userProfile.recommended == 'Java (Medium) Question 5') {
+                this.$router.push('/Java_med_qn5')
+            }
+            else if (this.userProfile.recommended == 'Java (Hard) Question 1') {
+                this.$router.push('/Java_hard_qn1')
+            }
+            else if (this.userProfile.recommended == 'Java (Hard) Question 2') {
+                this.$router.push('/Java_hard_qn2')
+            }
+            else if (this.userProfile.recommended == 'Java (Hard) Question 3') {
+                this.$router.push('/Java_hard_qn3')
+            }
+            else if (this.userProfile.recommended == 'Java (Hard) Question 4') {
+                this.$router.push('/Java_hard_qn4')
+            }
+            else if (this.userProfile.recommended == 'Java (Hard) Question 5') {
+                this.$router.push('/Java_hard_qn5')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Easy) Question 1') {
+                this.$router.push('/Javascript_easy_qn1')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Easy) Question 2') {
+                this.$router.push('/Javascript_easy_qn2')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Easy) Question 3') {
+                this.$router.push('/Javascript_easy_qn3')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Easy) Question 4') {
+                this.$router.push('/Javascript_easy_qn4')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Easy) Question 5') {
+                this.$router.push('/Javascript_easy_qn5')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Medium) Question 1') {
+                this.$router.push('/Javascript_med_qn1')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Medium) Question 2') {
+                this.$router.push('/Javascript_med_qn2')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Medium) Question 3') {
+                this.$router.push('/Javascript_med_qn3')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Medium) Question 4') {
+                this.$router.push('/Javascript_med_qn4')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Medium) Question 5') {
+                this.$router.push('/Javascript_med_qn5')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Hard) Question 1') {
+                this.$router.push('/Javascript_hard_qn1')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Hard) Question 2') {
+                this.$router.push('/Javascript_hard_qn2')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Hard) Question 3') {
+                this.$router.push('/Javascript_hard_qn3')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Hard) Question 4') {
+                this.$router.push('/Javascript_hard_qn4')
+            }
+            else if (this.userProfile.recommended == 'Javascript (Hard) Question 5') {
+                this.$router.push('/Javascript_hard_qn5')
+            }
+            else {
+                alert("Try out the other languages!")
             }
         } 
     },

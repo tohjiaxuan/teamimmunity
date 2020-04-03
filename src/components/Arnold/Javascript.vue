@@ -34,7 +34,7 @@
             </b-row>
             <b-row>
               <b-col class='pl-3'>
-                <b-button variant='info' class='mt-2' to='/btn' v-on:click='incrementClick("language_differences")'>Let's Get Started</b-button>
+                <b-button variant='info' class='mt-2 mb-5' to='/btn' v-on:click='incrementClick("language_differences")'>Let's Get Started</b-button>
               </b-col>
             </b-row>
           </b-card>
@@ -76,12 +76,12 @@
         </b-col>
         
       </b-row>
-
+      <Footer></Footer>
       </b-container>
     </div>
 
 
-    <Footer></Footer>
+    
   </div>
 </template>
 
@@ -163,7 +163,7 @@ hr {
 
 #ex-btn {
     background-color:rgb(36, 70, 182); 
-    width:17%; 
+    width:18%; 
     font-family:'Futura Hv BT'; 
     font-size:17px; 
     color:#ffffff;

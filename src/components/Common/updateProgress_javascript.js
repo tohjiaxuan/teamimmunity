@@ -9,9 +9,9 @@ export default {
     },
     methods : {
       updateProgress() {
-        if (this.userProfile.jsValue != 100) {
+        if (this.userProfile.jsValue < 100) {
           db.collection('users').doc(this.currentUser.uid).set({
-            jsValue: this.userProfile.jsValue + (100/15)
+            jsValue: Math.min(this.userProfile.jsValue + (100/15))
           }, {merge: true})
           console.log('jsValue + ' + 100/15)
         }

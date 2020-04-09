@@ -79,6 +79,8 @@
 <script>
 import navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
+import clicks from "../Common/clicks.js"
+
 export default {
     data() {
         return {
@@ -144,7 +146,8 @@ export default {
                 alert("Please select a valid subject area and catalogue number")
             }
         }
-    }
+    },
+    mixins: [clicks]
 }
 </script>
 

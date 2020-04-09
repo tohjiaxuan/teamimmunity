@@ -127,7 +127,7 @@
                     <b-col cols='4' align='center'><span id='font20'>5</span></b-col>
                 </b-row>     -->
                 <ol>
-                    <li v-for="person in leaderboard" v-bind:key="person.name" class='mb-3 ml-n2 pl-2'>
+                    <li v-for="person in leaderboardTop15" v-bind:key="person.name" class='mb-3 ml-n2 pl-2'>
                         <b-container>
                             <b-row>
                                 <b-col>
@@ -505,6 +505,9 @@ export default {
         jsValue() {
             return this.$store.state.userProfile.jsValue
         },
+        leaderboardTop15() {
+            return this.leaderboard.slice(0, 15)
+        }
     },
     async created() {
         function sleep(ms) {

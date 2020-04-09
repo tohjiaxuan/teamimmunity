@@ -98,7 +98,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='correct'"> Good job! Local variables must be initialize before accessing.</span>
+                      <span id='text' v-if="selected =='correct'"> Good job! Local variables must be initialized before accessing.</span>
                       <span id='text' v-else-if="selected =='wrong'"> Please try again! </span>
                       <span id='text' v-else> Please enter an answer! </span>
                       </p>

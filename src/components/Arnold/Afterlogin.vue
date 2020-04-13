@@ -162,7 +162,8 @@ export default {
             // jsValue: 82,
             max: 100,
             leaderboard: [],
-            arr:[]
+            arr:[],
+            badges: 0,
         }
     },
     components: {
@@ -489,7 +490,35 @@ export default {
             else {
                 alert("Try out the other languages!")
             }
-        } 
+        },
+        updateTotalExercises() {
+            // db.collection('total exercises activity').doc('total exercises completed').get().then(doc => {
+            //     this.curr = doc.data().clicks
+            //     console.log('curr' + doc.data().clicks)
+            // })
+            db.collection('users').where('badges', '>', 0).orderBy('badges', 'desc').get().then((querySnapshot)=>{
+                querySnapshot.forEach(doc=>{
+                    console.log(doc.data().badges)
+                    this.badges += doc.data().badges
+                    console.log('1 ' + this.badges)
+                })
+                console.log('2 ' + this.badges)
+            })
+            console.log('3 ' + this.badges)
+            
+            // if (this.total != this.curr) {
+            //     db.collection('total exercises activity').doc('total exercises completed').set({
+            //         clicks: this.total
+            //     }, {merge: true})
+            //     console.log('ran')
+            // }
+            
+            // db.collection('total exercises activity').doc('total exercises completed').set({
+            //     clicks: this.total
+            //     }, {merge: true})
+            // console.log('ran')
+            
+        }, 
     },
     computed: {
         ...mapState(['userProfile', 'currentUser']),
@@ -519,6 +548,15 @@ export default {
         await sleep(2000)
         this.updateRank()
         await sleep(2000)
+        db.collection('users').where('badges', '>', 0).orderBy('badges', 'desc').get().then((querySnapshot)=>{
+            querySnapshot.forEach(doc=>{
+                this.badges += doc.data().badges
+            })
+        })
+        await sleep(2000)
+        db.collection('total exercises activity').doc('total exercises completed').set({
+            clicks: this.badges
+        }, {merge: true})
     }
 }
 </script>

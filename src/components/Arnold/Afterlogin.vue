@@ -59,19 +59,19 @@
                 <b-row>
                     <b-col>
                         <span id='font20'>Overall Progress</span>
-                        <b-col align='right' class='mt-n4' v-if='oValue==max'><span id='font20'>Completed!!</span></b-col>
+                        <b-col align='right' class='mt-n4' v-if='oValue>=max'><span id='font20'>Completed!!</span></b-col>
                         <b-progress :value="oValue" :max="max" show-progress animated height='30px' variant="danger" class='mb-4'></b-progress>
 
                         <span id='font20'>Python</span>
-                        <b-col align='right' class='mt-n4' v-if='pValue==max'><span id='font20'>Completed!!</span></b-col>
+                        <b-col align='right' class='mt-n4' v-if='pValue>=max'><span id='font20'>Completed!!</span></b-col>
                         <b-progress :value="pValue" :max="max" show-progress animated height='20px' variant="success" class='mb-4'></b-progress>
 
                         <span id='font20'>Java</span>
-                        <b-col align='right' class='mt-n4' v-if='jValue==max'><span id='font20'>Completed!!</span></b-col>
+                        <b-col align='right' class='mt-n4' v-if='jValue>=max'><span id='font20'>Completed!!</span></b-col>
                         <b-progress :value="jValue" :max="max" show-progress animated height='20px' variant="info" class='mb-4'></b-progress>
 
                         <span id='font20'>Javascript</span>
-                        <b-col align='right' class='mt-n4' v-if='jsValue==max'><span id='font20'>Completed!!</span></b-col>
+                        <b-col align='right' class='mt-n4' v-if='jsValue>=max'><span id='font20'>Completed!!</span></b-col>
                         <b-progress :value="jsValue" :max="max" show-progress animated height='20px' variant="warning" class='mb-4'></b-progress>
                     </b-col>
                 </b-row>

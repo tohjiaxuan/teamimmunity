@@ -14,7 +14,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import HomePage from './Homepage.vue'
 import About from './About.vue'
 import Contact from './Contact.vue'
-import Dashboard from './components/Dashboard.vue'
+
+import Dashboard from './components/Dashboard/Dashboard.vue'
 
 import Language from './components/Arnold/Language.vue'
 import Python from './components/Arnold/Python.vue'

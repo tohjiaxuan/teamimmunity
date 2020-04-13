@@ -1,36 +1,34 @@
-import { Bar } from 'vue-chartjs'
+import { Line } from 'vue-chartjs'
 import db from '../../firebase.js'
 
 export default {
-  extends: Bar,
+  extends: Line,
   data: function () {
     return {
         datacollection: {
             datasets: [{
               label:[],
-              backgroundColor: [],
-              borderColor: [],
+              borderColor: "#3e95cd",
               data: [],
-              borderWidth: 0.5
             }]
         },
         options: {
           legend: { display: true },
           title: {
             display: true,
-            text: 'Take a look at the exericises most people are doing!'
+            text: 'Look at your rank'
           }, 
           scales: {
             yAxes: [{ 
               scaleLabel: {
                 display: true,
-                labelString: "Number of Exercises Completed"
+                labelString: "Rank"
               }
             }],
             xAxes: [{ 
               scaleLabel: {
                 display: true,
-                labelString: "Programming Language"
+                labelString: "Day"
               }
             }]
           },
@@ -41,19 +39,10 @@ export default {
   },
   methods: {
     fetchItems: function () {
-        db.collection('clicks')
-        .doc('exercise_java_easy_1')
-        .get()
-        .then(snapshot => {
-            const document = snapshot.data().clicks
-            this.datacollection.datasets[0].data.push(document)
-        }),
-      db.collection('clicks').get().then(querySnapShot => {
+      db.collection('users').get().then(querySnapShot => {
         querySnapShot.forEach(doc => {
-          this.datacollection.datasets[0].label.push(doc.data().country)
-          this.datacollection.datasets[0].backgroundColor.push(doc.data().backgroundColor)
-          this.datacollection.datasets[0].borderColor.push(doc.data().borderColor)
-          this.datacollection.datasets[0].data.push(doc.data().data)
+          this.datacollection.datasets.label.push(doc.data().rank)
+          this.datacollection.datasets.data.push(doc.data().rank)
         })
         this.renderChart(this.datacollection, this.options)
       })

@@ -14,6 +14,7 @@
           <b-nav-item to="/language" class='pr-2' v-on:click='incrementClick("language")'>Language</b-nav-item>
           <b-nav-item to="/module" class='pr-2' v-on:click='incrementClick("module")'>Module</b-nav-item>
           <b-nav-item to="/exercise" class='pr-2' v-on:click='incrementClick("exercise")'>Exercise</b-nav-item>
+          <b-nav-item to="/dashboard" class='pr-2' v-on:click='incrementClick("dashboard")'>Dashboard</b-nav-item>
           <b-nav-item to="/account" class='pr-2' v-on:click='incrementClick("account")'>Account</b-nav-item>
           <b-nav-item to="/" class='pr-2' v-on:click='incrementClick("logout"); logout()'>Logout</b-nav-item>
           <b-nav-item to="/contact" class='pr-2' v-on:click='incrementClick("contact")'>?</b-nav-item>

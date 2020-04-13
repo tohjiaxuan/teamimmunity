@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import HomePage from './Homepage.vue'
 import About from './About.vue'
 import Contact from './Contact.vue'
+import Dashboard from './components/Dashboard.vue'
 
 import Language from './components/Arnold/Language.vue'
 import Python from './components/Arnold/Python.vue'
@@ -108,6 +109,7 @@ const router = new VueRouter ({
     {path: '/', component: HomePage},
     {path: '/about', component: About},
     {path: '/contact', component: Contact},
+    {path: '/dashboard', component: Dashboard},
 
     {path: '/language',component:Language, meta: {requiresAuth: true}},
     {path: '/language/python', component:Python},

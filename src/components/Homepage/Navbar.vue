@@ -18,6 +18,7 @@
           <b-dropdown-item to="/language" id="menu" v-on:change='incrementClick("language")'>Language</b-dropdown-item>
           <b-dropdown-item to="/module" id="menu" v-on:change='incrementClick("module")'>Module</b-dropdown-item>
           <b-dropdown-item to="/exercise" id="menu" v-on:change='incrementClick("exercise")'>Exercise</b-dropdown-item>
+          <b-dropdown-item to="/dashboard" id="menu" v-on:change='incrementClick("dashboard")'>Dashboard</b-dropdown-item>
           <b-dropdown-item to="/account" id="menu" v-on:change='incrementClick("account")'>Account</b-dropdown-item>
         </b-nav-item-dropdown>
 

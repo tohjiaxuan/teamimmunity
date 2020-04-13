@@ -19,20 +19,20 @@ jobs:
         with:
           name: dist
           path: dist
-deploy:
-  name: Deploy
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout Repo
-      uses: actions/checkout@master
-    - name: Download Artifact
-      uses: actions/download-artifact@master
-      with:
-        name: dist
-    - name: Deploy to Firebase
-      uses: w9jds/firebase-action@master
-      with:
-        args: deploy --only hosting
-      env:
-        FIREBASE_TOKEN: $1//0gOc-Ekx2dGqHCgYIARAAGBASNwF-L9IrAxm6dxSC9AuGvh5oFI93BgGjx8hAfjOXfI3CUzTUET9EvF4cevz4wub3Bk6KlyzyhQk
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: $1//0gOc-Ekx2dGqHCgYIARAAGBASNwF-L9IrAxm6dxSC9AuGvh5oFI93BgGjx8hAfjOXfI3CUzTUET9EvF4cevz4wub3Bk6KlyzyhQk

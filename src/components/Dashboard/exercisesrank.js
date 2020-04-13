@@ -1,57 +1,66 @@
-import {Bar} from 'vue-chartjs'
-export default{
-    extends:Bar,
-    data: () => ({
-        chartdata: {
-          labels: ['January', 'February','March','April'],
-          datasets: [
-            {
-              label: 'Sales',
-              data: [400, 300,150,100],
-              backgroundColor:'#AA6',
-              borderWidth:0.5,
-              borderColor:"#000"
-            },
-            {
-                label: 'Sales2',
-                data: [40, 30,10,15],
-                backgroundColor:'#7C1'
-              }
-          ]
-          
+import { Bar } from 'vue-chartjs'
+import db from '../../firebase.js'
+
+export default {
+  extends: Bar,
+  data: function () {
+    return {
+        datacollection: {
+            datasets: [{
+              label:[],
+              backgroundColor: [],
+              borderColor: [],
+              data: [],
+              borderWidth: 0.5
+            }]
         },
-        
         options: {
-            title:{
-                display:true,
-                text:'Bar Chart Example',
-                fontColor:'Black',
-                fontSize:15
-
-            },
-            legend:{
-                position:'bottom'
-            },
-            layout:{
-                padding:{
-                    left: 5,
-                    right: 0,
-                    top: 0,
-                    bottom: 5
-                }
-            },
-            scales:{
-                yAxes:[{
-                    ticks:{
-                        min:0
-                    }
-
-                }]
-            }
-          
+          legend: { display: true },
+          title: {
+            display: true,
+            text: 'Take a look at the exericises most people are doing!'
+          }, 
+          scales: {
+            yAxes: [{ 
+              scaleLabel: {
+                display: true,
+                labelString: "Number of Exercises Completed"
+              }
+            }],
+            xAxes: [{ 
+              scaleLabel: {
+                display: true,
+                labelString: "Programming Language"
+              }
+            }]
+          },
+            responsive: true,
+            maintainAspectRatio: false
         }
-      }),
-    mounted(){
-        this.renderChart(this.chartdata,this.options)
     }
+  },
+  methods: {
+    fetchItems: function () {
+        db.collection('clicks')
+        .doc('exercise_java_easy_1')
+        .get()
+        .then(snapshot => {
+            const document = snapshot.data().clicks
+            this.datacollection.datasets[0].data.push(document)
+        }),
+      db.collection('clicks').get().then(querySnapShot => {
+        querySnapShot.forEach(doc => {
+          this.datacollection.datasets[0].label.push(doc.data().country)
+          this.datacollection.datasets[0].backgroundColor.push(doc.data().backgroundColor)
+          this.datacollection.datasets[0].borderColor.push(doc.data().borderColor)
+          this.datacollection.datasets[0].data.push(doc.data().data)
+        })
+        this.renderChart(this.datacollection, this.options)
+      })
+    }
+  },
+  created () {
+    this.fetchItems()
+  }
 }
+

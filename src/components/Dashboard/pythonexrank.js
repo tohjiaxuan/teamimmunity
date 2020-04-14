@@ -6,12 +6,7 @@ export default {
   data: function () {
     return {
         datacollection: {
-            datasets: [{
-              label:[],
-              backgroundColor: "#3cba9f",
-              borderWidth: 1,
-              data: []
-            }]
+            datasets: []
         },
         options: {
           legend: { display: true},

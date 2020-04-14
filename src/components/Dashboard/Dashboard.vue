@@ -4,7 +4,12 @@
         <div id="bkg" class="page-holder bg-overlay">
             <b-container fluid>
                 <b-row class='mt-4'>
-                    <rankEx></rankEx>
+                    <b-col>
+                        <rankEx></rankEx>
+                    </b-col>
+                    <b-col>
+                        <rankLeadboard></rankLeadboard>
+                    </b-col>
                 </b-row>
             </b-container>
         </div>
@@ -16,11 +21,13 @@
 import navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 import rankEx from '../Dashboard/exercisesrank.js'
+import rankLeadboard from '../Dashboard/leaderboardrank.js'
 export default {
     components : {
-        'navbar': navbar,
+        navbar,
         Footer,
-        rankEx
+        rankEx,
+        rankLeadboard
     }
 }
 </script>

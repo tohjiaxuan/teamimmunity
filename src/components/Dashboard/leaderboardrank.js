@@ -1,35 +1,35 @@
-import { Bubble } from 'vue-chartjs'
+import { Line } from 'vue-chartjs'
 import db from '../../firebase.js'
 
 export default {
-  extends: Bubble,
+  extends: Line,
   data: function () {
     return {
         datacollection: {
             datasets: [{
               label:[],
-              backgroundColor: [],
-              borderColor: [],
-              data: []
+              borderColor: "#3e95cd",
+              data: [],
+              fill: false
             }]
         },
         options: {
-          legend: { display: true},
+          legend: { display: true },
           title: {
             display: true,
-            text: 'GDP, happiness and population'
+            text: 'Look at your rank'
           }, 
           scales: {
             yAxes: [{ 
               scaleLabel: {
                 display: true,
-                labelString: "Happiness"
+                labelString: "Rank"
               }
             }],
             xAxes: [{ 
               scaleLabel: {
                 display: true,
-                labelString: "GDP (PPP)"
+                labelString: "User"
               }
             }]
           },
@@ -40,12 +40,10 @@ export default {
   },
   methods: {
     fetchItems: function () {
-      db.collection('countries').get().then(querySnapShot => {
+      db.collection('users').get().then(querySnapShot => {
         querySnapShot.forEach(doc => {
-          this.datacollection.datasets[0].label.push(doc.data().country)
-          this.datacollection.datasets[0].backgroundColor.push(doc.data().backgroundColor)
-          this.datacollection.datasets[0].borderColor.push(doc.data().borderColor)
-          this.datacollection.datasets[0].data.push(doc.data().data)
+          this.datacollection.datasets[0].label.push(doc.data().email)
+          this.datacollection.datasets[0].data.push(doc.data().rank)
         })
         this.renderChart(this.datacollection, this.options)
       })

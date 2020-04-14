@@ -1,5 +1,6 @@
 import { Line } from 'vue-chartjs'
 import db from '../../firebase.js'
+import firebase from 'firebase';
 
 export default {
   extends: Line,
@@ -27,9 +28,10 @@ export default {
               }
             }],
             xAxes: [{ 
+              data:[],
               scaleLabel: {
                 display: true,
-                labelString: "User"
+                labelString: "Day"
               }
             }]
           },
@@ -40,10 +42,13 @@ export default {
   },
   methods: {
     fetchItems: function () {
+      var user = firebase.auth().currentUser;
       db.collection('users').get().then(querySnapShot => {
         querySnapShot.forEach(doc => {
-          this.datacollection.datasets[0].label.push(doc.data().email)
-          this.datacollection.datasets[0].data.push(doc.data().rank)
+          if (user.email == doc.data().email) {
+            this.datacollection.datasets[0].label.push(doc.data().name)
+            this.datacollection.datasets[0].data.push(doc.data().rank)
+          }
         })
         this.renderChart(this.datacollection, this.options)
       })

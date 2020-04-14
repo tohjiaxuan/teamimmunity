@@ -18,7 +18,7 @@ export default {
           legend: { display: true },
           title: {
             display: true,
-            text: 'Look at your rank'
+            // text: 'Look at your rank'
           }, 
           scales: {
             yAxes: [{ 

@@ -12,7 +12,7 @@ export default {
           legend: { display: true},
           title: {
             display: true,
-            // text: 'Look at the number of Java exercises other users have completed'
+            // text: "Look at other users' interest level in the languages"
           }, 
           scales: {
             yAxes: [{ 
@@ -35,10 +35,10 @@ export default {
   },
   methods: {
     fetchItems: function () {
-      db.collection('java exercises activity').get().then(querySnapShot => {
+      db.collection('language activity').get().then(querySnapShot => {
         querySnapShot.forEach(doc => {
             var newDataset = {
-                label: doc.data().type,
+                label: doc.data().language,
                 backgroundColor: doc.data().color,
                 data: []
             }

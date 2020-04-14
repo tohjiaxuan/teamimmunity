@@ -5,8 +5,16 @@
             <b-container fluid>
                 <b-row class='mt-4'>
                     <b-col>
-                        <rankEx></rankEx>
+                        <rankPyEx></rankPyEx>
                     </b-col>
+                    <b-col>
+                        <rankJavaEx></rankJavaEx>
+                    </b-col>
+                    <b-col>
+                        <rankJsEx></rankJsEx>
+                    </b-col>
+                </b-row>
+                <b-row>
                     <b-col>
                         <rankLeadboard></rankLeadboard>
                     </b-col>
@@ -20,13 +28,17 @@
 <script>
 import navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
-import rankEx from '../Dashboard/exercisesrank.js'
+import rankPyEx from '../Dashboard/pythonexrank.js'
+import rankJavaEx from '../Dashboard/javaexrank.js'
+import rankJsEx from '../Dashboard/jsexrank.js'
 import rankLeadboard from '../Dashboard/leaderboardrank.js'
 export default {
     components : {
         navbar,
         Footer,
-        rankEx,
+        rankPyEx,
+        rankJavaEx,
+        rankJsEx,
         rankLeadboard
     }
 }

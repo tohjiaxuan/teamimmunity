@@ -1,15 +1,15 @@
-import { Bubble } from 'vue-chartjs'
+import { Bar } from 'vue-chartjs'
 import db from '../../firebase.js'
 
 export default {
-  extends: Bubble,
+  extends: Bar,
   data: function () {
     return {
         datacollection: {
             datasets: [{
               label:[],
-              backgroundColor: [],
-              borderColor: [],
+              backgroundColor: "#3cba9f",
+              borderWidth: 1,
               data: []
             }]
         },
@@ -17,19 +17,19 @@ export default {
           legend: { display: true},
           title: {
             display: true,
-            text: 'GDP, happiness and population'
+            text: 'Look at the number of Python exercises other users have completed'
           }, 
           scales: {
             yAxes: [{ 
               scaleLabel: {
                 display: true,
-                labelString: "Happiness"
+                labelString: "Number of completed exercises"
               }
             }],
             xAxes: [{ 
               scaleLabel: {
                 display: true,
-                labelString: "GDP (PPP)"
+                labelString: "Type of Exercise"
               }
             }]
           },
@@ -40,12 +40,15 @@ export default {
   },
   methods: {
     fetchItems: function () {
-      db.collection('countries').get().then(querySnapShot => {
+      db.collection('python exercises activity').get().then(querySnapShot => {
         querySnapShot.forEach(doc => {
-          this.datacollection.datasets[0].label.push(doc.data().country)
-          this.datacollection.datasets[0].backgroundColor.push(doc.data().backgroundColor)
-          this.datacollection.datasets[0].borderColor.push(doc.data().borderColor)
-          this.datacollection.datasets[0].data.push(doc.data().data)
+          var newDataset = {
+            label: doc.data().type,
+            backgroundColor: "#3cba9f",
+            data: []
+        }
+        newDataset.data.push(doc.data().clicks)
+        this.datacollection.datasets.push(newDataset)
         })
         this.renderChart(this.datacollection, this.options)
       })

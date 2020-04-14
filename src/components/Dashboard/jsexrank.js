@@ -39,7 +39,7 @@ export default {
         querySnapShot.forEach(doc => {
           var newDataset = {
               label: doc.data().type,
-              backgroundColor: "#8e5ea2",
+              backgroundColor: doc.data().color,
               data: []
           }
           newDataset.data.push(doc.data().clicks)

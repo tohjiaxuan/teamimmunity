@@ -12,7 +12,7 @@ export default {
           legend: { display: true},
           title: {
             display: true,
-            text: 'Look at the number of Javascript exercises other users have completed'
+            // text: 'Look at the number of Javascript exercises other users have completed'
           }, 
           scales: {
             yAxes: [{ 

@@ -18,13 +18,13 @@
                 <b-row class='mb-4'>
                     <h1 class='pl-3'><b>Take a look at the exercises our users have completed!</b></h1>
                     <b-col>
-                        <rankPyEx></rankPyEx>
+                        <rankEasy></rankEasy>
                     </b-col>
                     <b-col>
-                        <rankJavaEx></rankJavaEx>
+                        <rankMed></rankMed>
                     </b-col>
                     <b-col>
-                        <rankJsEx></rankJsEx>
+                        <rankHard></rankHard>
                     </b-col>
                 </b-row>
             </b-container>
@@ -36,18 +36,18 @@
 <script>
 import navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
-import rankPyEx from '../Dashboard/pythonexrank.js'
-import rankJavaEx from '../Dashboard/javaexrank.js'
-import rankJsEx from '../Dashboard/jsexrank.js'
+import rankEasy from '../Dashboard/easyrank.js'
+import rankMed from '../Dashboard/medrank.js'
+import rankHard from '../Dashboard/hardrank.js'
 import rankLeadboard from '../Dashboard/leaderboardrank.js'
 import rankLang from '../Dashboard/languagerank.js'
 export default {
     components : {
         navbar,
         Footer,
-        rankPyEx,
-        rankJavaEx,
-        rankJsEx,
+        rankEasy,
+        rankMed,
+        rankHard,
         rankLeadboard,
         rankLang,
     }

@@ -153,6 +153,7 @@ import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 import { mapState } from 'vuex'
 import db from "../../firebase.js";
+import firebase from "firebase"
 export default {
     data() {
         return {
@@ -180,7 +181,8 @@ export default {
                 jValue: 0,
                 jsValue: 0,
                 current: 'None',
-                recommended: 'None'
+                recommended: 'None',
+                prevRank: []
             }, {merge: true})
         },
         fetchLeaderboard() {
@@ -207,7 +209,8 @@ export default {
         updateRank() {
             if (this.getRank() != this.userProfile.rank) {
                 db.collection('users').doc(this.currentUser.uid).set({
-                    rank: this.getRank()
+                    rank: this.getRank(),
+                    prevRank: firebase.firestore.FieldValue.arrayUnion(this.userProfile.rank)
                 }, {merge: true})
             }
         },

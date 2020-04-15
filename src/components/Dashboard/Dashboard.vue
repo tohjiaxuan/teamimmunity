@@ -5,9 +5,9 @@
             <b-container fluid>
                 <b-row class='mt-3 mb-4'>
                     <h1 class='pl-3'><b>Your progress on the Leaderboard Ranking</b></h1>
-                    <b-col>
-                        <rankLeadboard></rankLeadboard>
-                    </b-col>
+                </b-row>
+                <b-row>
+                    <rankLeadboard></rankLeadboard>
                 </b-row>
                 <b-row class='mb-4'>
                     <h1 class='pl-3'><b>Take a look at how our users value the languages!</b></h1>
@@ -26,9 +26,6 @@
                     <b-col>
                         <rankJsEx></rankJsEx>
                     </b-col>
-                </b-row>
-                <b-row>
-                    <rankLeadboard></rankLeadboard>
                 </b-row>
             </b-container>
         </div>

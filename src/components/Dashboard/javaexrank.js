@@ -19,6 +19,9 @@ export default {
               scaleLabel: {
                 display: true,
                 labelString: "Number of completed exercises"
+              },
+              ticks: {
+                beginAtZero: true
               }
             }],
             xAxes: [{ 

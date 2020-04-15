@@ -15,9 +15,7 @@
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col>
-                        <rankLeadboard></rankLeadboard>
-                    </b-col>
+                    <rankLeadboard></rankLeadboard>
                 </b-row>
             </b-container>
         </div>

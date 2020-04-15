@@ -4,19 +4,28 @@
         <div id="bkg" class="page-holder bg-overlay">
             <b-container fluid>
                 <b-row class='mt-3 mb-4'>
-                    <h1 class='pl-3'><b>Your progress on the Leaderboard Ranking</b></h1>
-                </b-row>
-                <b-row>
-                    <rankLeadboard></rankLeadboard>
-                </b-row>
-                <b-row class='mb-4'>
-                    <h1 class='pl-3'><b>Take a look at how our users value the languages!</b></h1>
                     <b-col>
-                        <rankLang></rankLang>
+                        <b-row>
+                            <donutJavaProgress></donutJavaProgress>
+                        </b-row>
+                        <b-row>
+                            <donutPythonProgress></donutPythonProgress>
+                        </b-row>
+                        <b-row>
+                            <donutJsProgress></donutJsProgress>
+                        </b-row>
                     </b-col>
+                   <b-col>
+                       <b-row>
+                           <rankLeadboard></rankLeadboard>
+                       </b-row>
+                       <b-row>
+                           <rankLang></rankLang>
+                       </b-row>
+                   </b-col>
                 </b-row>
-                <b-row class='mb-4'>
-                    <h1 class='pl-3'><b>Take a look at the exercises our users have completed!</b></h1>
+                
+                <b-row>
                     <b-col>
                         <rankEasy></rankEasy>
                     </b-col>
@@ -41,6 +50,9 @@ import rankMed from '../Dashboard/medrank.js'
 import rankHard from '../Dashboard/hardrank.js'
 import rankLeadboard from '../Dashboard/leaderboardrank.js'
 import rankLang from '../Dashboard/languagerank.js'
+import donutJavaProgress from '../Dashboard/donutjava.js'
+import donutPythonProgress from '../Dashboard/donutpython.js'
+import donutJsProgress from '../Dashboard/donutjs.js'
 export default {
     components : {
         navbar,
@@ -50,6 +62,9 @@ export default {
         rankHard,
         rankLeadboard,
         rankLang,
+        donutJavaProgress,
+        donutPythonProgress,
+        donutJsProgress
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <radial-progress-bar :diameter="205">
-   <p style="font-family: Futura HV BT">JS Completed: {{ Math.floor(jValue) }}</p>
+  <radial-progress-bar :diameter="205" :completed = "done" :total = "totals">
+   <p style="font-family: Futura HV BT">Java Completed: {{ Math.floor(jValue) }}</p>
    
   </radial-progress-bar>
 </template>
@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             
-
+            
             
         }
     },
@@ -27,7 +27,7 @@ export default {
             db.collection('users').doc(this.currentUser.uid).set({
                 
               
-                jsValue: 0
+                jValue: 0
                 
             }, {merge: true})
         },

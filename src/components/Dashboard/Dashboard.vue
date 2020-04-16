@@ -7,11 +7,9 @@
                     <b-col>
                         <b-row>
                             <donutJavaProgress></donutJavaProgress>
-                        </b-row>
-                        <b-row>
+                        
                             <donutPythonProgress></donutPythonProgress>
-                        </b-row>
-                        <b-row>
+                      
                             <donutJsProgress></donutJsProgress>
                         </b-row>
                     </b-col>
@@ -50,9 +48,9 @@ import rankMed from '../Dashboard/medrank.js'
 import rankHard from '../Dashboard/hardrank.js'
 import rankLeadboard from '../Dashboard/leaderboardrank.js'
 import rankLang from '../Dashboard/languagerank.js'
-import donutJavaProgress from '../Dashboard/donutjava.js'
-import donutPythonProgress from '../Dashboard/donutpython.js'
-import donutJsProgress from '../Dashboard/donutjs.js'
+import donutJavaProgress from '../Dashboard/donutjava.vue'
+import donutPythonProgress from '../Dashboard/donutpython.vue'
+import donutJsProgress from '../Dashboard/donutjs.vue'
 export default {
     components : {
         navbar,

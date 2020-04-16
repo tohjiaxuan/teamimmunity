@@ -4,12 +4,20 @@
         <div id="bkg" class="page-holder bg-overlay">
             <b-container fluid>
                 <b-row class='mt-3 mb-4'>
+                    
                     <b-col>
-                        <b-row>
+
+                        <h2> Let us track your progress! </h2>
+                            <b-row>
                             <donutJavaProgress></donutJavaProgress>
-                            <donutPythonProgress></donutPythonProgress>                  
-                            <donutJsProgress></donutJsProgress>    
-                        </b-row>
+                           
+                            <donutPythonProgress></donutPythonProgress>     
+                            </b-row>
+                            <b-row>
+                            <donutJsProgress></donutJsProgress> 
+                            <donutOverall></donutOverall>    
+                            </b-row>
+                        
                     </b-col>
                    <b-col>
                        <b-row>
@@ -49,6 +57,7 @@ import rankLang from '../Dashboard/languagerank.js'
 import donutJavaProgress from '../Dashboard/donutjava.vue'
 import donutPythonProgress from '../Dashboard/donutpython.vue'
 import donutJsProgress from '../Dashboard/donutjs.vue'
+import donutOverall from '../Dashboard/donutoverall.vue'
 export default {
     components : {
         navbar,
@@ -60,7 +69,8 @@ export default {
         rankLang,
         donutJavaProgress,
         donutPythonProgress,
-        donutJsProgress
+        donutJsProgress,
+        donutOverall
     }
 }
 </script>
@@ -75,4 +85,7 @@ export default {
     background: linear-gradient(180deg, #CBE7F8 15%, rgba(222, 248, 254, 0) 100%)
 }
 
+.h1 {
+    font-family: Futura Hv BT;
+}
 </style>

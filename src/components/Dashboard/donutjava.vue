@@ -1,6 +1,6 @@
 <template>
-  <radial-progress-bar :diameter="205" :completed-steps="jValue" :total-steps=100>
-   <p style="font-family: Futura HV BT">Java Completed: {{ Math.floor(jValue) }}</p>
+  <radial-progress-bar :diameter="220" :completed-steps="jValue" :total-steps=100>
+   <p class="header" style="font-family: Futura HV BT">Java: {{ Math.floor(jValue) }}%</p>
    
   </radial-progress-bar>
 </template>
@@ -31,3 +31,8 @@ export default {
 }
 </script>
 
+<style scoped>
+.header {
+    font-size: 1.4em;
+}
+</style>

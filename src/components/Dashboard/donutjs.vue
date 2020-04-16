@@ -1,5 +1,5 @@
 <template>
-  <radial-progress-bar :diameter="205">
+  <radial-progress-bar :diameter="205" :completed="com" :total="tot">
    <p style="font-family: Futura HV BT">JS Completed: {{ Math.floor(jsValue) }}</p>
    
   </radial-progress-bar>
@@ -13,7 +13,8 @@ import RadialProgressBar from 'vue-radial-progress'
 export default {
     data() {
         return {
-            
+            com:0,
+            tot: 100
         
             
         }

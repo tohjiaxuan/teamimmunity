@@ -1,5 +1,5 @@
 <template>
-  <radial-progress-bar :diameter="205" :completed = "done" :total = "totals">
+  <radial-progress-bar :diameter="205" :completed="com" :total="tot">
    <p style="font-family: Futura HV BT">Java Completed: {{ Math.floor(jValue) }}</p>
    
   </radial-progress-bar>
@@ -14,7 +14,8 @@ export default {
     data() {
         return {
             
-            
+            com:0,
+            totals: 100
             
         }
     },

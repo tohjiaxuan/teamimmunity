@@ -7,10 +7,8 @@
                     <b-col>
                         <b-row>
                             <donutJavaProgress></donutJavaProgress>
-                        
-                            <donutPythonProgress></donutPythonProgress>
-                      
-                            <donutJsProgress></donutJsProgress>
+                            <donutPythonProgress></donutPythonProgress>                  
+                            <donutJsProgress></donutJsProgress>    
                         </b-row>
                     </b-col>
                    <b-col>

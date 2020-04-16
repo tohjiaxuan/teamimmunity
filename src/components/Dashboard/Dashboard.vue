@@ -6,20 +6,18 @@
                 <b-row class='mt-3 mb-4'>
                     
                     <b-col>
-
                         <h2> Let us track your progress! </h2>
-                            <b-row>
+                        <b-row>
                             <donutJavaProgress></donutJavaProgress>
-                           
                             <donutPythonProgress></donutPythonProgress>     
-                            </b-row>
-                            <b-row>
+                        </b-row>
+                        <b-row>
                             <donutJsProgress></donutJsProgress> 
                             <donutOverall></donutOverall>    
-                            </b-row>
-                        
+                        </b-row>
                     </b-col>
-                   <b-col>
+
+                    <b-col>
                        <b-row>
                            <rankLeadboard></rankLeadboard>
                        </b-row>

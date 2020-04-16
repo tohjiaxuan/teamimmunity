@@ -7,7 +7,7 @@ export default {
   data: function () {
     return {
         datacollection: {
-          labels: [],
+          labels: ['java','js','py'],
           datasets: [{
             label: "No. of hints",
             backgroundColor: [],
@@ -36,19 +36,29 @@ export default {
     }
   },
   methods: {
-    fetchItems: function() {
-      var user = firebase.auth().currentUser;
-      db.collection('users').doc(user).get().then(snapshot => {
-        const document = snapshot.data()
-        document.collection('easy exercises hint').get().then(querySnapShot => {
-          querySnapShot.forEach(doc => {
-            this.datacollection.labels.push(doc.data().language)
-            this.datacollection.datasets[0].backgroundColor.push(doc.data().color)
+    // fetchItems: function() {
+    //   var user = firebase.auth().currentUser;
+    //   db.collection('users').doc(user).get().then(snapshot => {
+    //     const document = snapshot.data()
+    //     document.collection('easy exercises hint').get().then(querySnapShot => {
+    //       querySnapShot.forEach(doc => {
+    //         this.datacollection.labels.push(doc.data().language)
+    //         this.datacollection.datasets[0].backgroundColor.push(doc.data().color)
+    //         this.datacollection.datasets[0].data.push(doc.data().hint)
+    //       })
+    //     })
+    //     this.renderChart(this.datacollection, this.options)
+    //   })
+
+      fetchItems: function() {
+        var user = firebase.auth().currentUser;
+        db.collection('users').doc(user.uid).collection('easy exercises hint').get().then(querySnapshot => {
+          querySnapshot.forEach(doc => {
+            console.log(doc.data().hint)
             this.datacollection.datasets[0].data.push(doc.data().hint)
           })
+          this.renderChart(this.datacollection, this.options)
         })
-        this.renderChart(this.datacollection, this.options)
-      })
 
       // db.collection('users').doc(user).get().then(snapshot => {
       //   const document = snapshot.data()

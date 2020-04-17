@@ -1,5 +1,5 @@
 <template>
-  <radial-progress-bar class="bar" :diameter="220" :completed-steps="pValue" :total-steps=100>
+  <radial-progress-bar class="bar" :diameter="200" :completed-steps="pValue" :total-steps=100>
    <p class="header" style="font-family: Futura HV BT">Python: {{ Math.floor(pValue) }}%</p>
    
   </radial-progress-bar>

@@ -1,5 +1,5 @@
 <template>
-  <radial-progress-bar :diameter="220" :completed-steps="jsValue" :total-steps=100>
+  <radial-progress-bar :diameter="200" :completed-steps="jsValue" :total-steps=100>
    <p class="header" style="font-family: Futura HV BT">JS: {{ Math.floor(jsValue) }}%</p>
    
   </radial-progress-bar>

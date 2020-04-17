@@ -4,7 +4,6 @@
         <div id="bkg" class="page-holder bg-overlay">
             <b-container fluid>
                 <b-row class='mt-3 mb-4'>
-                    
                     <b-col>
                         <h2> Let us track your progress! </h2>
                         <b-row>
@@ -16,15 +15,12 @@
                             <donutOverall></donutOverall>    
                         </b-row>
                     </b-col>
-
                     <b-col>
-                       <b-row>
-                           <rankLeadboard></rankLeadboard>
-                       </b-row>
-                       <b-row>
-                           <rankLang></rankLang>
-                       </b-row>
-                   </b-col>
+                        <rankLeadboard></rankLeadboard>
+                    </b-col>
+                    <b-col>
+                        <rankLang></rankLang>
+                    </b-col> 
                 </b-row>
                 
                 <b-row>
@@ -80,7 +76,7 @@ export default {
 }
 
 #bkg {
-    background: linear-gradient(180deg, #CBE7F8 15%, rgba(222, 248, 254, 0) 100%)
+    background: linear-gradient(180deg, #CBE7F8 25%, rgba(222, 248, 254, 0) 100%)
 }
 
 .h1 {

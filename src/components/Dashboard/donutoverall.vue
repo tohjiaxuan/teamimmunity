@@ -1,5 +1,5 @@
 <template>
-  <radial-progress-bar class="bar" :diameter="220" :completed-steps="oValue" :total-steps=100>
+  <radial-progress-bar class="bar" :diameter="200" :completed-steps="oValue" :total-steps=100>
    <p class="header" style="font-family: Futura HV BT">Overall: {{ Math.floor(oValue) }}%</p>
    
   </radial-progress-bar>

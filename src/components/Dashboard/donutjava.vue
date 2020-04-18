@@ -1,5 +1,5 @@
 <template>
-  <radial-progress-bar :diameter="200" :completed-steps="jValue" :total-steps=100 :strokeWidth=20 startColor="#E9C1B9" stopColor="#BF3E24">
+  <radial-progress-bar :diameter="200" :completed-steps="jValue" :total-steps=100 :strokeWidth=16 startColor="#2980B9" stopColor="#2980B9" innerStrokeColor="#A6ACAF">
    <p class="header" style="font-family: Futura HV BT">Java: {{ Math.floor(jValue) }}%</p>
    
   </radial-progress-bar>

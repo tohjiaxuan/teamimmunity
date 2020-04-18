@@ -1,8 +1,10 @@
 <template>
-  <radial-progress-bar class="bar" :diameter="220" :completed-steps="pValue" :total-steps=100>
+
+  <radial-progress-bar  :diameter="225" :completed-steps="pValue" :total-steps=100>
    <p class="header" style="font-family: Futura HV BT">Python: {{ Math.floor(pValue) }}%</p>
    
   </radial-progress-bar>
+ 
 </template>
 
 <script>
@@ -11,11 +13,11 @@ import db from "../../firebase.js";
 import firebase from "firebase"
 import RadialProgressBar from 'vue-radial-progress'
 export default {
-
+    
     data() {
         return {
-            com:0,
-            tot: 100
+            
+
         }
     },
     components: {
@@ -58,4 +60,5 @@ export default {
 .header {
     font-size: 1.4em;
 }
+
 </style>

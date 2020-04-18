@@ -1,8 +1,8 @@
-import { Bar } from 'vue-chartjs'
+import { HorizontalBar } from 'vue-chartjs'
 import db from '../../firebase.js'
 
 export default {
-  extends: Bar,
+  extends: HorizontalBar,
   data: function () {
     return {
         // datacollection: {
@@ -16,29 +16,7 @@ export default {
             data: []
           }]
         },
-        // options: {
-        //   legend: { display: true},
-        //   title: {
-        //     display: true,
-        //     // text: "Look at other users' interest level in the languages"
-        //   }, 
-        //   scales: {
-        //     yAxes: [{ 
-        //       scaleLabel: {
-        //         display: true,
-        //         labelString: "Number of completed exercises"
-        //       }
-        //     }],
-        //     xAxes: [{ 
-        //       scaleLabel: {
-        //         display: true,
-        //         labelString: "Type of Exercise"
-        //       }
-        //     }]
-        //   },
-        //     responsive: true,
-        //     maintainAspectRatio: false
-        // }
+        
         options: {
           legend: { display: false },
           title: {
@@ -47,12 +25,13 @@ export default {
           },
           scales: {
             yAxes: [{
+              stacked: false,
               ticks: {
                 beginAtZero:true
               }
             }],
             xAxes: [{
-
+              stacked: true
             }]
           },
           responsive: true,

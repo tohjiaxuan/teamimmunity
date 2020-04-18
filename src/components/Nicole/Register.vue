@@ -144,6 +144,51 @@ import firebase from 'firebase';
             }).catch(error => {
                 console.log(error)
             })
+            db.collection('users').doc(user.user.uid).collection('easy exercises hint').doc('java easy hint').set({
+                color: '#E9C1B9',
+                hint: 0,
+                language: 'Java'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('easy exercises hint').doc('js easy hint').set({
+                color: '#B6AACD',
+                hint: 0,
+                language: 'Javascript'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('easy exercises hint').doc('python easy hint').set({
+                color: '#AAC9AF',
+                hint: 0,
+                language: 'Python'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('medium exercises hint').doc('java medium hint').set({
+                color: '#DD8C7C',
+                hint: 0,
+                language: 'Java'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('medium exercises hint').doc('js medium hint').set({
+                color: '#9A82C4',
+                hint: 0,
+                language: 'Javascript'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('medium exercises hint').doc('python medium hint').set({
+                color: '#7ECA8A',
+                hint: 0,
+                language: 'Python'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('hard exercises hint').doc('java hard hint').set({
+                color: '#BF3E24',
+                hint: 0,
+                language: 'Java'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('hard exercises hint').doc('js hard hint').set({
+                color: '#5429A0',
+                hint: 0,
+                language: 'Javascript'
+            }, {merge: true})
+            db.collection('users').doc(user.user.uid).collection('hard exercises hint').doc('python hard hint').set({
+                color: '#378C43',
+                hint: 0,
+                language: 'Python'
+            }, {merge: true})
         })
         .catch((error) => {
             alert('Oops. ' + error.message)

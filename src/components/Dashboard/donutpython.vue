@@ -1,5 +1,5 @@
 <template>
-  <radial-progress-bar :diameter="200" :completed-steps="pValue" :total-steps=100 :strokeWidth=16 startColor="#F4D03F" stopColor="#F4D03F" innerStrokeColor="#A6ACAF">
+  <radial-progress-bar :diameter="200" :completed-steps="pValue" :total-steps=100 :strokeWidth=16 startColor="#229954" stopColor="#229954" innerStrokeColor="#A6ACAF">
    <p class="header" style="font-family: Futura HV BT">Python: {{ Math.floor(pValue) }}%</p>
    
   </radial-progress-bar>

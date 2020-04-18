@@ -1,5 +1,5 @@
 <template>
- <radial-progress-bar :diameter="200" :completed-steps="oValue" :total-steps=100 :strokeWidth=16 startColor="#EC7063" stopColor="#EC7063" innerStrokeColor="#A6ACAF">
+ <radial-progress-bar :diameter="200" :completed-steps="oValue" :total-steps=100 :strokeWidth=16 startColor="#3498DB" stopColor="#3498DB " innerStrokeColor="#A6ACAF">
    <p class="header" style="font-family: Futura HV BT">Overall: {{ Math.floor(oValue) }}%</p>
    
   </radial-progress-bar>

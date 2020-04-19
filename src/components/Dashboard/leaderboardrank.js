@@ -33,7 +33,7 @@ export default {
               data:[],
               scaleLabel: {
                 display: true,
-                labelString: "Day"
+                labelString: "Date"
               }
             }]
           },
@@ -43,9 +43,9 @@ export default {
     }
   },
   methods: {
-    formatDate: function(date) {
-      return moment(date, 'YYYY-MM-DD').format('DD/MM/YYYY');
-    },
+    // formatDate: function(date) {
+    //   return moment(date, 'YYYY-MM-DD').format('DD/MM/YYYY');
+    // },
     fetchItems: function () {
       var user = firebase.auth().currentUser;
       db.collection('users').get().then(querySnapShot => {

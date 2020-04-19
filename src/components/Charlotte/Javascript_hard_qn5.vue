@@ -159,7 +159,7 @@ export default {
        
             }
             else {
-              this.test='wrong'
+              this.status='wrong'
             }
       },
       addBadge() {

@@ -147,7 +147,7 @@ export default {
        
             }
             else {
-              this.status='correct'
+              this.status='wrong'
             }
       }
 

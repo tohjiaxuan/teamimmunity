@@ -95,9 +95,10 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                     <span id='correct' v-if="selected =='9'"> Good job! Since  </span>
+                     <span id='correct' v-if="status =='correct'"> Good job! </span>
                       <span id='empty' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='wrong' v-else > Please try again! </span>
+                  
                       </p>
                     </div>
                   </b-card>
@@ -150,12 +151,13 @@ export default {
     methods: {
       check: function(ans) {
      
-            if(ans == 'wrong'){
-              this.test='h'
+            if(ans == '9'){
+              this.status = 'correct'
+           
        
             }
             else {
-              this.test='h'
+              this.status='wrong'
             }
       }
 

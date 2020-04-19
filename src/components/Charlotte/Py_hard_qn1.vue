@@ -92,9 +92,11 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='6'"> Good job! </span>
+                      <span id='text' v-if="status =='correct'"> Good job! </span>
                       <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='text' v-else > Please try again! </span>
+
+    
                       </p>
                     </div>
                   </b-card>
@@ -146,16 +148,19 @@ export default {
         Footer,
     },
     methods: {
+    
       check: function(ans) {
      
-            if(ans == 'wrong'){
-              this.test='h'
+            if(ans == '6'){
+              this.status='correct'
        
             }
             else {
-              this.test='h'
+              this.status='wrong'
             }
       }
+
+
 
   },
   mixins: [clicks, updateProgress],

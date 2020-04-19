@@ -1,6 +1,7 @@
 import { Line } from 'vue-chartjs'
 import db from '../../firebase.js'
 import firebase from 'firebase';
+import moment from "moment"
 
 export default {
   extends: Line,
@@ -9,7 +10,7 @@ export default {
         datacollection: {
           labels:  [],
           datasets: [{
-            label:  [],
+            label:  "Rank",
             borderColor: "#3e95cd",
             data: [],
             fill: false
@@ -42,12 +43,18 @@ export default {
     }
   },
   methods: {
+    formatDate: function(date) {
+      return moment(date, 'YYYY-MM-DD').format('DD/MM/YYYY');
+    },
     fetchItems: function () {
       var user = firebase.auth().currentUser;
       db.collection('users').get().then(querySnapShot => {
         querySnapShot.forEach(doc => {
           if (user.email == doc.data().email) {
-            this.datacollection.datasets[0].label.push(doc.data().name)
+            let date = Date(Date.now())
+            let today = moment(date).format('DD/MM/YYYY');
+            this.datacollection.labels.push(today)
+            // this.datacollection.datasets[0].label.push(doc.data().name)
             this.datacollection.datasets[0].data.push(doc.data().rank)
           }
         })

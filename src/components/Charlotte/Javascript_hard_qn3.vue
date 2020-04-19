@@ -141,7 +141,7 @@
             
             <b-col align='right' >
               <router-link to="/Javascript_hard_qn4" >
-              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress(selected, 63)'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>

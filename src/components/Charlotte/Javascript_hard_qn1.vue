@@ -86,7 +86,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='text' v-if="selected =='let trimmed = (l.trim() for (l in lines));'"> Good job! The various types of trim functions are trimLeft(), trimRight() and trim().</span>
+                      <span id='text' v-if="status == 'correct'"> Good job! The various types of trim functions are trimLeft(), trimRight() and trim().</span>
                       <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='text' v-else> Please try again! </span>
                       </p>
@@ -106,7 +106,7 @@
             
             <b-col align='right' >
               <router-link to="/Javascript_hard_qn2" >
-              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress(status, 61)'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>
@@ -132,6 +132,7 @@ export default {
 
         return {
           selected: '',
+          status: ''
 
         }
     },
@@ -141,13 +142,12 @@ export default {
     },
     methods: {
       check: function(ans) {
-     
-            if(ans == 'wrong'){
-              this.test='h'
+            if(ans == 'let trimmed = (l.trim() for (l in lines));'){
+              this.status='correct'
        
             }
             else {
-              this.test='h'
+              this.status='correct'
             }
       }
 

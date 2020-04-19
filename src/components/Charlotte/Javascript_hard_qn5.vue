@@ -86,7 +86,7 @@
                   <b-card>
                     <div>
                       <p class="text-left">
-                      <span id='correct' v-if="selected =='Bournavita, Horlicks, Maltova'"> Good job!
+                      <span id='correct' v-if="status == 'correct'"> Good job!
                           Initially, the unordered list consists of elements Boost, Horlicks, and Maltova. 
                           After replacing the first element with Bournavita using replaceChild(), 
                           the output we get is Bournavita, Horlicks, and Maltova as shown in the output </span>
@@ -109,7 +109,7 @@
 
             
             <b-col align='right' >
-              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(); incrementActivity("javascript hard")'> Complete </b-button>
+              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(status, 65); incrementActivity("javascript hard")'> Complete </b-button>
               <b-modal ref="my-modal" hide-footer id="complete">
                 <div class="d-block text-center">
                   <h3>Congrats! You have completed the exercise!</h3>
@@ -143,6 +143,7 @@ export default {
 
         return {
           selected: '',
+          status: ''
 
         }
     },
@@ -153,12 +154,12 @@ export default {
     methods: {
       check: function(ans) {
      
-            if(ans == 'wrong'){
-              this.test='h'
+            if(ans == 'Bournavita, Horlicks, Maltova'){
+              this.status='correct'
        
             }
             else {
-              this.test='h'
+              this.test='wrong'
             }
       },
       addBadge() {

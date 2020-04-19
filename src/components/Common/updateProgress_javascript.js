@@ -34,8 +34,8 @@ export default {
               oValue: this.userProfile.oValue + (100/45)
             }, {merge: true})
             console.log('0Value + ' + 100/45)
-          } else {
-            if (number < 70 && number > this.userProfile.jsHard && this.userProfile.jsValue < 100) {
+          }
+            else if (number < 70 && number > this.userProfile.jsHard && this.userProfile.jsValue < 100) {
               db.collection('users').doc(this.currentUser.uid).set({
                 jsValue: Math.min(this.userProfile.jsValue + (100/15))
               }, {merge: true})
@@ -49,7 +49,6 @@ export default {
               console.log('0Value + ' + 100/45)
             }
           }
-        }
       },
       updateCurrentlyOn(name) {
         db.collection('users').doc(this.currentUser.uid).set({

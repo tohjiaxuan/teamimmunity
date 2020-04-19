@@ -9,19 +9,47 @@ export default {
     },
     methods : {
       updateProgress(selected, number) {
-        if (selected == 'correct' && number > this.userProfile.jsEasy && this.userProfile.jsValue < 100) {
-          db.collection('users').doc(this.currentUser.uid).set({
-            jsValue: Math.min(this.userProfile.jsValue + (100/15))
-          }, {merge: true})
-          console.log('jsValue + ' + 100/15)
-          db.collection('users').doc(this.currentUser.uid).set({
-            jsEasy: number
-          }, {merge: true})
-          db.collection('users').doc(this.currentUser.uid).set({
-            oValue: this.userProfile.oValue + (100/45)
-          }, {merge: true})
-          console.log('0Value + ' + 100/45)
-        } 
+        if (selected == 'correct') {
+          if (number < 50 && number > this.userProfile.jsEasy && this.userProfile.jsValue < 100) {
+            db.collection('users').doc(this.currentUser.uid).set({
+              jsValue: Math.min(this.userProfile.jsValue + (100/15))
+            }, {merge: true})
+            console.log('jsValue + ' + 100/15)
+            db.collection('users').doc(this.currentUser.uid).set({
+              jsEasy: number
+            }, {merge: true})
+            db.collection('users').doc(this.currentUser.uid).set({
+              oValue: this.userProfile.oValue + (100/45)
+            }, {merge: true})
+            console.log('0Value + ' + 100/45)
+          } else if (number < 60 && number > this.userProfile.jsMed && this.userProfile.jsValue < 100) {
+            db.collection('users').doc(this.currentUser.uid).set({
+              jsValue: Math.min(this.userProfile.jsValue + (100/15))
+            }, {merge: true})
+            console.log('jsValue + ' + 100/15)
+            db.collection('users').doc(this.currentUser.uid).set({
+              jsMed: number
+            }, {merge: true})
+            db.collection('users').doc(this.currentUser.uid).set({
+              oValue: this.userProfile.oValue + (100/45)
+            }, {merge: true})
+            console.log('0Value + ' + 100/45)
+          } else {
+            if (number < 70 && number > this.userProfile.jsHard && this.userProfile.jsValue < 100) {
+              db.collection('users').doc(this.currentUser.uid).set({
+                jsValue: Math.min(this.userProfile.jsValue + (100/15))
+              }, {merge: true})
+              console.log('jsValue + ' + 100/15)
+              db.collection('users').doc(this.currentUser.uid).set({
+                jsHard: number
+              }, {merge: true})
+              db.collection('users').doc(this.currentUser.uid).set({
+                oValue: this.userProfile.oValue + (100/45)
+              }, {merge: true})
+              console.log('0Value + ' + 100/45)
+            }
+          }
+        }
       },
       updateCurrentlyOn(name) {
         db.collection('users').doc(this.currentUser.uid).set({

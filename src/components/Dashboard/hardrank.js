@@ -18,7 +18,7 @@ export default {
           legend: { display: false },
           title: {
             display: true,
-            text: "Difficulty Level: Hard"
+            text: "No. of hints used (Difficulty Level: Hard)"
           },
           scales: {
             yAxes: [{

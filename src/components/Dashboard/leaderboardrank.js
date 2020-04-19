@@ -7,18 +7,19 @@ export default {
   data: function () {
     return {
         datacollection: {
-            datasets: [{
-              label:[],
-              borderColor: "#3e95cd",
-              data: [],
-              fill: false
-            }]
+          labels:  [],
+          datasets: [{
+            label:  [],
+            borderColor: "#3e95cd",
+            data: [],
+            fill: false
+          }]
         },
         options: {
           legend: { display: true },
           title: {
             display: true,
-            // text: 'Look at your rank'
+            text: 'Take a look at your rank!'
           }, 
           scales: {
             yAxes: [{ 

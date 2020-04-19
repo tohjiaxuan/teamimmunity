@@ -118,7 +118,7 @@
             
             <b-col align='right' >
               <router-link to="/Java_med_qn2" >
-              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress(selected, 21)'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>

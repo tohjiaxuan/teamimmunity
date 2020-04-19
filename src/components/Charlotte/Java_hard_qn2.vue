@@ -100,7 +100,7 @@
                   <b-card>
                     <div>
                     <p class="text-left">
-                     <span id='text' v-if="selected =='eating...'"> Good job! Dog is a subclass of Animal, thus it inherits the method 'eat'. </span>
+                     <span id='text' v-if="status == 'correct'"> Good job! Dog is a subclass of Animal, thus it inherits the method 'eat'. </span>
                       <span id='text' v-else-if="selected ==''"> Please enter an answer! </span>
                       <span id='text' v-else > Please try again! </span>
                       </p>
@@ -120,7 +120,7 @@
             
             <b-col align='right' >
               <router-link to="/Java_hard_qn3" >
-              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress(status, 32)'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>
@@ -146,6 +146,7 @@ export default {
 
         return {
           selected: '',
+          status
         
         }
     },
@@ -156,12 +157,12 @@ export default {
     methods: {
       check: function(ans) {
      
-            if(ans == 'wrong'){
-              this.test='h'
+            if(ans == 'eating...'){
+              this.status='correct'
        
             }
             else {
-              this.test='h'
+              this.status='wrong'
             }
       }
 

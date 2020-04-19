@@ -8,17 +8,20 @@ export default {
       }
     },
     methods : {
-      updateProgress() {
-        if (this.userProfile.jsValue < 100) {
+      updateProgress(selected, number) {
+        if (selected == 'correct' && number > this.userProfile.jsEasy && this.userProfile.jsValue < 100) {
           db.collection('users').doc(this.currentUser.uid).set({
             jsValue: Math.min(this.userProfile.jsValue + (100/15))
           }, {merge: true})
           console.log('jsValue + ' + 100/15)
-        }
-        db.collection('users').doc(this.currentUser.uid).set({
-          oValue: this.userProfile.oValue + (100/45)
-        }, {merge: true})
-        console.log('0Value + ' + 100/45)
+          db.collection('users').doc(this.currentUser.uid).set({
+            jsEasy: number
+          }, {merge: true})
+          db.collection('users').doc(this.currentUser.uid).set({
+            oValue: this.userProfile.oValue + (100/45)
+          }, {merge: true})
+          console.log('0Value + ' + 100/45)
+        } 
       },
       updateCurrentlyOn(name) {
         db.collection('users').doc(this.currentUser.uid).set({

@@ -137,7 +137,18 @@ import firebase from 'firebase';
                 jsValue: 0,
                 current: 'None',
                 recommended: 'None',
-                prevRank: []
+                prevRank: [],
+                pyEasy:0, 
+                pyMed:0, 
+                pyHard:0, 
+                javaEasy:0, 
+                javaMed:0, 
+                javaHard:0,
+                jsEasy:0, 
+                jsMed:0, 
+                jsHard:0
+            
+
             }).then(() => {
                 this.$store.dispatch('fetchUserProfile')
                 this.$router.replace('/')

@@ -3,27 +3,27 @@
         <navbar></navbar>
         <div id="bkg" class="page-holder bg-overlay">
             <b-container fluid>
-                <b-row class='mt-3 mb-4'>
-                    <b-col>
+                <b-row class='mt-3 pt-4 mb-4 pb-4'>
+                    <b-col cols='12' md='4' align='center'>
                         <h2> Let us track your progress! </h2>
                         <b-row>
-                            <donutJavaProgress></donutJavaProgress>
-                            <donutPythonProgress></donutPythonProgress>     
+                            <b-col><donutJavaProgress></donutJavaProgress></b-col>
+                            <b-col><donutPythonProgress></donutPythonProgress></b-col>     
                         </b-row>
                         <b-row>
-                            <donutJsProgress></donutJsProgress> 
-                            <donutOverall></donutOverall>    
+                            <b-col><donutJsProgress></donutJsProgress></b-col> 
+                            <b-col><donutOverall></donutOverall></b-col>    
                         </b-row>
                     </b-col>
-                    <b-col>
+                    <b-col cols='12' md='4' align='center'>
                         <rankLeadboard></rankLeadboard>
                     </b-col>
-                    <b-col>
+                    <b-col cols='12' md='4' align='center'>
                         <rankLang></rankLang>
                     </b-col> 
                 </b-row>
                 
-                <b-row>
+                <b-row class='pb-4'>
                     <b-col>
                         <rankEasy></rankEasy>
                     </b-col>

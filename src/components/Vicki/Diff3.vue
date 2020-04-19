@@ -156,11 +156,7 @@
   
   
   <br>
-  <br>
-  <br>
-  <div class="row fixed-row-bottom float-right">
   <Footer></Footer>
-  </div>
 </div>
 
 

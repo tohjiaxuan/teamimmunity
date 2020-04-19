@@ -8,7 +8,7 @@
         <br>
       <b-row>
           <!-- Python -->
-          <b-col>
+          <b-col cols='12' md='4'>
               <b-card-group deck>
                   <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>
@@ -45,7 +45,7 @@
           </b-col>
 
           <!-- Java --> 
-          <b-col>
+          <b-col cols='12' md='4'>
               <b-card-group deck>
                   <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>
@@ -82,7 +82,7 @@
           </b-col>
 
           <!-- Javascript --> 
-          <b-col>
+          <b-col cols='12' md='4'>
               <b-card-group deck>
                   <b-card class='pb-3'>
                       <b-row class="text-center" align-content="center" no-gutters>

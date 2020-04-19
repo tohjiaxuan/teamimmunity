@@ -2,7 +2,7 @@
 <template>
     <div>
       <Navbar></Navbar>
-  <div class="container-fluid difference mb-3">
+  <div class="container-fluid difference mt-3">
     <div class="text-center mt-4">
     <img src="https://img.icons8.com/color/49/000000/2-circle-c--v1.png"/>
     </div>
@@ -57,7 +57,7 @@
       </div>
       <!-- Java Tier -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0 w-75 ml-5">
+        <div class="card mb-5 mb-lg-0 w-75 ml-5 mt-2">
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">PRINTING</h5>
             <h6 class="card-price text-center">
@@ -72,7 +72,7 @@
               
             </ul>
             <div>
-            <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1">
+            <button type="button"  class="btn btn-primary mt-4" data-toggle="modal" data-target="#exampleModalLong1">
                 See Code
             </button>
                 <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -160,11 +160,8 @@
   </div>
   
   <br>
-  <br>
-  <br>
-  <div class="row fixed-row-bottom float-right">
   <Footer></Footer>
-  </div>
+  
 
 </div>
 

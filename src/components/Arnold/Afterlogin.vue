@@ -49,7 +49,7 @@
                 <b-button v-on:click='reset'>Reset</b-button>
             </b-col>
 
-            <b-col cols='7' class='second-section'>
+            <b-col cols='12' md='7' class='second-section'>
                 <b-row>
                     <b-col align='center' class='pt-5 pb-5'>
                         <span id='font50'>PROFILE PAGE</span>
@@ -182,7 +182,16 @@ export default {
                 jsValue: 0,
                 current: 'None',
                 recommended: 'None',
-                prevRank: []
+                prevRank: [],
+                pyEasy:0, 
+                pyMed:0, 
+                pyHard:0, 
+                javaEasy:0, 
+                javaMed:0, 
+                javaHard:0,
+                jsEasy:0, 
+                jsMed:0, 
+                jsHard:0
             },  {merge: true})
             db.collection('users').doc(this.currentUser.uid).collection('easy exercises hint').doc('java easy hint').set({
                 color: '#E9C1B9',

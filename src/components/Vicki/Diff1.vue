@@ -5,7 +5,7 @@
 <div>
   <Navbar></Navbar>
 
-  <div class="container-fluid difference mb-3" >
+  <div class="container-fluid difference mt-3 mb-3" >
     <div class="text-center mt-4">
       <img src="https://img.icons8.com/color/49/000000/1-circle-c--v1.png"/>
     </div>

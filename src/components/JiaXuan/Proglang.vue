@@ -17,7 +17,11 @@
                             <div class="form-row">
                                 <div id="search" class="form-group col-md-6 display-4">
                                     <!-- <label for="subjectarea">Subject Area</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area" v-model="subject" v-on:keyup.enter="submit(subject,catnum)">
+                                    <input id="ip" type="text" class="form-control" placeholder="Subject Area" v-model="subject" list='subjects' v-on:keyup.enter="submit(subject,catnum)">
+                                    <datalist id='subjects'>
+                                        <option value="BT"></option>
+                                        <option value="CS"></option>
+                                    </datalist>
                                     <!-- <select id="font" class="custom-select" v-model="subject">
                                         <option disabled selected value="null"> Select Subject Area</option>
                                         <option value="bt">BT</option>
@@ -26,7 +30,15 @@
                                 </div>
                                 <div id="search" class="w-75 form-group col-md-6 display-4">
                                     <!-- <label for="catalognum">Catalogue Number</label> -->
-                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number" v-model="catnum" v-on:keyup.enter="submit(subject,catnum)">
+                                    <input id="ip" type="text" class="form-control" placeholder="Catalogue Number" v-model="catnum" list='numbers' v-on:keyup.enter="submit(subject,catnum)">
+                                    <datalist id='numbers'>
+                                        <option value="1010"></option>
+                                        <option value="1010J"></option>
+                                        <option value="1010S"></option>
+                                        <option value="2030"></option>
+                                        <option value="2040"></option>
+                                        <option value="3103"></option>
+                                    </datalist>
                                     <!-- <select id="font" class="custom-select" v-model="catnum">
                                         <option disabled selected value="null">Select Catalogue Number</option>
                                         <option value="1010">1010</option>

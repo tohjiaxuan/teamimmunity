@@ -14,7 +14,7 @@ export default {
             db.collection('users').doc(this.currentUser.uid).set({
               jValue: Math.min(this.userProfile.jValue + (100/15))
             }, {merge: true})
-            console.log('jValue + ' + 100/15)
+            console.log('jValue3 + ' + 100/15)
             db.collection('users').doc(this.currentUser.uid).set({
               javaEasy: number
             }, {merge: true})
@@ -26,7 +26,7 @@ export default {
             db.collection('users').doc(this.currentUser.uid).set({
               jValue: Math.min(this.userProfile.jValue + (100/15))
             }, {merge: true})
-            console.log('jValue + ' + 100/15)
+            console.log('jValue2 + ' + 100/15)
             db.collection('users').doc(this.currentUser.uid).set({
               javaMed: number
             }, {merge: true})
@@ -39,7 +39,7 @@ export default {
               db.collection('users').doc(this.currentUser.uid).set({
                 jValue: Math.min(this.userProfile.jValue + (100/15))
               }, {merge: true})
-              console.log('jValue + ' + 100/15)
+              console.log('jValue1 + ' + 100/15)
               db.collection('users').doc(this.currentUser.uid).set({
                 javaHard: number
               }, {merge: true})

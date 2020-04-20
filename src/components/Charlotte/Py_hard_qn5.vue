@@ -112,7 +112,7 @@
               </b-col>
             
             <b-col align='right' >
-              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(); incrementActivity("python hard")'> Complete </b-button>
+              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(selected, 95); incrementActivity("python hard")'> Complete </b-button>
               <b-modal ref="my-modal" hide-footer id="complete">
                 <div class="d-block text-center">
                   <h3>Congrats! You have completed the exercise!</h3>

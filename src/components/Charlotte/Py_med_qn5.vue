@@ -120,7 +120,7 @@
 
             
             <b-col align='right' >
-              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(); incrementActivity("python medium")'> Complete </b-button>
+              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(status, 85); incrementActivity("python medium")'> Complete </b-button>
               <b-modal ref="my-modal" hide-footer id="complete">
                 <div class="d-block text-center">
                   <h3>Congrats! You have completed the exercise!</h3>
@@ -154,7 +154,7 @@ export default {
 
         return {
           selected: '',
-      
+          status: ''
         }
     },
     components: {

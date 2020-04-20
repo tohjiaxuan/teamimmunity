@@ -115,7 +115,7 @@
             
             <b-col align='right' >
               <router-link to="/Py_hard_qn3" >
-              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress(status, 92)'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>
@@ -140,7 +140,8 @@ export default {
     data() {
 
         return {
-          selected: ''
+          selected: '',
+          status: ''
 
         }
     },

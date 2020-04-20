@@ -114,7 +114,7 @@
             
             <b-col align='right' >
               <router-link to="/Py_easy_qn2" >
-              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress(selected, 71)'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>

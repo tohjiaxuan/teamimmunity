@@ -119,7 +119,7 @@
             
             <b-col align='right' >
               <router-link to="/Py_hard_qn5" >
-              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress()'> Next </b-button>
+              <b-button variant="outline-dark" id = "next" v-on:click='updateProgress(selected, 94)'> Next </b-button>
               </router-link>
               </b-col>
           </b-row>

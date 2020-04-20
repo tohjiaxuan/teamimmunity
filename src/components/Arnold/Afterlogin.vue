@@ -111,21 +111,6 @@
                     <b-col align='right' class='mt-1 mb-4'><span id='badges'>Badges</span></b-col>
                 </b-row>
 
-                <!-- <b-row class='mb-3'>
-                    <b-col cols='2'><span id='font20'>1</span></b-col>
-                    <b-col><span id='font20'>Arnold</span></b-col>
-                    <b-col cols='4' align='center'><span id='font20'>10</span></b-col>
-                </b-row>
-                <b-row class='mb-3'>
-                    <b-col cols='2'><span id='font20'>2</span></b-col>
-                    <b-col><span id='font20'>Charlotte</span></b-col>
-                    <b-col cols='4' align='center'><span id='font20'>7</span></b-col>
-                </b-row>
-                <b-row class='mb-3'>
-                    <b-col cols='2'><span id='font20'>3</span></b-col>
-                    <b-col><span id='font20'>Nicole</span></b-col>
-                    <b-col cols='4' align='center'><span id='font20'>5</span></b-col>
-                </b-row>     -->
                 <ol>
                     <li v-for="person in leaderboardTop15" v-bind:key="person.name" class='mb-3 ml-n2 pl-2'>
                         <b-container>
@@ -551,34 +536,7 @@ export default {
                 alert("Try out the other languages!")
             }
         },
-        updateTotalExercises() {
-            // db.collection('total exercises activity').doc('total exercises completed').get().then(doc => {
-            //     this.curr = doc.data().clicks
-            //     console.log('curr' + doc.data().clicks)
-            // })
-            db.collection('users').where('badges', '>', 0).orderBy('badges', 'desc').get().then((querySnapshot)=>{
-                querySnapshot.forEach(doc=>{
-                    console.log(doc.data().badges)
-                    this.badges += doc.data().badges
-                    console.log('1 ' + this.badges)
-                })
-                console.log('2 ' + this.badges)
-            })
-            console.log('3 ' + this.badges)
-            
-            // if (this.total != this.curr) {
-            //     db.collection('total exercises activity').doc('total exercises completed').set({
-            //         clicks: this.total
-            //     }, {merge: true})
-            //     console.log('ran')
-            // }
-            
-            // db.collection('total exercises activity').doc('total exercises completed').set({
-            //     clicks: this.total
-            //     }, {merge: true})
-            // console.log('ran')
-            
-        }, 
+        
     },
     computed: {
         ...mapState(['userProfile', 'currentUser']),

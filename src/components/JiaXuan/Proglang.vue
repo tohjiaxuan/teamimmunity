@@ -160,15 +160,6 @@ export default {
     min-width: 100vw;
 }
 
-/* .bg-overlay {
-    background-image: url("/assets/proglangbkg.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    height: 100vh;
-    opacity: 1.0;
-} */
-
 #bkg {
     background: linear-gradient(180deg, rgb(168, 212, 240) 0%, rgba(222, 248, 254, 0) 100%), url("/assets/proglangbkg.jpeg");
     background-repeat: no-repeat;
@@ -198,25 +189,12 @@ export default {
     font-size: 19px;
 }
 
-/* #ip {
-    background: white;
-    font-size: 24px;
-    color: black;
-} */
-
-
 h1 {
     font-family: 'Futura Hv BT';
     font-size: 46px;
     color: black;
     text-align: center;
 }
-
-/* #word-box {
-    background-color: rgb(37, 37, 37);
-    width: 100%;
-    height: 100%;
-} */
 
 #btn {
     width: 100%;

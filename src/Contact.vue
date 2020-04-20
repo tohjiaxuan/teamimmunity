@@ -2,7 +2,7 @@
 <div>
     <Navbar></Navbar>
     <Body></Body>
-    <Footer id='foot'></Footer>
+    <Footer></Footer>
 </div>
 </template>
 

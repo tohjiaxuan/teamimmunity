@@ -22,7 +22,7 @@ export default {
               oValue: this.userProfile.oValue + (100/45)
             }, {merge: true})
             console.log('0Value + ' + 100/45)
-          } else if (number < 90 && number > this.userProfile.pythonMed && this.userProfile.pValue < 100) {
+          } else if (number > 80 && number < 90 && number > this.userProfile.pythonMed && this.userProfile.pValue < 100) {
             db.collection('users').doc(this.currentUser.uid).set({
               pValue: Math.min(this.userProfile.pValue + (100/15))
             }, {merge: true})
@@ -35,7 +35,7 @@ export default {
             }, {merge: true})
             console.log('0Value + ' + 100/45)
           } 
-            else if (number < 100 && number > this.userProfile.pythonHard && this.userProfile.pValue < 100) {
+            else if (number > 90 && number < 100 && number > this.userProfile.pythonHard && this.userProfile.pValue < 100) {
               db.collection('users').doc(this.currentUser.uid).set({
                 pValue: Math.min(this.userProfile.pValue + (100/15))
               }, {merge: true})

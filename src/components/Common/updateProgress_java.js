@@ -11,6 +11,7 @@ export default {
       updateProgress(selected, number) {
         if (selected == 'correct') {
           if (number < 20 && number > this.userProfile.javaEasy && this.userProfile.jValue < 100) {
+            console.log("pass1")
             db.collection('users').doc(this.currentUser.uid).set({
               jValue: Math.min(this.userProfile.jValue + (100/15))
             }, {merge: true})
@@ -23,6 +24,7 @@ export default {
             }, {merge: true})
             console.log('0Value + ' + 100/45)
           } else if (number > 20 && number < 30 && number > this.userProfile.javaMed && this.userProfile.jValue < 100) {
+            console.log("pass2")
             db.collection('users').doc(this.currentUser.uid).set({
               jValue: Math.min(this.userProfile.jValue + (100/15))
             }, {merge: true})
@@ -36,6 +38,7 @@ export default {
             console.log('0Value + ' + 100/45)
           } 
             else if (number > 30 && number < 40 && number > this.userProfile.javaHard && this.userProfile.jValue < 100) {
+              console.log("pass3")
               db.collection('users').doc(this.currentUser.uid).set({
                 jValue: Math.min(this.userProfile.jValue + (100/15))
               }, {merge: true})

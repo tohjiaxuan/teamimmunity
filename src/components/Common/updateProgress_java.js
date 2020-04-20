@@ -22,7 +22,7 @@ export default {
               oValue: this.userProfile.oValue + (100/45)
             }, {merge: true})
             console.log('0Value + ' + 100/45)
-          } else if (number < 30 && number > this.userProfile.javaMed && this.userProfile.jValue < 100) {
+          } else if (number > 20 && number < 30 && number > this.userProfile.javaMed && this.userProfile.jValue < 100) {
             db.collection('users').doc(this.currentUser.uid).set({
               jValue: Math.min(this.userProfile.jValue + (100/15))
             }, {merge: true})
@@ -35,7 +35,7 @@ export default {
             }, {merge: true})
             console.log('0Value + ' + 100/45)
           } 
-            else if (number < 40 && number > this.userProfile.javaHard && this.userProfile.jValue < 100) {
+            else if (number > 30 && number < 40 && number > this.userProfile.javaHard && this.userProfile.jValue < 100) {
               db.collection('users').doc(this.currentUser.uid).set({
                 jValue: Math.min(this.userProfile.jValue + (100/15))
               }, {merge: true})

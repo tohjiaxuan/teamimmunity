@@ -40,7 +40,7 @@ export default {
       var user = firebase.auth().currentUser;
       db.collection('users').doc(user.uid).collection('hard exercises hint').get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
-          console.log(doc.data().hint)
+          // console.log(doc.data().hint)
           this.datacollection.datasets[0].backgroundColor.push(doc.data().color)
           this.datacollection.datasets[0].data.push(doc.data().hint)
         })

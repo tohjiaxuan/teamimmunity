@@ -154,6 +154,7 @@ import Footer from '../Common/Footer.vue'
 import { mapState } from 'vuex'
 import db from "../../firebase.js";
 import firebase from "firebase"
+import moment from "moment"
 export default {
     data() {
         return {
@@ -183,9 +184,9 @@ export default {
                 current: 'None',
                 recommended: 'None',
                 prevRank: [],
-                pyEasy:0, 
-                pyMed:0, 
-                pyHard:0, 
+                pythonEasy:0, 
+                pythonMed:0, 
+                pythonHard:0, 
                 javaEasy:0, 
                 javaMed:0, 
                 javaHard:0,
@@ -262,9 +263,11 @@ export default {
         },
         updateRank() {
             if (this.getRank() != this.userProfile.rank) {
+                let date = Date(Date.now())
+                let today = moment(date).format('DD/MM/YYYY');
                 db.collection('users').doc(this.currentUser.uid).set({
                     rank: this.getRank(),
-                    prevRank: firebase.firestore.FieldValue.arrayUnion(this.userProfile.rank)
+                    prevRank: firebase.firestore.FieldValue.arrayUnion({rank: this.userProfile.rank, date: today})
                 }, {merge: true})
             }
         },

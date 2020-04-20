@@ -79,11 +79,11 @@ export default {
         })
         .catch((err) => {
           console.log(err)
-          db.collection('python exercises activity').doc(id).set({clicks: 1})
+          db.collection('python exercises activity').doc(id).set({clicks: 1}, {merge: true})
         })
       },
       setActivity(id, number) {
-        db.collection('python exercises activity').doc(id).set({clicks: number})
+        db.collection('python exercises activity').doc(id).set({clicks: number}, {merge: true})
       },
     },
     computed: {

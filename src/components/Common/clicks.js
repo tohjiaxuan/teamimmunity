@@ -19,7 +19,7 @@ export default {
     },
 
     setData(id, number) {
-      database.collection('clicks').doc(id).set({clicks: number})
+      database.collection('clicks').doc(id).set({clicks: number}, {merge: true})
     },
     
     getClicks(id) { // change document id
@@ -36,12 +36,12 @@ export default {
       })
       .catch((err) => {
         console.log(err)
-        database.collection('language activity').doc(id).set({clicks: 1})
+        database.collection('language activity').doc(id).set({clicks: 1}, {merge: true})
       })
     },
 
     setLangData(id, number) {
-      database.collection('language activity').doc(id).set({clicks: number})
+      database.collection('language activity').doc(id).set({clicks: number}, {merge: true})
     },
   }
 }

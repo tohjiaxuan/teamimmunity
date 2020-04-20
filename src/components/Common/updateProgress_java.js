@@ -67,11 +67,11 @@ export default {
         })
         .catch((err) => {
           console.log(err)
-          db.collection('java exercises activity').doc(id).set({clicks: 1})
+          db.collection('java exercises activity').doc(id).set({clicks: 1}, {merge: true})
         })
       },
       setActivity(id, number) {
-        db.collection('java exercises activity').doc(id).set({clicks: number})
+        db.collection('java exercises activity').doc(id).set({clicks: number}, {merge: true})
       },
     },
     computed: {

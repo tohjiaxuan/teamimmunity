@@ -47,9 +47,7 @@ export default {
                 oValue: this.userProfile.oValue + (100/45)
               }, {merge: true})
               console.log('0Value + ' + 100/45)
-            } else {
-              return
-            }
+            } 
           }
       },
       updateCurrentlyOn(name) {

@@ -20,7 +20,7 @@ export default {
           legend: { display: true },
           title: {
             display: true,
-            text: 'Take a look at your rank!'
+            text: 'Take a look at your Rank progress!'
           }, 
           scales: {
             yAxes: [{ 
@@ -40,7 +40,7 @@ export default {
               }
             }]
           },
-            responsive: false,
+            responsive: true,
             maintainAspectRatio: false
         }
     }

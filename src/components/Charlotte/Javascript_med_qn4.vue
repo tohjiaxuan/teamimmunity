@@ -62,7 +62,7 @@
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> Which of the following is correct about callbacks? </p>
 
-                <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
+                <b-button v-b-toggle.collapse-1 variant="primary" v-on:click='incrementHint("medium exercises hint", "js medium hint")'> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
                     <p class="card-text"> Callbacks might be events! </p>

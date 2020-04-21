@@ -60,7 +60,7 @@
                 <p id="description"> What is the code to trim whitespaces? </p>
              
 
-                <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
+                <b-button v-b-toggle.collapse-1 variant="primary" v-on:click='incrementHint("hard exercises hint", "js hard hint")'> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
                     <p class="card-text"> Code to trim whitespaces and filter out comments and blank lines </p>

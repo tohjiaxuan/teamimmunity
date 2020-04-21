@@ -60,7 +60,7 @@
                 <p id="description"> The fields in an interface are implicitly specified as: </p>
              
 
-                <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
+                <b-button v-b-toggle.collapse-1 variant="primary" v-on:click='incrementHint("hard exercises hint", "java hard hint")'> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
                     <p class="card-text"> An interface cannot have behavior or state as it is intended to specify only an interaction contract </p>

@@ -70,7 +70,7 @@
 
                 </code> </pre>
 
-                <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
+                <b-button v-b-toggle.collapse-1 variant="primary" v-on:click='incrementHint("easy exercises hint", "java easy hint")'> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
                     <p class="card-text"> For loop runs through the entire array </p>

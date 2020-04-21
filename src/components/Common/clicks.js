@@ -29,6 +29,24 @@ export default {
       })
     },
 
+    incrementHint(level, lang) { // change document id
+      database.collection('users').doc(this.currentUser.uid).collection(level).doc(lang).get().then(doc => {
+        this.setHint(level, lang, doc.data().hint + 1)
+        console.log(this.currentUser.uid)
+        console.log(doc.data().hint)
+    
+      })
+      .catch((err) => {
+        console.log(err)
+        database.collection('users').doc(this.currentUser.uid).collection(level).doc(lang).set({hint: 1})
+      })
+    },
+
+    setHint(level, lang, number) {
+      database.collection('users').doc(this.currentUser.uid).collection(level).doc(lang).set({hint: number}, {merge: true})
+    },
+
+
     incrementLangActivity(id) { // change document id
       database.collection('language activity').doc(id).get().then(doc => {
         this.setLangData(id, doc.data().clicks + 1)

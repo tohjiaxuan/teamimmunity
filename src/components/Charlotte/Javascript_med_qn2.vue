@@ -62,7 +62,7 @@
               <div id="grey1" class="shadow-lg p-3 mb-5 bg-grey rounded">
                 <p id="description"> Which form of event propagation handles the registered container elements? </p>
 
-                <b-button v-b-toggle.collapse-1 variant="primary"> Hint </b-button>
+                <b-button v-b-toggle.collapse-1 variant="primary" v-on:click='incrementHint("medium exercises hint", "js medium hint")'> Hint </b-button>
                 <b-collapse id="collapse-1" class="mt-2">
                   <b-card>
                     <p class="card-text">  There are two ways of event propagation in the HTML DOM API in the options. </p>

@@ -171,7 +171,7 @@ export default {
             }
       },
       addBadge() {
-        db.collection('users').doc(this.currentUser.uid).set({
+          db.collection('users').doc(this.currentUser.uid).set({
           badges: this.userProfile.badges + 1
         }, {merge: true})
       }

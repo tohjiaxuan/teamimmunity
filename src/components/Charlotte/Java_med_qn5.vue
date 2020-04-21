@@ -109,7 +109,7 @@
               </b-col>
             
             <b-col align='right' >
-              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(selected, 24); incrementActivity("java medium")'> Complete </b-button>
+              <b-button variant="outline-dark" id = "next" @click="$bvModal.show('complete')" v-on:click='addBadge(); updateProgress(selected, 25); incrementActivity("java medium")'> Complete </b-button>
               <b-modal ref="my-modal" hide-footer id="complete">
                 <div class="d-block text-center">
                   <h3>Congrats! You have completed the exercise!</h3>
@@ -170,9 +170,9 @@ export default {
             }
       },
       addBadge() {
-        db.collection('users').doc(this.currentUser.uid).set({
+          db.collection('users').doc(this.currentUser.uid).set({
           badges: this.userProfile.badges + 1
-        }, {merge: true})
+          }, {merge: true})
       }
 
   },

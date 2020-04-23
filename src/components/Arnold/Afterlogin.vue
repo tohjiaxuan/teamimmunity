@@ -46,7 +46,7 @@
                 <b-row>
                     <b-col><hr align='center' class='w-75' ></b-col>
                 </b-row>
-                <b-button v-on:click='reset'>Reset</b-button>
+                <!-- <b-button v-on:click='reset'>Reset</b-button> -->
             </b-col>
 
             <b-col cols='12' md='7' class='second-section'>
@@ -235,11 +235,7 @@ export default {
         fetchRankArr() {
             db.collection('users').where('badges', '>=', 0).orderBy('badges', 'desc').get().then((querySnapshot)=>{
                 querySnapshot.forEach(doc=>{
-                    // if (doc.data().name != this.userProfile.name) {
-                    //     this.rank = this.rank + 1;
-                    // }
                     this.arr.push(doc.data().name)
-                    // console.log(this.arr)
                 })
             })
         },

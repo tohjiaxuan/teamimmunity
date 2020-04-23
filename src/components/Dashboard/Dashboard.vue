@@ -5,17 +5,17 @@
             <b-container fluid>
                 <b-row class='mt-3 pt-4 mb-4 pb-4'>
                     <b-col>
-                        <h2 class='pl-5'> Let us track your progress! </h2>
-                        <b-row>
-                            <b-col><donutJavaProgress></donutJavaProgress></b-col>
-                            <b-col><donutPythonProgress></donutPythonProgress></b-col>     
+                        <h2 align='center'> Let us track your progress! </h2>
+                        <b-row align='center'>
+                            <b-col class='mr-n5'><donutJavaProgress></donutJavaProgress></b-col>
+                            <b-col class='ml-n5'><donutPythonProgress></donutPythonProgress></b-col>     
                         </b-row>
-                        <b-row>
-                            <b-col><donutJsProgress></donutJsProgress></b-col> 
-                            <b-col><donutOverall></donutOverall></b-col>    
+                        <b-row align='center'>
+                            <b-col class='mr-n5'><donutJsProgress></donutJsProgress></b-col> 
+                            <b-col class='ml-n5'><donutOverall></donutOverall></b-col>    
                         </b-row>
                     </b-col>
-                    <b-col class='ml-5'>
+                    <b-col>
                         <rankLang></rankLang>
                     </b-col>
                 </b-row>

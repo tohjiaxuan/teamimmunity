@@ -34,7 +34,7 @@
             </b-row>
             <b-row>
               <b-col class='pl-3'>
-                <b-button variant='info' class='mt-2 mb-5' to='/btn' v-on:click='incrementClick("language_differences")'>Let's Get Started</b-button>
+                <b-button variant='info' class='mt-2 mb-5' to='/btn' id='start-btn' v-on:click='incrementClick("language_differences")'>Let's Get Started</b-button>
               </b-col>
             </b-row>
           </b-card>
@@ -113,13 +113,13 @@ export default {
 
 <style scoped>
 #bkg {
-    background: linear-gradient(180deg, #CBE7F8 0%, rgba(222, 248, 254, 0) 100%), url("/assets/javascript-language-logo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center center; */
-    color: #fff;
-    height: 100vh;
-    width: 100vw;
+  background: linear-gradient(180deg, #CBE7F8 0%, rgba(222, 248, 254, 0) 100%), url("/assets/javascript-language-logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center center; */
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
 }
 #content {
   background: transparent;
@@ -162,16 +162,20 @@ hr {
 }
 
 #ex-btn {
-    background-color:rgb(36, 70, 182); 
-    width:18%; 
-    font-family:'Futura Hv BT'; 
-    font-size:17px; 
-    color:#ffffff;
+  background-color:rgb(36, 70, 182); 
+  width:18%; 
+  font-family:'Futura Hv BT'; 
+  font-size:17px; 
+  color:#ffffff;
 }
 
 #card {
   background: white;
   opacity: 0.75;
+}
+
+#start-btn {
+  font-family:'Futura Hv BT'; 
 }
 
 </style>

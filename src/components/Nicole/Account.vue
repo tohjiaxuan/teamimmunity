@@ -25,7 +25,7 @@
 
                 <b-row>
                     <b-col align='left' class='offset-1 pl-4'>
-                        <span id='number'>10</span>
+                        <span id='number'>{{userProfile.badges}}</span>
                         <br>
                         <span>BADGES</span>
                     </b-col>
@@ -37,7 +37,7 @@
 
                 <b-row>
                     <b-col align='left' class='offset-1 pl-4'>
-                        <span id='number'>1</span>
+                        <span id='number'>{{userProfile.rank}}</span>
                         <br>
                         <span>RANK</span>
                     </b-col>
@@ -104,9 +104,7 @@
                 <b-row>
                   <b-col md="3" offset-md="3"></b-col>
                   <b-col md="3" offset-md="3">
-                    <router-link to="/after">
-                     <b-button id="final" variant='danger'>Submit</b-button>
-                    </router-link>
+                    <b-button id="final" variant='danger' to='/account'>Submit</b-button>
                     </b-col>
                 </b-row>
 
@@ -128,21 +126,20 @@
                     <b-col align='right' class='mt-1 mb-4'><span id='badges'>Badges</span></b-col>
                 </b-row>
 
-                <b-row class='mb-3'>
-                    <b-col cols='2'><span id='font20'>1</span></b-col>
-                    <b-col><span id='font20'>Arnold</span></b-col>
-                    <b-col cols='4' align='center'><span id='font20'>10</span></b-col>
-                </b-row>
-                <b-row class='mb-3'>
-                    <b-col cols='2'><span id='font20'>2</span></b-col>
-                    <b-col><span id='font20'>Charlotte</span></b-col>
-                    <b-col cols='4' align='center'><span id='font20'>7</span></b-col>
-                </b-row>
-                <b-row class='mb-3'>
-                    <b-col cols='2'><span id='font20'>3</span></b-col>
-                    <b-col><span id='font20'>Nicole</span></b-col>
-                    <b-col cols='4' align='center'><span id='font20'>5</span></b-col>
-                </b-row>    
+                <ol>
+                    <li v-for="person in leaderboardTop15" v-bind:key="person.name" class='mb-3 ml-n2 pl-2'>
+                        <b-container>
+                            <b-row>
+                                <b-col>
+                                    <span id='font20'>{{person.name}}</span>
+                                </b-col>
+                                <b-col cols='3' align='center'>
+                                    <span id='font20'>{{person.badges}}</span>
+                                </b-col>
+                            </b-row>
+                        </b-container>
+                    </li>
+                </ol>  
 
 
             </b-col>
@@ -157,6 +154,7 @@
 import Navbar from '../Common/Navbar.vue'
 import Footer from '../Common/Footer.vue'
 import { mapState } from 'vuex'
+import db from "../../firebase.js";
 export default {
     data() {
         return {
@@ -176,7 +174,8 @@ export default {
               { value: '2', text: 'Year 2' },
               { value: '3', text: 'Year 3' },
               { value: '4', text: 'Year 4' }
-            ]
+            ],
+            leaderboard: []
         }
     },
     components: {
@@ -203,10 +202,23 @@ export default {
         this.$nextTick(() => {
           this.show = true
         })
-      }
+      },
+      fetchLeaderboard() {
+            db.collection('users').where('badges', '>=', 0).orderBy('badges', 'desc').get().then((querySnapshot)=>{
+                querySnapshot.forEach(doc=>{
+                    this.leaderboard.push({name: doc.data().name, badges: doc.data().badges})
+                })
+            })
+        },
     },
     computed: {
-      ...mapState(['userProfile', 'currentUser'])
+      ...mapState(['userProfile', 'currentUser']),
+      leaderboardTop15() {
+        return this.leaderboard.slice(0, 15)
+      }
+    },
+    created() {
+      this.fetchLeaderboard()
     }
 }
 </script>
@@ -313,6 +325,12 @@ span {
 #final {
   margin-top: 10%;
   margin-left: 20%;
+  font-family: 'Futura Hv BT';
+}
+
+ol {
+  font-family: 'Futura Hv BT';
+  font-size: 20px;
 }
 
 </style>
